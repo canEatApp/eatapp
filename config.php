@@ -4,7 +4,7 @@ return array(
         "host"=>"localhost",
         "user"=>"root",
         "pass"=>"root",
-        "database"=>"blog",
+        "database"=>"eatapp",
         "port"=>"3306",
     )
 )
