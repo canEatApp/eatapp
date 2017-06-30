@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{$smarty.const.CSS_PATH}/bootstrap.min.css">
+</head>
+<style>
+    .box{
+        width:300px;
+        height:200px;
+        position: fixed;
+        top:0;
+        left: 0;
+        right:0;
+        bottom: 0;
+        margin:auto;
+        font-size: 20px;
+        padding:6px;
+    }
+    a{
+        color: #fff;
+    }
+    span{
+        color: red;
+    }
+</style>
+<body>
+<div class="box bg-primary">
+    <p class="">{$message}将于 <span>3</span>s后跳转，<a href="
+{$src}">立即跳转</a></p>
+</div>
+</body>
+<script>
+    var span=document.querySelector("span");
+    var i=3;
+    var a=document.querySelector('a');
+    var href=a.href;
+    var t=setInterval(function(){
+        i--;
+        if(i==0){
+            clearInterval(t);
+            if (href==""){
+                top.location.href=href;
+            }else{
+                self.location.href=document.querySelector("a").href
+            }
+        }
+        document.querySelector("span").innerHTML=i;
+    },1000);
+    a.onclick=function (e) {
+        e.preventDefault();
+        if (href==""){
+            top.location.href=href;
+        }else{
+            self.location.href=document.querySelector("a").href
+        }
+    };
+</script>
+</html>

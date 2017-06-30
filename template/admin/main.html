@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{$smarty.const.CSS_PATH}/admin/main.css">
+    <script src="{$smarty.const.JS_PATH}/jquery.js"></script>
+</head>
+<body>
+
+<section id="title">
+    <h1>后台管理系统</h1>
+    <p><span><a href="index.php?m=index&f=index" style="color: #ffffff;">进入主页 </a> </span><span><?php echo date("Y-m-d")?> </span> 欢迎 &nbsp;<?php echo $user?><a href="index.php?m=admin&f=login&a=out">退出登录</a></p>
+</section>
+<section id="main">
+    <ul id="box">
+        <li>
+            <span>角色管理</span>
+            <ul >
+                <li>
+                    <a href="index.php?m=admin&f=addRole" target="window">管理角色</a>
+                </li>
+                <li>
+                    <a href="index.php?m=admin&f=addRole&a=add" target="window">添加角色</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>栏目管理</span>
+            <ul>
+                <li>
+                    <a href="" target="window">添加栏目</a>
+                </li>
+                <li>
+                    <a href="" target="window">管理栏目</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>内容管理</span>
+            <ul>
+                <li><a href="" target="window">添加内容</a></li>
+            </ul>
+        </li>
+        <li>
+            <span>用户管理</span>
+            <ul>
+                <li>
+                    <a href="" target="window">留言管理</a>
+                </li>
+                <li>
+                    <a href="" target="window">用户管理</a>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+
+    <iframe src="welcome.html" frameborder="0" name="window">
+
+    </iframe>
+</section>
+</body>
+<script>
+    $('#box >li >span').click(function () {
+        $(this).next('ul').slideToggle('fast');
+    })
+</script>
+</body>
+</html>
