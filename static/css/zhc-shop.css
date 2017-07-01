@@ -1,0 +1,200 @@
+header{
+	height: 3.08rem;
+	width: 100%;
+	background: #fa801e;
+	padding: 0 0.24rem;
+	box-sizing: border-box;
+}
+header .top{
+	width: 100%;
+	height: 0.8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header .top a{
+	display: block;
+	width: 0.44rem;
+	height: 0.44rem;
+}
+header .top a img{
+	width: 100%;
+	height: 100%;
+}
+
+header .bottom{
+	height: 2.28rem;
+	width: 100%;
+}
+header .bottom .hblt{
+	float: left;
+	height: 100%;
+	width: 2rem;
+}
+header .bottom .hblt .back{
+	width: 1.4rem;
+	height: 1.4rem;
+	transform:rotate(-45deg) ;
+	background: #e1731a;
+	border-radius: 0.12rem;
+	margin-left: 0.24rem;
+	position: relative;
+}
+header .bottom .hblt .back div{
+	width: 100%;
+	height: 100%;
+	border-radius: 0.12rem;
+	background: #fff;
+	padding: 0.04rem;
+	box-sizing: border-box;
+	transform:rotate(45deg) ;
+}
+header .bottom .hblt .back div img{
+	width: 100%;
+	height: 100%;
+	border-radius: 0.12rem;
+}
+
+header .bottom .hbgt{
+	float: left;
+	height: 100%;
+	width: 5rem;
+}
+header .bottom .hbgt p{
+	width: 100%;
+	height: 0.44rem;
+	color: #fff;
+	font-size: 0.32rem;
+	font-family: "黑体";
+	line-height: 0.44rem;
+}
+header .bottom .hbgt .addrssbox{
+	float: left;
+	width: 100%;
+	height: 0.44rem;
+}
+header .bottom .hbgt .addrssbox img{
+	float: left;
+	width: 0.44rem;
+	height: 0.44rem;
+}
+header .bottom .hbgt .addrssbox .words{
+	float: left;
+	width: 4.5rem;
+	height: 0.44rem;
+}
+header .bottom .hbgt .addrssbox .words .tiao{
+	width: 4.5rem;
+	height: 0.2rem;
+	background: url(../img/zhc-img/images/tiao_15.png);
+	background-size: 80%;
+	background-position: 0%;
+	background-repeat: no-repeat;
+}
+header .bottom .hbgt .addrssbox .words .english{
+	width: 4.5rem;
+	height: 0.24rem;
+	text-transform: uppercase;
+	font-family: "黑体";
+	color: #FFFFFF;
+	font-size: 0.22rem;
+	padding-left: 0.04rem;
+	box-sizing: border-box;
+}
+
+header .bottom .hbgt .where{
+	width: 100%;
+	height: 0.6rem;
+	display: flex;
+	align-items: center;
+	font-size: 0.2rem;
+	font-family: "黑体";
+	color: #fff;
+}
+header .bottom .hbgt .where .km{
+	width: 1rem;
+	height: 0.42rem;
+	background: #ed791b;
+	line-height: 0.36rem;
+	text-align: center;
+	border: 0.04rem solid #fff;
+	box-sizing: border-box;
+	border-radius: 0.3rem;
+}
+header .bottom .hbgt .where .time{
+	width: 1rem;
+	height: 0.42rem;
+	line-height: 0.42rem;
+	background: url(../img/zhc-img/images/timeback_19.png);
+	background-size: 100%;
+	text-align: center;
+	margin-left: 0.06rem;
+	padding-left: 0.2rem;
+	box-sizing: border-box;
+}
+header .bottom .hbgt .where .money{
+	width: 1.4rem;
+	text-align: right;
+	height: 0.42rem;
+	line-height: 0.42rem;
+}
+header .bottom .hbgt .where .song{
+	width: 1rem;
+	height: 0.42rem;
+	line-height: 0.42rem;
+	background: #fff;
+	border-radius: 0.3rem;
+	text-align: center;
+	color: #dd7d2b;
+	margin-left: 0.1rem;
+}
+header .bottom .hbgt .starbox{
+	width: 100%;
+	height: 0.3rem;
+	display: flex;
+}
+header .bottom .hbgt .starbox .stars{
+	display: flex;
+	align-items: center;
+	width: 1.6rem;
+	height: 100%;
+}
+header .bottom .hbgt .starbox .stars img{
+	width: 0.21rem;
+	height: 0.22rem;
+	margin: 0 0.04rem;
+}
+header .bottom .hbgt .starbox .num{
+	width: auto;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 0.2rem;
+	font-family: "黑体";
+	color: #fff;
+}
+
+header .bottom .hbgt .minusbox{
+	width: 100%;
+	height: 0.46rem;
+	display: flex;
+	align-items: center;
+	font-size: 0.22rem;
+	font-family: "黑体";
+	color: #fff;
+}
+header .bottom .hbgt .minusbox .minus{
+	width: 0.34rem;
+	height: 0.34rem;
+	background: #fc3040;
+	border-radius: 0.1rem;
+	text-align: center;
+	line-height: 0.34rem;
+	margin: 0 0.08rem;
+	font-size: 0.2rem;
+}
+header .bottom .hbgt .minusbox .p{
+	width: auto;
+	height: 0.3rem;
+	line-height: 0.3rem;
+}
