@@ -18,20 +18,23 @@ class login extends main{
         $password=md5($password);
         $check=strtolower($_POST["check"]);
         $checked=$this->session->get("check");
-        if ($check==$checked){
-            $db=new db2("admins");
-            $arr=$db->select()[0];
-            if ($user==$arr["adname"]){
-                if ($password=$arr["adpass"]){
-                    $this->session->set("user","{$user}");
-                    $this->session->set("load","loaded");
-                    $this->jump("登录成功","m=admin&f=login&a=main");
-                }else{
-                    $this->jump("密码错误","m=admin&f=login");
+        if ($check==$checked) {
+            $db = new db();
+            $arr = $db->select("user");
+            foreach ($arr as $v) {
+                if ($user == $v["uname"]) {
+                    if ($password = $v["upass"]) {
+                        $this->session->set("user", "{$user}");
+                        $this->session->set("load", "loaded");
+                        $this->session->set("rid",$v["rid"]);
+                        $this->jump("登录成功", "m=admin&f=login&a=main");
+                    } else {
+                        $this->jump("密码错误", "m=admin&f=login");
+                    }
+                } else {
+                    $this->jump("账户不存在", "m=admin&f=login");
                 }
-            }else{
-                $this->jump("账户不存在","m=admin&f=login");
-            }
+             }
         }else{
             $this->jump("验证码错误","m=admin&f=login");
         }
@@ -53,6 +56,11 @@ class login extends main{
 
     function main(){
         if ($this->session->get("user")) {
+            $user=$this->session->get("user");
+            $this->smarty->assign("user",$this->session->get("user"));
+            $db=new db();
+            $result=$db->where("uname='{$user}'")->select('user',"rid");
+            $this->smarty->assign("rid",$this->session->get("rid"));
             $this->smarty->display("main.html");
         }else{
              $this->jump("请登录","m=admin&f=login");
@@ -63,5 +71,28 @@ class login extends main{
         $this->session->clear();
         $this->jump("退出成功","m=admin&f=login");
     }
-    
+    function sign(){
+        $this->smarty->display("sign.html");
+    }
+    function signed(){
+        $uname=$_POST["suser"];
+        $upass=md5($_POST["supass"]);
+        $check=$_POST["checked"];
+        if ($check==$this->session->get("check")) {
+            $db = new db();
+            if ($db->where("uname='{$uname}'")->select("user")) {
+                $this->jump("账号已存在", "m=admin&f=login&a=sign");
+                exit;
+            }
+            if ($db->insert("uname='{$uname}',upass='{$upass}',credit=60,rid=3","user") > 0) {
+                $this->jump("注册成功，请登陆", "m=admin&f=login");
+            } else {
+                $this->jump("注册失败，请重试", "m=admin&f=login&a=sign");
+            };
+        }else{
+            $this->jump("验证码错误，请重新输入","m=admin&f=login&a=sign");
+        }
+
+
+    }
 }

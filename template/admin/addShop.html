@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{$smarty.const.CSS_PATH}/bootstrap.min.css">
+    <script src="{$smarty.const.JS_PATH}/jquery.js"></script>
+    <script src="{$smarty.const.JS_PATH}/uploadimg.js"></script>
+</head>
+<style>
+    form{
+        margin-top:20px;
+        padding:10px;
+        box-sizing: border-box;
+    }
+</style>
+店铺名／店铺密码／店铺状态／店铺标语／是否通过审核／店铺地址／店铺缩略图／
+加validate
+<body>
+<form method="post" action="index.php?m=admin&f=shop&a=add">
+    <div class="form-group">
+        <label for="exampleInputEmail1">店铺名</label>
+        <input name="sname" type="text" required class="form-control" style="width: 40%;" id="" placeholder="店铺名">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">店铺密码</label>
+        <input name="spass" type="password" required class="form-control" style="width: 40%;"  placeholder="店铺密码">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">店铺标语</label>
+        <input name="snotes" type="text" class="form-control" required style="width: 40%;"  placeholder="店铺标语">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">店铺地址</label>
+        <input name="saddress" type="text" class="form-control" required style="width: 40%;"  placeholder="店铺地址">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">店铺缩略图</label>
+        <input type="hidden" class="inputImg" name="simg">
+    </div>
+    <button type="submit" class="btn btn-default">创建</button>
+</form>
+
+</body>
+<script>
+    window.onload=function () {
+        let obj=new upload_1();
+        obj.url="upload.php";
+        obj.success=function (url) {
+            document.querySelector(".inputImg").value=url;
+        };
+        obj.createView();
+    }
+</script>
+</html>
