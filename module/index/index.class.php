@@ -8,7 +8,7 @@
 if(!COMMING){
     exit();
 }
-class index{
+class index extends indexMain {
     function mode(){
 //        $obj=new db();
 //        $array=$obj->where("pass=123123")->select("friend","names");
@@ -21,14 +21,8 @@ class index{
 //        $smarty->setTemplateDir("template");
 //        $smarty->assign("str","str");
 //        $smarty->display("index.html");
-
 //        smarty引擎
-        $smarty=new Smarty();
-        $smarty->setCompileDir("compile");
-        $smarty->setTemplateDir("template");
-        $smarty->assign("aa","aaaa");
-        $smarty->assign("bb","bb");
-        $smarty->display("index.html");
+        $this->smarty->display("index.html");
 
 
     }

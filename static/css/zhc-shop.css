@@ -1,5 +1,11 @@
+body,html{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
 header{
-	height: 3.08rem;
+	height: 3.1rem;
 	width: 100%;
 	background: #fa801e;
 	padding: 0 0.24rem;
@@ -197,4 +203,266 @@ header .bottom .hbgt .minusbox .p{
 	width: auto;
 	height: 0.3rem;
 	line-height: 0.3rem;
+}
+
+/*本店提前2小时订餐*/
+.zhc_mess{
+	width: 100%;
+	height: 2.09rem;
+	background: url(../img/zhc-img/images/messback_13.png);
+	background-size: cover;
+	margin-top: -0.08rem;
+}
+.zhc_mess .p_mess{
+	width: 100%;
+	height: 0.88rem;
+	padding-left: 0.66rem;
+	box-sizing: border-box;
+	color: #aeb0c8;
+	font-family: "黑体";
+	font-size: 0.26rem;
+	text-align: left;
+	display: flex;
+	align-items: center;
+}
+.zhc_mess .btn_box{
+	width: 100%;
+	height: 1.2rem;
+	display: flex;
+	align-items: center;
+}
+.zhc_mess .btn_box .btn_boxs{
+	width: 4.36rem;
+	height: 0.7rem;
+	border-radius: 0.6rem;
+	background: #f7f7f7;
+	border:0.04rem solid #ededed;
+	padding: 0.04rem;
+	box-sizing: border-box;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+.zhc_mess .btn_box .btn_boxs button{
+	height: 100%;
+	width: 2rem;
+	border:none;
+	background: none;
+	border-radius: 0.6rem;
+	outline: none;
+	font-size: 0.24rem;
+	font-family: "黑体";
+	color: #8b8c99;
+}
+
+.zhc_mess .btn_box .btn_boxs button.active{
+	background: url(../img/zhc-img/images/btn_14.png);
+	background-size: cover;
+	color: #fff;
+}
+
+/*主要商品*/
+main{
+	width: 100%;
+	height: auto;
+	background: #f4f4f4;
+	overflow: hidden;
+}
+main .lt_list{
+	float: left;
+	width: 2.1rem;
+	height: auto;
+	background: #3d3e4d;
+	padding:0.3rem 0 0.3rem 0.26rem;
+	box-sizing: border-box;
+}
+main .lt_list li{
+	width: 1.64rem;
+	height: 0.76rem;
+	border-radius: 0.5rem;
+	border: 0.04rem solid #dd7e2c;
+	box-sizing: border-box;
+	line-height: 0.76rem;
+	text-align: center;
+	color: #dd7e2c;
+	font-family: "黑体";
+	font-size: 0.26rem;
+	margin: 0.12rem 0;
+}
+main .lt_list li.active{
+	background: #ed791b;
+	border: 0.04rem solid #ddd;
+	color: #fff;
+}
+main .container{
+	position: absolute;
+	top: 5.2rem;
+	bottom: 1.5rem;
+	right: 0;
+	overflow: hidden;
+}
+main .gt_list{
+	float: left;
+	width: 5.16rem;
+	height: auto;
+	margin-left: 0.2rem;
+	padding-top: 0.2rem;
+	box-sizing: border-box;
+}
+main .gt_list li{
+	width: 5rem;
+	height: 1.9rem;
+	background: #fff;
+	border-radius: 0.08rem;
+	margin: 0.12rem 0;
+	box-shadow: 0 0 0.2rem #dfdfdf;
+	position: relative;
+}
+main .gt_list li .add{
+	width: 0.48rem;
+	height: 0.48rem;
+	position: absolute;
+	right: 0.24rem;
+	top: 50%;
+	margin-top: -0.24rem;
+}
+main .gt_list li .img_box{
+	float: left;
+	width: 1.08rem;
+	height: 100%;
+	padding: 0 0.12rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main .gt_list li .img_box img{
+	width: 100%;
+}
+main .gt_list li .word_box{
+	float: left;
+	width: 3.92rem;
+	height: 100%;
+	padding: 0.2rem 0;
+	box-sizing: border-box;
+}
+main .gt_list li .word_box .title{
+	width: 100%;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	color: #5e5e5e;
+	font-family: "黑体";
+	font-size: 0.26rem;
+	text-transform: uppercase;
+}
+main .gt_list li .word_box .stars_box{
+	width: 100%;
+	height: 0.3rem;
+	line-height: 0.3rem;
+}
+main .gt_list li .word_box .stars_box img{
+	width: 0.23rem;
+	height: 0.21rem;
+	margin: 0 0.04rem;
+}
+main .gt_list li .word_box .tiaos{
+	width: 100%;
+	height: 0.06rem;
+	background: url(../img/zhc-img/images/tiaos_22.png);
+	background-repeat: no-repeat;
+	background-position: 0%;
+	background-size: 80%;
+}
+main .gt_list li .word_box .money_box{
+	width: 100%;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	font-family: "黑体";
+}
+main .gt_list li .word_box .money_box span:first-child{
+	color: #ed791b;
+	font-size: 0.26rem;
+}
+main .gt_list li .word_box .money_box span:last-child{
+	color: #646575;
+	font-size: 0.2rem;
+}
+main .gt_list li .word_box .num{
+	width: 100%;
+	height: 0.3rem;
+	display: flex;
+	align-items: center;
+}
+main .gt_list li .word_box .num img{
+	width: 0.14rem;
+}
+main .gt_list li .word_box .num span{
+	font-size: 0.2rem;
+	font-family: "黑体";
+	color: #a6a7b6;
+	margin-left: 0.08rem;
+}
+
+footer{
+	height: 1.12rem;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: $fff;
+	padding: 0 0.24rem;
+	box-sizing: border-box;
+}
+footer .car{
+	width: 0.8rem;
+	height: 0.8rem;
+	position: absolute;
+	top: -50%;
+	left: 1rem;
+}
+footer .info{
+	float: left;
+	width: 4rem;
+	height: 100%;
+	padding-left: 1.5rem;
+	padding-top: 0.2rem;
+	box-sizing: border-box;
+	background: url(../img/zhc-img/images/dot_47.png);
+	background-repeat: no-repeat;
+	background-position: 30% 50%;
+}
+footer .info .summon{
+	width: 100%;
+	height: 0.4rem;
+	font-family: "黑体";
+	line-height: 0.4rem;
+}
+footer .info .summon span:first-child{
+	color: #f62b39;
+	font-size: 0.32rem;
+}
+footer .info .summon span:last-child{
+	color: #646575;
+	font-size: 0.2rem;
+}
+footer .info .mess{
+	width: 100%;
+	height: 0.3rem;
+	font-family: "黑体";
+	font-size: 0.24rem;
+	color: #8f8f94;
+}
+footer .info .mess span{
+	color: #f62b39;
+}
+footer .btn{
+	float: right;
+	width: 2.66rem;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+footer .btn img{
+	width: 100%;
+	height: 0.74rem;
 }

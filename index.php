@@ -15,7 +15,7 @@ define("REQUEST_URL",substr($server["REQUEST_URI"],0,strrpos($server["REQUEST_UR
 define("HOST_PATH",$http."://".$server["HTTP_HOST"].REQUEST_URL);
 //根目录
 define("ROOT_PATH",$server["DOCUMENT_ROOT"]);
-define("APP_PATH",ROOT_PATH."/mvc");
+define("APP_PATH",ROOT_PATH."/eatapp");
 //模块目录
 define("MODULE_PATH",APP_PATH."/module");
 //引擎文件
@@ -26,6 +26,7 @@ define("TEM_PATH",APP_PATH."/template／");
 define("CSS_PATH",HOST_PATH."/static/css");
 define("JS_PATH",HOST_PATH."/static/js");
 define("IMG_PATH",HOST_PATH."/static/img");
+
 include LIBS_PATH."function.class.php";
 include_once LIBS_PATH."checkimg.php";
 include LIBS_PATH."route.php";  //路由
@@ -33,6 +34,7 @@ include_once LIBS_PATH."db.php";//数据库操作
 //include_once LIBS_PATH."smarty.class.php";//自己写的smarty
 include_once LIBS_PATH."smarty/Smarty.class.php";//模版引擎
 include_once LIBS_PATH."session.class.php";//session操作
-include_once LIBS_PATH."main.class.php";//主类
+include_once LIBS_PATH."main.class.php";//admin主类
+include_once LIBS_PATH."indexmain.class.php";//index主类
 $obj=new route();
 $obj->getInfo();

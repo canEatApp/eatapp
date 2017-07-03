@@ -10,10 +10,11 @@
 
 <section id="title">
     <h1>后台管理系统</h1>
-    <p><span><a href="index.php?m=index&f=index" style="color: #ffffff;">进入主页 </a> </span><span><?php echo date("Y-m-d")?> </span> 欢迎 &nbsp;<?php echo $user?><a href="index.php?m=admin&f=login&a=out">退出登录</a></p>
+    <p><span><a href="index.php?m=index&f=index" style="color: #ffffff;">进入主页 </a> </span> 欢迎{$user}<a href="index.php?m=admin&f=login&a=out">退出登录</a></p>
 </section>
 <section id="main">
     <ul id="box">
+        {if $rid==1}
         <li>
             <span>角色管理</span>
             <ul >
@@ -26,16 +27,29 @@
             </ul>
         </li>
         <li>
-            <span>栏目管理</span>
+            <span>店铺总管理</span>
             <ul>
                 <li>
-                    <a href="" target="window">添加栏目</a>
+                    <a href="index.php?m=admin&f=shop&a=showShop" target="window">店铺情况</a>
                 </li>
                 <li>
-                    <a href="" target="window">管理栏目</a>
+                    <a href="index.php?m=admin&f=shop&a=adminShop" target="window">管理店铺</a>
                 </li>
             </ul>
         </li>
+        {else}
+        <li>
+            <span>店铺管理</span>
+            <ul>
+                <li>
+                    <a href="index.php?m=admin&f=shop&a=addShop" target="window">添加店铺</a>
+                </li>
+                <li>
+                    <a href="index.php?m=admin&f=shop&a=adminShop" target="window">管理店铺</a>
+                </li>
+            </ul>
+        </li>
+        {/if}
         <li>
             <span>内容管理</span>
             <ul>
@@ -56,7 +70,7 @@
         </li>
     </ul>
 
-    <iframe src="welcome.html" frameborder="0" name="window">
+    <iframe src="" frameborder="0" name="window">
 
     </iframe>
 </section>
