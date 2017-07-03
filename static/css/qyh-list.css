@@ -1,0 +1,412 @@
+header{
+    width:100%;
+    height:0.88rem;
+    background: #FC811E;
+    position: fixed;
+    top:0;
+    left:0;
+}
+header > a{
+    vertical-align:top;
+}
+header > a:first-child{
+    display: inline-block;
+    margin:0.11rem 0.2rem 0;
+}
+header > a:first-child img {
+    height:0.66rem;
+}
+header > a:last-child{
+    position: absolute;
+    right:0.2rem;top:0.08rem;
+    display: inline-block;
+}
+header > a:last-child img {
+    height:0.80rem;
+}
+header > img{
+    height:0.74rem;
+    position: absolute;
+    top:0.1rem;left:50%;
+    margin-left:-0.41rem;
+
+}
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+    bottom: 48px;
+    left: 0;
+    width: 100%;
+    background: #F7F7F7;
+    overflow: hidden;
+}
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+/*轮播开始*/
+div.q-banner{
+    position: relative;
+    width:100%;
+    height:auto;
+}
+div.q-banner .swiper-container {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 10px;
+
+}
+div.q-banner .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    /*width:6.20rem;margin:0 auto;*/
+}
+
+/*猜你喜欢开始*/
+div.q-banner{
+    margin:0.2rem 0;
+    width:100%;
+    height:auto;
+}
+div.q-banner > img{
+    height:0.31rem;
+    margin:0.1rem auto 0.3rem;
+    display: block;
+}
+div.q-like > ul{
+    display: flex;
+    justify-content: space-between;
+    padding:0 0.24rem;
+    box-sizing: border-box;
+}
+.q-banner div.swiper-slide {
+    width:3.32rem;
+    height:4.48rem;
+    position: relative;
+}
+.q-banner div.swiper-slide  > a > div.q-back{
+    width:100%;
+    height:100%;
+    background: #F7A765;
+    border-radius: 10px;
+    position: absolute;
+    top:-0.1rem;right:-0.1rem;
+    z-index: -1;
+}
+.q-banner div.swiper-slide  > a > .dian{
+    width:0.13rem;height:0.17rem;
+    background: #FA8628;
+    position: absolute;
+    top:2.1rem;
+    z-index: 2;
+}
+.q-banner div.swiper-slide  > a > .dian1{
+    border-radius: 0.13rem 0 0 0.13rem;
+    right:-0.06rem;
+}
+.q-banner div.swiper-slide  > a > .dian2{
+    border-radius:0 0.13rem 0.13rem 0 ;
+    left:0;
+}
+.q-banner div.swiper-slide  > a > img{
+    width:100%;
+    border:1px solid #fff;
+    border-radius:10px;
+    box-shadow: 0 0 3px #333;
+}
+.q-banner div.swiper-slide  > a >.q-shi{
+    width:100%;
+    height:2.3rem;
+    position: absolute;
+    bottom: 1px;
+    left:1px;
+    border-radius: 0 0 10px 10px ;
+    background: #fff;
+}
+.q-banner div.swiper-slide  > a >.q-shi > .q-rgb{
+    position: absolute;
+    top:-0.42rem;
+    left:0;
+    width:100%;
+    height:0.42rem;
+    background: rgba(0,0,0,.3);
+}
+.q-banner div.swiper-slide  > a >.q-shi > .q-rgb > img{
+    width:0.63rem;
+    position: absolute;
+    top:-0.3rem;
+    left:0.1rem;
+}
+.q-banner div.swiper-slide  > a >.q-shi > .q-rgb > p{
+    float: right;
+    color: #fff;
+    height:100%;
+    line-height: 0.42rem;
+    margin-right:0.14rem;
+}
+.q-banner div.swiper-slide  > a >.q-shi > .q-page{
+    width:100%;
+    margin-top:0.1rem;
+}
+.q-banner div.swiper-slide   .q-page > p.title,.q-banner div.swiper-slide   .q-page > p.etitle{
+    float: left;
+    font-size: 0.28rem;
+    font-weight:600;
+    color:#333333;
+}
+.q-banner div.swiper-slide   .q-page > img.q-huo{
+    /*float: left;*/
+    height:0.24rem;
+    margin-left: 0.1rem;
+}
+.q-banner div.swiper-slide   .q-page > p.etitle{
+    font-size: 0.2rem;
+    font-family: Helvetica;
+    font-weight: 200;
+}
+.q-banner div.swiper-slide   .q-page > div.star{
+    height: 0.16rem;
+    float: right;
+    line-height: 0;
+    position: absolute;
+    top:0.2rem;right:0.1rem;
+}
+.q-banner div.swiper-slide   .q-page > div.star > img{
+    height:100%;
+}
+.q-banner div.swiper-slide   .q-page > img.q-zan{
+    position: absolute;
+    top:0.5rem;right: 0.1rem;
+}
+.q-banner div.swiper-slide   .q-page > .q-bianqian{
+    height:0.6rem;
+    position: relative;
+    line-height: 0;
+}
+.q-banner div.swiper-slide   .q-page > .q-bianqian >span{
+    border-radius: 15px;
+    border:2px solid transparent;
+    background-clip:padding-box,border-box;
+    background-origin:padding-box,border-box;
+    background-image:linear-gradient(45deg,#fff,#fff),linear-gradient(45deg,#37BD21,#F9D127);
+    display: inline-block;
+    width:auto;height:auto;
+    padding:0.2rem;
+    color:#333;
+    font-size: 0.20rem;
+}
+
+div.q-like div.q-name{
+    width:100%;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    margin:0.3rem 0 0 ;
+}
+div.q-like div.left{
+    width:78%;
+    float: left;
+}
+div.q-like div.left > .q-img{
+    width:0.34rem;
+    height: 0.34rem;
+    margin: 0.14rem 0.1rem;
+    border-radius: 100%;
+    background-position: center;
+    background-size:contain;
+    float: left;
+}
+div.q-like div.left > span:first-of-type{
+    color:#FA8628;
+    font-size: 0.28rem;
+    display: block;
+}
+div.q-like div.left > span:last-of-type{
+    color:#333;
+    font-size: 0.24rem;
+    letter-spacing:-1px;
+}
+div.q-like div.right{
+    width:22%;
+    float: right;
+    position: relative;
+}
+div.q-like div.right > img{
+    width:0.34rem;
+    border-radius: 50%;
+    border:1px solid #fff;
+    position: absolute;
+    top:0rem;
+}
+div.q-like div.right > img:first-child{
+    left:-0.6rem;
+}
+div.q-like div.right > img:nth-child(2){
+    left:-0.4rem;
+}
+div.q-like div.right > img:nth-child(3){
+    left:-0.2rem;
+}
+div.q-like div.right > img:nth-child(4){
+    left:0rem;
+}
+div.q-like div.right > img:nth-child(5){
+    left:0.2rem;
+}
+div.q-like div.q-page > img:last-child{
+    height:0.3rem;
+    position: absolute;
+    bottom: -0.16rem;
+    left:1.4rem;
+}
+/*新品开始*/
+div.q-xin{
+    width:100%;
+    height:auto;
+    margin:0.4rem 0;
+}
+div.q-xin > img{
+    height:0.31rem;
+    margin:0.1rem auto 0.3rem;
+    display: block;
+}
+div.q-xin li{
+    padding: 0.2rem;
+    width:100%;
+    height:auto;
+    box-sizing: border-box;
+}
+div.q-xin li > a{
+    display: block;
+    width:100%;
+    height:2.5rem;
+    box-shadow: 0 0 5px #aaa;
+    border-radius: 0.18rem;
+    padding-top:0.24rem;
+    position: relative;
+}
+div.q-xin li > a .q-con > img{
+    position: absolute;
+    top:-0.35rem;
+    right:0.16rem;
+    height:1.42rem;
+}
+div.q-xin li > a .q-img{
+    width:2.64rem;height:1.72rem;
+    background: #cccc77;
+    margin:0 0 0 0.2rem;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    position: relative;
+    box-shadow: 0 0 8px #ccc;
+    float: left;
+}
+div.q-xin li > a .q-img > img{
+    width:100%;
+    height:100%;
+}
+div.q-xin li > a .q-img > div{
+    width:2.64rem;height:1.72rem;
+    background: #FBDCC3;
+    position: absolute;
+    top:-0.15rem;right:-0.15rem;
+    z-index: -1;
+    border-radius: 10px;
+}
+div.q-xin li div.right{
+    float: right;
+    width:59%;
+    padding-left: 0.2rem;
+    box-sizing: border-box;
+}
+div.q-xin li div.right > .q-title{
+    margin:0 0.1rem;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.28rem;
+}
+div.q-xin li div.right > .q-title > img{
+    height:0.24rem;
+}
+div.q-xin li div.right > .q-yu{
+    padding-left:0.3rem;
+    color:#B1B1B1;
+    font-size: 0.24rem;
+}
+div.q-xin li div.right >.q-star{
+    height:0.16rem;
+    line-height:0;
+    padding:0.1rem 0.3rem 0;
+}
+div.q-xin li div.right >.q-star > img{
+    height:100%;
+}
+div.q-xin li div.right > .q-con{
+    padding:0.08rem 0.9rem 0 0.3rem;
+    color:#727272;
+}
+div.q-xin li div.q-per{
+    float: right;
+    color: #929292;
+    margin-right: 0.3rem;
+}
+
+div.q-xin li a > .q-di{
+    width:100%;
+    height:0.46rem;
+    float: left;
+    border-top:1px solid #E1E1E1;
+    display: flex;
+    justify-content: space-around;
+    line-height: 0.46rem;
+}
+div.q-xin li a > .q-di img{
+    height:0.23rem;
+}
+div.q-xin li a > .q-di span{
+    color: #979696;
+}
+
+/*脚开始*/
+footer{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    z-index: 20;
+    height:1rem;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    background: #FC811E;
+}
+footer > div{
+    width:1px;
+    height:0.3rem;
+    background: #ACACAC;
+    margin-top:0.3rem;
+}
+footer > a > img{
+    height:0.5rem;
+    margin-top:3px;
+}
+footer > a > p{
+    color:#fff;
+}
