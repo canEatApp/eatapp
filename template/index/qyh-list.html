@@ -16,25 +16,28 @@
 </head>
 <script type="text/javascript">
     $(function(){
-        var myScroll = new IScroll('#wrapper', {
+        var myScroll = new IScroll('#qyh-wrapper', {
             bounceEasing: 'elastic',
             bounceTime: 1200 ,
             mouseWheel:true,
             scrollbars:false,
         });
-        var swiper = new Swiper('.swiper-container', {
+
+        var swiper = new Swiper('.qyh-swiper-container', {
             pagination: '.swiper-pagination',
             effect: 'coverflow',
             grabCursor: true,
-            centeredSlides: true,
+            centeredSlides:false,
             slidesPerView: 'auto',
+            spaceBetween : 40,
             coverflow: {
                 rotate: 0,
-                stretch: -30,
+                stretch: 20,
                 depth: 0,
                 modifier: 1,
                 slideShadows : false
-            }
+            },
+
         });
     })
 
@@ -46,149 +49,160 @@
     <img src="../../static/img/qyh-img/q-live.png" alt="">
     <a href=""><img src="../../static/img/qyh-img/q-mess.png" alt=""></a>
 </header>
-<div id="wrapper">
+<div id="qyh-wrapper">
     <div id="scroller">
         <div class="q-banner">
-            <img src="../../static/img/qyh-img/q-xin.png" alt="">
-            <div class="swiper-container">
+            <div class="img">
+                <!--<img src="../../static/img/qyh-img/q-xin.png" alt="">-->
+                <div class="q-gg"></div>
+                <div class="q-dian"></div>
+                <p>当下热门</p>
+                <p>THE CURRENY POPULAR</p>
+                <div class="q-dian"></div>
+                <div class="q-gg"></div>
+            </div>
+            <div class="qyh-swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="">
-                            <div class="q-back"></div>
-                            <img src="../../static/img/qyh-img/q-shi.png" alt="">
-                            <div class="dian dian1"></div>
-                            <div class="dian dian2"></div>
-                            <div class="q-shi">
-                                <div class="q-rgb">
-                                    <p>￥58</p>
-                                </div>
-                                <div class="q-page">
-                                    <p class="title">营养美食汇</p>
-                                    <img src="../../static/img/qyh-img/q-huo.png" alt="" class="q-huo">
-                                    <p class="etitle">NUTRITION CUISINE</p>
-                                    <div class="star">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                    </div>
-                                    <img src="../../static/img/qyh-img/q-zan.png" alt="" class="q-zan">
-                                    <div class="q-bianqian">
-                                        <span> 会吃专送</span>
-                                        <span> 新店</span>
-                                    </div>
-                                    <DIV class="q-name">
-                                        <div class="left">
-                                            <div class="q-img" style="background-image: url('../../static/img/qyh-img/q-shi1.png');"></div>
-                                            <span>北京朝阳</span>
-                                            <span>BEIJING ZHAOYANG</span>
-                                        </div>
-                                        <div class="right">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                        </div>
 
-                                    </DIV>
-                                    <img src="../../static/img/qyh-img/q-di.png" alt="">
-                                </div>
-                            </div>
+                        <div class="q-back"></div>
+                        <a href="">
+                            <img src="../../static/img/qyh-img/q-shi.png" alt="">
                         </a>
+                        <div class="dian dian1"></div>
+                        <div class="dian dian2"></div>
+                        <div class="q-shi">
+                            <div class="q-rgb">
+                                <p>￥58</p>
+                            </div>
+                            <div class="q-page">
+                                <p class="title">营养美食汇</p>
+                                <img src="../../static/img/qyh-img/q-huo.png" alt="" class="q-huo">
+                                <p class="etitle">NUTRITION CUISINE</p>
+                                <div class="star">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                </div>
+                                <img src="../../static/img/qyh-img/q-zan.png" alt="" class="q-zan">
+                                <div class="q-bianqian">
+                                    <span> 会吃专送</span>
+                                    <span> 新店</span>
+                                </div>
+                                <div class="q-name">
+                                    <div class="left">
+                                        <div class="q-img" style="background-image: url('../../static/img/qyh-img/q-shi1.png');"></div>
+                                        <span>北京朝阳</span>
+                                        <span>BEIJING ZHAOYANG</span>
+                                    </div>
+                                    <div class="right">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                    </div>
+
+                                </div>
+                                <img src="../../static/img/qyh-img/q-di.png" alt="">
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="">
-                            <div class="q-back"></div>
-                            <img src="../../static/img/qyh-img/q-shi.png" alt="">
-                            <div class="dian dian1"></div>
-                            <div class="dian dian2"></div>
-                            <div class="q-shi">
-                                <div class="q-rgb">
-                                    <p>￥58</p>
-                                </div>
-                                <div class="q-page">
-                                    <p class="title">营养美食汇</p>
-                                    <img src="../../static/img/qyh-img/q-huo.png" alt="" class="q-huo">
-                                    <p class="etitle">NUTRITION CUISINE</p>
-                                    <div class="star">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                    </div>
-                                    <img src="../../static/img/qyh-img/q-zan.png" alt="" class="q-zan">
-                                    <div class="q-bianqian">
-                                        <span> 会吃专送</span>
-                                        <span> 新店</span>
-                                    </div>
-                                    <DIV class="q-name">
-                                        <div class="left">
-                                            <div class="q-img" style="background-image: url('../../static/img/qyh-img/q-shi1.png');"></div>
-                                            <span>北京朝阳</span>
-                                            <span>BEIJING ZHAOYANG</span>
-                                        </div>
-                                        <div class="right">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                        </div>
 
-                                    </DIV>
-                                    <img src="../../static/img/qyh-img/q-di.png" alt="">
-                                </div>
-                            </div>
+                        <div class="q-back"></div>
+                        <a href="">
+                            <img src="../../static/img/qyh-img/q-shi.png" alt="">
                         </a>
+                        <div class="dian dian1"></div>
+                        <div class="dian dian2"></div>
+                        <div class="q-shi">
+                            <div class="q-rgb">
+                                <p>￥58</p>
+                            </div>
+                            <div class="q-page">
+                                <p class="title">营养美食汇</p>
+                                <img src="../../static/img/qyh-img/q-huo.png" alt="" class="q-huo">
+                                <p class="etitle">NUTRITION CUISINE</p>
+                                <div class="star">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                </div>
+                                <img src="../../static/img/qyh-img/q-zan.png" alt="" class="q-zan">
+                                <div class="q-bianqian">
+                                    <span> 会吃专送</span>
+                                    <span> 新店</span>
+                                </div>
+                                <div class="q-name">
+                                    <div class="left">
+                                        <div class="q-img" style="background-image: url('../../static/img/qyh-img/q-shi1.png');"></div>
+                                        <span>北京朝阳</span>
+                                        <span>BEIJING ZHAOYANG</span>
+                                    </div>
+                                    <div class="right">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                    </div>
+
+                                </div>
+                                <img src="../../static/img/qyh-img/q-di.png" alt="">
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="">
-                            <div class="q-back"></div>
-                            <img src="../../static/img/qyh-img/q-shi.png" alt="">
-                            <div class="dian dian1"></div>
-                            <div class="dian dian2"></div>
-                            <div class="q-shi">
-                                <div class="q-rgb">
-                                    <p>￥58</p>
-                                </div>
-                                <div class="q-page">
-                                    <p class="title">营养美食汇</p>
-                                    <img src="../../static/img/qyh-img/q-huo.png" alt="" class="q-huo">
-                                    <p class="etitle">NUTRITION CUISINE</p>
-                                    <div class="star">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                        <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
-                                    </div>
-                                    <img src="../../static/img/qyh-img/q-zan.png" alt="" class="q-zan">
-                                    <div class="q-bianqian">
-                                        <span> 会吃专送</span>
-                                        <span> 新店</span>
-                                    </div>
-                                    <DIV class="q-name">
-                                        <div class="left">
-                                            <div class="q-img" style="background-image: url('../../static/img/qyh-img/q-shi1.png');"></div>
-                                            <span>北京朝阳</span>
-                                            <span>BEIJING ZHAOYANG</span>
-                                        </div>
-                                        <div class="right">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                            <img src="../../static/img/qyh-img/q-shi1.png" alt="">
-                                        </div>
 
-                                    </DIV>
-                                    <img src="../../static/img/qyh-img/q-di.png" alt="">
-                                </div>
-                            </div>
+                        <div class="q-back"></div>
+                        <a href="">
+                            <img src="../../static/img/qyh-img/q-shi.png" alt="">
                         </a>
+                        <div class="dian dian1"></div>
+                        <div class="dian dian2"></div>
+                        <div class="q-shi">
+                            <div class="q-rgb">
+                                <p>￥58</p>
+                            </div>
+                            <div class="q-page">
+                                <p class="title">营养美食汇</p>
+                                <img src="../../static/img/qyh-img/q-huo.png" alt="" class="q-huo">
+                                <p class="etitle">NUTRITION CUISINE</p>
+                                <div class="star">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                    <img src="../../static/img/qyh-img/q-hongxin.png" alt="">
+                                </div>
+                                <img src="../../static/img/qyh-img/q-zan.png" alt="" class="q-zan">
+                                <div class="q-bianqian">
+                                    <span> 会吃专送</span>
+                                    <span> 新店</span>
+                                </div>
+                                <div class="q-name">
+                                    <div class="left">
+                                        <div class="q-img" style="background-image: url('../../static/img/qyh-img/q-shi1.png');"></div>
+                                        <span>北京朝阳</span>
+                                        <span>BEIJING ZHAOYANG</span>
+                                    </div>
+                                    <div class="right">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                        <img src="../../static/img/qyh-img/q-shi1.png" alt="">
+                                    </div>
+
+                                </div>
+                                <img src="../../static/img/qyh-img/q-di.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -300,26 +314,5 @@
 
     </div>
 </div>
-<footer>
-    <a href="">
-        <img src="../../static/img/qyh-img/q-guan.png" alt="">
-        <p>推荐</p>
-    </a>
-    <div></div>
-    <a href="">
-        <img src="../../static/img/qyh-img/q-eye.png" alt="">
-        <p>同步</p>
-    </a>
-    <div></div>
-    <a href="">
-        <img src="../../static/img/qyh-img/q-order.png" alt="">
-        <p>订单</p>
-    </a>
-    <div></div>
-    <a href="">
-        <img src="../../static/img/qyh-img/q-geren.png" alt="">
-        <p>我的</p>
-    </a>
-</footer>
 </body>
 </html>
