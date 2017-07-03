@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 3.1.30, created on 2017-06-27 12:29:04
-  from "/Applications/MAMP/htdocs/mvc/template/admin/index.html" */
+  from "/Applications/MAMP/htdocs/mvc/template/admin/qyh-index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
@@ -11,7 +11,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     '233626ba156fbbcb80ee6bc8baa0b6e6eb7a99c6' => 
     array (
-      0 => '/Applications/MAMP/htdocs/mvc/template/admin/index.html',
+      0 => '/Applications/MAMP/htdocs/mvc/template/admin/qyh-index.html',
       1 => 1498559344,
       2 => 'file',
     ),

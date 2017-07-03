@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 3.1.30, created on 2017-06-30 07:48:23
-  from "/Applications/MAMP/htdocs/eatapp/template/index.html" */
+  from "/Applications/MAMP/htdocs/eatapp/template/qyh-index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
@@ -11,7 +11,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'ef911ddc2c95aebc70f68df19d7d1fc7b1dd5596' => 
     array (
-      0 => '/Applications/MAMP/htdocs/eatapp/template/index.html',
+      0 => '/Applications/MAMP/htdocs/eatapp/template/qyh-index.html',
       1 => 1498613658,
       2 => 'file',
     ),

@@ -20,9 +20,9 @@ class index extends indexMain {
 //        $smarty->setCompileDir("compile");
 //        $smarty->setTemplateDir("template");
 //        $smarty->assign("str","str");
-//        $smarty->display("index.html");
+//        $smarty->display("qyh-index.html");
 //        smarty引擎
-        $this->smarty->display("index.html");
+        $this->smarty->display("qyh-index.html");
 
 
     }
