@@ -22,7 +22,7 @@ class Smarty_1{
     }
     function display($file){
         //展示
-        include $this->template."/index.html";
+        include $this->template."/qyh-index.html";
         //组合拷贝文件路径
         $url=$this->template."/".$file;
         //将整个文件读成字符串file_get_contents
