@@ -14,18 +14,21 @@ class login extends main{
     }
     function load(){
         $user=$_POST["user"];
-        $password=$_POST["pass"];
-        $password=md5($password);
+        $password=md5($_POST["pass"]);
         $check=strtolower($_POST["check"]);
         $checked=$this->session->get("check");
         if ($check==$checked) {
             $db = new db();
             $arr = $db->select("user");
-            foreach ($arr as $v) {
+
+            foreach ($arr as $k=>$v) {
                 if ($user == $v["uname"]) {
                     if ($password = $v["upass"]) {
+                        $this->session->clear();
                         $this->session->set("user", "{$user}");
                         $this->session->set("load", "loaded");
+                        $uid=$v['uid'];
+                        $this->session->set("uid",$uid);
                         $this->session->set("rid",$v["rid"]);
                         $this->jump("登录成功", "m=admin&f=login&a=main");
                     } else {
@@ -34,7 +37,8 @@ class login extends main{
                 } else {
                     $this->jump("账户不存在", "m=admin&f=login");
                 }
-             }
+            }
+
         }else{
             $this->jump("验证码错误","m=admin&f=login");
         }
