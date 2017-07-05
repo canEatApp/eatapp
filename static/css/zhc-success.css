@@ -1,0 +1,58 @@
+
+html,body{
+	width: 100%;
+	height: 100%;
+	position: relative;	
+	background: #f7f7f7;
+}
+header{
+	height: 4.32rem;
+	width: 100%;
+	background: url(../img/zhc-img/images/zhc-success_02.png);
+	background-size: cover;
+}
+header img{
+	width: 0.88rem;
+	height: 0.88rem;
+}
+.success-back{
+	width: 100%;
+	height: 9.3rem;
+	position: absolute;
+	bottom: 2.04rem;
+	left: 0;
+	background: url(../img/zhc-img/images/successback_02.png);
+	background-size: cover;
+}
+.success-back p:first-child{
+	width: 2.5rem;
+	height: 0.3rem;
+	line-height: 0.3rem;
+	font-family: "黑体";
+	font-size: 0.32rem;
+	color: #fc811e;
+	position: absolute;
+	left: 3.2rem;
+	top: 3.12rem;
+}
+.success-back p:last-child{
+	width: 0.4rem;
+	height: 0.6rem;
+	line-height: 0.4rem;
+	text-align: center;
+	font-family: "黑体";
+	font-size: 0.46rem;
+	color: #fff;
+	position: absolute;
+	left: 3.6rem;
+	top: 5.3rem;
+}
+.success-btn{
+	width: 4.64rem;
+	height: 0.84rem;
+	background: url(../img/zhc-img/images/successbtn_03.png);
+	background-size: cover;
+	position: absolute;
+	bottom: 0.7rem;
+	left: 1.58rem;
+}

@@ -118,6 +118,9 @@ main .zhifubox .zflist .zflist_word div:last-child{
 	font-family: "黑体";
 	line-height: 0.4rem;
 }
+main .zhifubox .zflist .zflist_word div:last-child span{
+	font-size: 0.22rem;
+}
 main .zhifubox .zflist .zfnum{
 	width: 0.34rem;
 	height: 0.34rem;
@@ -125,6 +128,7 @@ main .zhifubox .zflist .zfnum{
 	line-height: 0.34rem;
 	color: #fff;
 	font-family: "黑体";
+	font-size: 0.24rem;
 	border-radius: 50%;
 	background: #fc721e;
 	position: absolute;
