@@ -1,0 +1,148 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	background: url(../img/zhc-img/images/parbck_02.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*background-position-y: 1.3rem;*/
+}
+header{
+	width:100%;
+	height:0.8rem;
+	display: flex;
+	align-items: center;
+	padding: 0 0.24rem;
+	box-sizing: border-box;
+	background: #fc811e;
+}
+header img{
+	width: 0.4rem;
+	height: 0.4rem;
+}
+
+
+
+main{
+	width: 100%;
+	height: 10rem;
+	padding: 1.7rem 0.42rem 0;
+	box-sizing: border-box;
+}
+main .zhifubox{
+	width: 100%;
+	height: 10.4rem;
+	background: url(../img/zhc-img/images/zhifuback_03.png);
+	background-size: cover;
+	box-shadow: 0 0 0.2rem #c36516;
+	border-radius: 0.14rem;
+	padding-top: 0.5rem;
+	padding-left: 0.02rem;
+	box-sizing: border-box;
+}
+main .zhifubox h3{
+	font-style: normal;
+	width: 100%;
+	height: 0.3rem;
+	line-height: 0.3rem;
+	text-align: center;
+	color: #5d5d5d;
+	font-size: 0.24rem;
+}
+main .zhifubox p{
+	width: 100%;
+	height: 0.3rem;
+	line-height: 0.3rem;
+	text-align: center;
+	color: #b3b3b3;
+	font-size: 0.22rem;
+	font-family: "黑体";
+}
+main .zhifubox .select{
+	width: 100%;
+	height: 2rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 0.4rem;
+}
+main .zhifubox .select img{
+	width: 2.75rem;
+	height: 1.08rem;
+}
+
+
+main .zhifubox .zhifutitle{
+	height: 1rem;
+	width: 100%;
+	background: url(../img/zhc-img/images/zftitlea_10.png);
+	background-size: cover;
+}
+main .zhifubox .zflist{
+	height: 1.1rem;
+	width: 6.24rem;
+	margin: 0.08rem auto;
+	background: #fff;
+	border-radius: 0.08rem;
+	position: relative;
+}
+main .zhifubox .zflist .zfhead{
+	float: left;
+	width:1.1rem;
+	height:1.1rem;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+}
+main .zhifubox .zflist .zfhead img{
+	width:0.64rem;
+	height:0.64rem;
+}
+main .zhifubox .zflist .zflist_word{
+	 width: auto;
+	 height: 100%;
+	 float: left;
+	 padding-top: 0.15rem;
+	 box-sizing: border-box;
+}
+main .zhifubox .zflist .zflist_word div:first-child{
+	font-size: 0.26rem;
+	color: #747474;
+	height: 0.4rem;
+	line-height: 0.4rem;	 
+	font-family: "黑体";
+}
+main .zhifubox .zflist .zflist_word div:last-child{
+	font-size: 0.22rem;
+	color: #b5b1b1;
+	height: 0.4rem;
+	font-family: "黑体";
+	line-height: 0.4rem;
+}
+main .zhifubox .zflist .zflist_word div:last-child span{
+	font-size: 0.22rem;
+}
+main .zhifubox .zflist .zfnum{
+	width: 0.34rem;
+	height: 0.34rem;
+	text-align: center;
+	line-height: 0.34rem;
+	color: #fff;
+	font-family: "黑体";
+	font-size: 0.24rem;
+	border-radius: 50%;
+	background: #fc721e;
+	position: absolute;
+	right: 0.24rem;
+	top: 50%;
+	margin-top: -0.17rem;
+}
+main .zhifubox .zflist .zfnums{
+	width: 0.08rem;
+	height: 0.9rem;
+	position: absolute;
+	right: 0.08rem;
+	top: 50%;
+	margin-top: -0.45rem;
+	background: #fc801e;
+	border-radius: 0.06rem;
+}

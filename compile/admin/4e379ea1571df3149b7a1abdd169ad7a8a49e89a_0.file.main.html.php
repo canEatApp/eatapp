@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-02 18:05:48
+/* Smarty version 3.1.30, created on 2017-07-04 02:46:07
   from "/Applications/MAMP/htdocs/eatapp/template/admin/main.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_595919dc287597_90915212',
+  'unifunc' => 'content_595ae54f002b62_22992045',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4e379ea1571df3149b7a1abdd169ad7a8a49e89a' => 
     array (
       0 => '/Applications/MAMP/htdocs/eatapp/template/admin/main.html',
-      1 => 1498903543,
+      1 => 1499064491,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_595919dc287597_90915212 (Smarty_Internal_Template $_smarty_tpl) {
+function content_595ae54f002b62_22992045 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,9 +80,10 @@ function content_595919dc287597_90915212 (Smarty_Internal_Template $_smarty_tpl)
         </li>
         <?php }?>
         <li>
-            <span>内容管理</span>
+            <span>商品管理</span>
             <ul>
-                <li><a href="" target="window">添加内容</a></li>
+                <li><a href="index.php?m=admin&f=commodity" target="window">添加商品</a></li>
+                <li><a href="index.php?m=admin&f=commodity&a=admin" target="window">管理商品</a></li>
             </ul>
         </li>
         <li>

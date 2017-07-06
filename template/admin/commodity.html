@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{$smarty.const.CSS_PATH}/bootstrap.min.css">
+    <script src="{$smarty.const.JS_PATH}/jquery.js"></script>
+    <script src="{$smarty.const.JS_PATH}/uploadimg.js"></script>
+</head>
+<style>
+    #add{
+        margin-top:10px;
+        margin-left:10px;
+    }
+     .img{
+         width:100px;
+     }
+    #shopName{
+        width:20%;
+        display: inline-block;
+    }
+    .width{
+        width:40%;
+    }
+</style>
+<body>
+<form action="index.php?m=admin&f=commodity&a=lists" id="add" method="post">
+    <select name="" id="">
+        {foreach $arr as $v}
+        <option value="{$v['lid']}" name="lid">--{$v['lname']}--</option>
+        {/foreach}
+    </select>
+    <input type="text" name="lname" placeholder="添加分类">
+    <input type="submit" value="添加">
+</form>
+分类／价格／图片／购买量／属于哪个店铺／简介／收藏／
+<br>表commodity cid cname cprice cimg sid cnotes clike cbuy(购买量) ccid(分类) crec(推荐) keywords
+
+<form action="index.php?m=admin&f=commodity&a=add" method="post">
+    <select name="ccid" >
+        <label for="disabledTextInput">所属分类</label>
+        {foreach $arr as $v}
+        <option value="{$v['lid']}" name="ccid">--{$v['lname']}--</option>
+        {/foreach}
+    </select>
+    <div class="form-group">
+        <label for="disabledTextInput">商品名</label>
+        <input type="text" id="cname" class="form-control" name="cname"  value="">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">价格</label>
+        <input type="text" class="form-control width" value="" name="cprice">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">简介</label>
+        <input type="text" class="form-control width" value="{$info['snotes']}" name="cnotes">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">关键词</label>
+        <input type="text" class="form-control width" value="{$info['snotes']}" name="keywords">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">推荐</label>
+        <input type="radio" name="crec"  value="1" checked>
+        推荐
+        <input type="radio" name="crec" value="0" checked>
+        不推荐
+    </div>
+    <div class="form-group" id="change">
+        <input type="hidden" class="inputImg" name="cimg" value="1">
+        <input type="hidden" name="uid" value="{$uid}">
+    </div>
+    <button type="submit" class="btn btn-default">添加</button>
+</form>
+<label for="exampleInputPassword1">添加缩略图</label>
+</body>
+<script>
+    window.onload=function () {
+        let obj=new upload_1();
+        obj.url="upload.php";
+        obj.success=function (url) {
+            document.querySelector(".inputImg").value=url;
+        };
+        obj.createView();
+    }
+</script>
+</html>

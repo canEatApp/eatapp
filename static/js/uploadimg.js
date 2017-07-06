@@ -36,8 +36,7 @@ class upload_1{
 
     }
     createBox(box){
-        if (box){
-            this.box=box;
+        if (!this.box==""){
             return;
         }
         this.box=document.createElement("div");

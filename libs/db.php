@@ -90,9 +90,11 @@ class db{
             }else{
                 $this->opts["field"]=$params;
                 $this->opts["where"]= $this->opts["where"];
-
             }
         }
+        $sql="update ".$this->table." set ".$this->opts["field"]." ".$this->opts["where"];
+        $this->db->query($sql);
+        return $this->db->affected_rows;
     }
     //增加
     function insert($params="",$table){
