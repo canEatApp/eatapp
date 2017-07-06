@@ -46,5 +46,27 @@ class addRole extends main {
     function checkAdmin(){
 
     }
+    //app分类管理
+    function applist(){
+        $db=new db();
+        $result=$db->select("applists");
+        if ($result){
+            $this->smarty->assign("arr",$result);
+        }
+        $this->smarty->display("applist.html");
+
+    }
+    function addAppList(){
+        $alimg=$_POST["alimg"];
+        $alname=$_POST["alname"];
+        $db=new db();
+        $result=$db->insert("alname='{$alname}',alimg='{$alimg}'","applists");
+        if ($result>0){
+            $this->jump("添加成功","m=admin&f=addRole&a=applist");
+        }else{
+            $this->jump("添加失败","m=admin&f=addRole&a=applist");
+        }
+
+    }
 }
 
