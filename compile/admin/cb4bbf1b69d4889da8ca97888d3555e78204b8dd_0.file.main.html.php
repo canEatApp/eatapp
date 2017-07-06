@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-05 11:55:31
+/* Smarty version 3.1.30, created on 2017-07-06 08:11:13
   from "D:\html\wamp\www\eatapp\template\admin\main.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_595cb7933a8337_73161972',
+  'unifunc' => 'content_595dd4818937b5_76463377',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cb4bbf1b69d4889da8ca97888d3555e78204b8dd' => 
     array (
       0 => 'D:\\html\\wamp\\www\\eatapp\\template\\admin\\main.html',
-      1 => 1499049581,
+      1 => 1499321465,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_595cb7933a8337_73161972 (Smarty_Internal_Template $_smarty_tpl) {
+function content_595dd4818937b5_76463377 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +45,9 @@ function content_595cb7933a8337_73161972 (Smarty_Internal_Template $_smarty_tpl)
     <ul id="box">
         <?php if ($_smarty_tpl->tpl_vars['rid']->value == 1) {?>
         <li>
+            <a href="index.php?m=admin&f=addRole&a=applist" target="window" style="color: #ccc;">App分类管理</a>
+        </li>
+        <li>
             <span>角色管理</span>
             <ul >
                 <li>
@@ -66,6 +69,7 @@ function content_595cb7933a8337_73161972 (Smarty_Internal_Template $_smarty_tpl)
                 </li>
             </ul>
         </li>
+
         <?php } else { ?>
         <li>
             <span>店铺管理</span>
@@ -80,9 +84,10 @@ function content_595cb7933a8337_73161972 (Smarty_Internal_Template $_smarty_tpl)
         </li>
         <?php }?>
         <li>
-            <span>内容管理</span>
+            <span>商品管理</span>
             <ul>
-                <li><a href="" target="window">添加内容</a></li>
+                <li><a href="index.php?m=admin&f=commodity" target="window">添加商品</a></li>
+                <li><a href="index.php?m=admin&f=commodity&a=admin" target="window">管理商品</a></li>
             </ul>
         </li>
         <li>
