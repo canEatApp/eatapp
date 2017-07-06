@@ -14,7 +14,6 @@ $().ready(function(){
   				}
   			})
   			if($('.color').length==6){
-				$('.cover').removeClass('active');
         			location.href='zhc-success.html';
 			}
             this.value=this.value.replace(/^(.).*$/,'$1');
