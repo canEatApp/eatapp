@@ -1,0 +1,166 @@
+body{
+	width: 100%;
+	height: 100%;
+	background: #fc811e;
+}
+header{
+	width: 7.5rem;
+	height: 6.76rem;
+	background-image: url(../img/xx-img/xx-login01.png);
+	background-size: 100%;
+}
+.begin{
+	width: 100%;
+	height: .74rem;
+}
+.begin > a:first-child{
+	width: .77rem;
+	height: 100%;
+	display: block;
+	background-image: url(../img/xx-img/xx-login02.png);
+	background-size: 100%;
+	float: left;
+}
+.begin > a:nth-child(2){
+	width: 1.42rem;
+	height: 100%;
+	display: block;
+	float: right;
+	background-image: url(../img/xx-img/xx-login03.png);
+	background-size: 100%;
+}
+header > img{
+	width: 2.4rem;
+	height: 2.05rem;
+	display: block;
+	margin: .46rem auto .34rem auto;
+}
+p,h3,h4{
+	text-align: center;
+	text-transform: uppercase;
+}
+p{
+	font-size: .36rem;
+	color: #fefefe;
+	font-weight: 600;
+}
+h3{
+	font-size: .42rem;
+	color: #FFFFFF;
+}
+h4{
+	font-size: .32rem;
+	color: #fefefe;
+	text-transform: lowercase;
+	font-weight: 600;
+}
+.logn{
+	width: 100%;
+	height: .79rem;
+	text-align: center;
+	margin-top: .44rem;
+}
+.logn > img{
+	width: 1.77rem;
+	height: 100%;
+	
+}
+.number{
+	width: 7.5rem;
+	height: 1.67rem;
+	background-image: url(../img/xx-img/xx-logn_18.png);
+	background-size: 100%;
+	overflow: hidden;
+}
+.number > p{
+	width: 1.12rem;
+	height: .2rem;
+	margin: .54rem 0 .16rem 1.02rem;
+	color: #fb7e19;
+	font-size: .22rem;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+.number > input{
+	width: 4.5rem;
+	height: .36rem;
+	border: none;
+	margin-left: 1.06rem;
+	color: #c3c2c2;
+}
+input:-moz-placeholder,   
+textarea:-moz-placeholder {   
+    color: #c3c2c2;   
+}   
+  
+input:-ms-input-placeholder,   
+textarea:-ms-input-placeholder {   
+    color: #c3c2c2;   
+}   
+  
+input::-webkit-input-placeholder,   
+textarea::-webkit-input-placeholder {   
+    color: #c3c2c2;   
+}  
+*:focus { outline: none; }
+
+.find{
+	width: 100%;
+	height: .5rem;
+	padding: 1.2rem .66rem .73rem .66rem;
+}
+.find > div{
+	width: .04rem;
+	height: .16rem;
+	border-radius: .02rem;
+	background: #ffca2a;
+	float: left;
+	margin-top: .06rem;
+}
+.find >p{
+	width: 50%;
+	height: 100%;
+	font-size: .2rem;
+	text-transform: capitalize;
+	text-align: left;
+	padding-left: .1rem;
+	float: left;
+}
+.find > img{
+	display: block;
+	float: right;
+	width: 1.53rem;
+	margin-right: .75rem;
+}
+.login{
+	width: 5.49rem;
+	height: 1.1rem;
+	margin: 0 auto;
+	background-image: url(../img/xx-img/xx-login08.png);
+	background-size: 100%;
+	padding-top: .16rem;
+	box-sizing: border-box;
+}
+.login > p:first-child{
+	color: #e0e0e0;
+	font-size: .3rem;
+}
+.login > p:nth-child(2){
+	color: #e0e0e0;
+	font-size: .2rem;
+}
+.logintwo{
+	display: none;
+}
+.outside > img:first-child{
+	width: 6.34rem;
+	height: .37rem;
+	margin: .8rem  auto 0 auto;
+	display: block;
+}
+.outside > img:nth-child(2){
+	width: 2.67rem;
+	height: .79rem;
+	margin: .26rem auto 0 auto;
+	display: block;
+}
