@@ -19,7 +19,7 @@ div.q-search{
     display: inline-block;
     vertical-align:top;
     margin-top:0.16rem;
-    width:4.3rem;
+    width:4rem;
     height:0.55rem;
 }
 header div.q-search > input{
@@ -212,6 +212,56 @@ div.q-banner  .star > img{
     height:100%;
 }
 /*猜你喜欢开始*/
+.img{
+    height:auto;
+    line-height: 0;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 0 1.8rem 0.4rem;
+    margin-top:0.05rem;
+    /*box-sizing: border-box;*/
+}
+.img > .q-gg{
+    width:1rem;
+    height:0.02rem;
+    background: #E1DCD7;
+    margin-top:0.2rem;
+}
+.img > .q-dian{
+    width:0.1rem;
+    height:0.1rem;
+    border-radius: 50%;
+    background: #E1DCD7;
+    margin-top:0.17rem;
+}
+.img >p:first-of-type {
+    display: inline-block;
+    height: 0.4rem;
+    line-height: 0;
+    font-size: 0.26rem;
+    font-weight:800;
+    line-height: 1.9em;
+    ont-family: ´微软雅黑´;
+    background-image: -webkit-gradient(linear, 0 0, 100% bottom, from(rgba(253, 144, 60, 1)), to(rgba(234, 28, 72, 1)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.img >p:last-of-type{
+    position:absolute;
+    bottom: 0.3rem;
+    left:0;
+    width:118%;
+    height:0.4rem;
+    line-height: 2.5em;
+    text-align: center;
+    margin-left:-0.6rem;
+    font-size:0.24rem;
+    letter-spacing:-1px;
+    z-index: -1;
+    color:#E8E7E7;
+    font-weight: bold;
+}
 div.q-like{
     margin:0.2rem 0;
     width:100%;

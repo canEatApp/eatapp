@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-07-05 11:53:23
+  from "D:\html\wamp\www\eatapp\template\index\qyh-index.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_595cb713ddf816_86208910',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '098d6b8ca8d4cd1a516ac2496ee8cac93d53cfe2' => 
+    array (
+      0 => 'D:\\html\\wamp\\www\\eatapp\\template\\index\\qyh-index.html',
+      1 => 1499077959,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_595cb713ddf816_86208910 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,15 +30,24 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
-    <script src="../../static/js/common.js"></script>
-    <script src="../../static/js/jquery.js"></script>
-    <script src="../../static/js/swiper.js"></script>
-    <script src="../../static/js/iscroll.js"></script>
+    <?php echo '<script'; ?>
+ src="../../static/js/common.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="../../static/js/jquery.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="../../static/js/swiper.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="../../static/js/iscroll.js"><?php echo '</script'; ?>
+>
     <link rel="stylesheet" href="../../static/css/common.css">
     <link rel="stylesheet" href="../../static/css/swiper.min.css">
     <link rel="stylesheet" href="../../static/css/qyh-index.css">
 </head>
-<script type="text/javascript">
+<?php echo '<script'; ?>
+ type="text/javascript">
 $(function(){
     var myScroll = new IScroll('#qyh-wrapper', {
         bounceEasing: 'elastic',
@@ -39,7 +72,8 @@ $(function(){
 })
 
 
-</script>
+<?php echo '</script'; ?>
+>
 
 
 <body>
@@ -175,15 +209,7 @@ $(function(){
             </div>
         </div>
         <div class="q-like">
-            <div class="img">
-                <!--<img src="../../static/img/qyh-img/q-xin.png" alt="">-->
-                <div class="q-gg"></div>
-                <div class="q-dian"></div>
-                <p>猜你喜欢</p>
-                <p>THE CURRENY POPULAR</p>
-                <div class="q-dian"></div>
-                <div class="q-gg"></div>
-            </div>
+            <img src="../../static/img/qyh-img/q-like.png" alt="">
             <ul>
                 <li>
                     <div class="q-back"></div>
@@ -280,15 +306,7 @@ $(function(){
             </ul>
         </div>
         <div class="q-xin">
-            <div class="img">
-                <!--<img src="../../static/img/qyh-img/q-xin.png" alt="">-->
-                <div class="q-gg"></div>
-                <div class="q-dian"></div>
-                <p>新品推荐</p>
-                <p>THE CURRENY POPULAR</p>
-                <div class="q-dian"></div>
-                <div class="q-gg"></div>
-            </div>
+            <img src="../../static/img/qyh-img/q-xin.png" alt="">
             <ul>
                 <li>
                     <a href="">
@@ -416,4 +434,5 @@ $(function(){
     </a>
 </footer>
 </body>
-</html>
+</html><?php }
+}

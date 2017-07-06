@@ -1,0 +1,173 @@
+#qyh-wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 5.82rem;
+    bottom: 48px;
+    left: 0;
+    width: 100%;
+    background: #F7F7F7;
+    overflow: hidden;
+}
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+
+header{
+    width:100%;
+    height:4.68rem;
+    background-image: url("../img/qyh-img/qg-bj.png");
+    background-size: cover;
+}
+header > a.share{
+    display: block;
+    width:1.03rem;
+    margin-left:6.3rem;
+    padding-top:0.2rem;
+}
+header > a > img{
+    width:1.03rem;
+    text-align: right;
+}
+header > div.header{
+    wisth:100%;
+    line-height: 1.82rem;
+    display: flex;
+    justify-content: space-around;
+}
+header > div.header > a{
+    display: block;
+    width:0.6rem;
+}
+header > div.header > a > img{
+    width:100%;
+}
+header > div.header > div.photo{
+    width:1.82rem;
+    height:1.82rem;
+    background: rgba(234,227,227,0.2);
+    border-radius: 50%;
+    position: relative;
+}
+header > div.header > div.photo > .a1{
+    width:1.58rem;
+    height:1.58rem;
+    background: rgba(234,227,227,0.4);
+    border-radius: 50%;
+    position:absolute;
+    top:0.11rem;
+    left:0.11rem;
+}
+header > div.header > div.photo > .a2{
+    width:1.3rem;
+    height:1.3rem;
+    background: rgba(234,227,227,0.6);
+    border-radius: 50%;
+    position:absolute;
+    top:0.25rem;
+    left:0.25rem;
+    z-index: 4;
+}
+header > div.header > div.photo > .a3{
+    width:1rem;
+    height:1rem;
+    border-radius: 50%;
+    position:absolute;
+    top:0.37rem;
+    left:0.37rem;
+    z-index: 5;
+    border:2px solid #fff;
+}
+header > div.header > div.photo > .a3 > img{
+    width:0.4rem;
+    position:absolute;
+    top:0.67rem;
+    left:0.67rem;
+}
+header > p.name{
+    width:100%;
+    text-align: center;
+    color:#fff;
+    font-size: 0.3rem;
+}
+header > p.like{
+    width:100%;
+    text-align: center;
+    color:#fff;
+    font-size: 0.26rem;
+}
+header > div.star{
+    width:100%;
+    height:0.21rem;
+    text-align: center;
+}
+header > div.star > img{
+    height:100%;
+}
+header > div.sign{
+    float: right;
+    width:1.2rem;
+    position: relative;
+    height:0.5rem;
+    margin-right:0.2rem;
+}
+header > div.sign > img{
+    float: right;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+header > div.sign > span{
+    color:#fff;
+    position: absolute;top:0.1rem;left:0.1rem;
+}
+div.content{
+    width:7.05rem;
+    margin:0 auto;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    z-index: 20;
+    height:1rem;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    background: #FC811E;
+}
+footer > div{
+    width:1px;
+    height:0.3rem;
+    background: #ACACAC;
+    margin-top:0.3rem;
+}
+footer > a > img{
+    height:0.5rem;
+    margin-top:3px;
+}
+footer > a > p{
+    color:#fff;
+}
