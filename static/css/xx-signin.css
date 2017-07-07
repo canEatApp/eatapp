@@ -106,7 +106,7 @@ textarea::-webkit-input-placeholder {
 	color: #B7B7B7;
 	text-align: center;
 }
-.err{
+.err,label{
 	width: 4.88rem;
 	height: .83rem;
 	line-height: .83rem;
