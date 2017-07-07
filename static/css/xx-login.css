@@ -65,6 +65,9 @@ h4{
 	height: 100%;
 	
 }
+.logn > img:nth-child(3){
+	display: none;
+}
 .number{
 	width: 7.5rem;
 	height: 1.67rem;
@@ -88,6 +91,9 @@ h4{
 	margin-left: 1.06rem;
 	color: #c3c2c2;
 }
+.number > input:nth-of-type(2){
+	display: none;
+}
 input:-moz-placeholder,   
 textarea:-moz-placeholder {   
     color: #c3c2c2;   
@@ -105,9 +111,10 @@ textarea::-webkit-input-placeholder {
 *:focus { outline: none; }
 
 .find{
-	width: 100%;
+	width: 7.5rem;
 	height: .5rem;
 	padding: 1.2rem .66rem .73rem .66rem;
+	box-sizing: border-box;
 }
 .find > div{
 	width: .04rem;
@@ -130,12 +137,12 @@ textarea::-webkit-input-placeholder {
 	display: block;
 	float: right;
 	width: 1.53rem;
-	margin-right: .75rem;
+	margin-right: -.6rem;
 }
 .login{
 	width: 5.49rem;
 	height: 1.1rem;
-	margin: 0 auto;
+	margin: .6rem auto 0 auto;
 	background-image: url(../img/xx-img/xx-login08.png);
 	background-size: 100%;
 	padding-top: .16rem;
