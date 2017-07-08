@@ -1,31 +1,109 @@
 $(function(){
-	$("input:first-child").blur(function(){
-		$(".user").html("")
+	$("input:first-of-type").blur(function(){
+//		console.log($("label").css("displiay"))	
+		window.setTimeout(function(){	
+			console.log($("label").css("display"))
+			if($("label").css("display")=="none"){
+				if($("input:first-of-type").val()!==""){
+					$(".user").html("")
+				}			
+			}else{
+			}
+		}
+		,100)		
+		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
+	 		$(".submit").css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+	 		$(".submit p").css("color","#FFFFFF")
+	 		$(".submit > h4").css("color","#FFFFFF")
+	 }
 	})
 	$(".phone").click(function(){
-		$(".phone").html("")
+		window.setTimeout(function(){	
+			console.log($("label").css("display"))
+			if($("label").css("display")=="none"){
+				
+				$(".phone").html("")
+			}else{
+			}
+		}
+		,100)	
+		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
+	 		$(".submit").css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+	 		$(".submit p").css("color","#FFFFFF")
+	 		$(".submit > h4").css("color","#FFFFFF")
+	 }
 	})
-	$("input:nth-child(3)").blur(function(){
-		$(".verfi").html("")
+	$("input:nth-of-type(3)").blur(function(){
+		window.setTimeout(function(){	
+			console.log($("label").css("display"))
+			if($("label").css("display")=="none"){
+				if($("input:nth-of-type(3)").val()!==""){
+					$(".verfi").html("")	
+				}				
+			}else{
+			}
+		}
+		,100)	
+		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
+	 		$(".submit").css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+	 		$(".submit p").css("color","#FFFFFF")
+	 		$(".submit > h4").css("color","#FFFFFF")
+	 }
 	})
-	$("input:nth-child(4)").focus(function(){
+	$("input:nth-of-type(4)").focus(function(){
 		$(".err").css("display","none")
+		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
+	 		$(".submit").css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+	 		$(".submit p").css("color","#FFFFFF")
+	 		$(".submit > h4").css("color","#FFFFFF")
+	 }
 	})
-	$("input:nth-child(4)").blur(function(){
-		$(".pass").html("")
-//		if($("input:nth-child(4)").val()==$("input:nth-child(5)").val()){
+	$("input:nth-of-type(4)").blur(function(){
+		window.setTimeout(function(){	
+			console.log($("label").css("display"))
+			if($("label").css("display")=="none"){
+				if($("input:nth-of-type(4)").val()!==""){
+					$(".pass").html("")
+				}
+			}else{
+			}
+		}
+		,100)	
+		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
+	 		let sub=$(".submit");
+			sub.css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+	 		$(".submit p").css("color","#FFFFFF")
+	 		$(".submit > h4").css("color","#FFFFFF")
+
+
+	 }
+//		if($("input:nth-of-type(4)").val()==$("input:nth-of-type(5)").val()){
 //			
 //		}else{
 //			$(".err").css("display","block")
 //		}
 	})
-	$("input:nth-child(5)").blur(function(){
-		$(".again").html("")
-		if($("input:nth-child(4)").val()==$("input:nth-child(5)").val()){
+	$("input:nth-of-type(5)").blur(function(){
+		window.setTimeout(function(){	
+			console.log($("label").css("display"))
+			if($("label").css("display")=="none"){
+				if($("input:nth-of-type(5)").val()!==""){
+					$(".again").html("")
+				}				
+			}else{
+			}
+		}
+		,100)	
+		if($("input:nth-of-type(4)").val()==$("input:nth-of-type(5)").val()){
 			
 		}else{
 			$(".err").css("display","block")
 		}
+		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
+	 		$(".submit").css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+	 		$(".submit p").css("color","#FFFFFF")
+	 		$(".submit > h4").css("color","#FFFFFF")
+	 }
 	})
 //	$("form div").html("")
 
@@ -36,7 +114,7 @@ $(function(){
 		 rules:{ //验证规则
 			 username:{
 				 required:true, //必填字段
-				 rangelength:[6,100], //长度在6-10之间
+				 rangelength:[6,15], //长度在6-10之间
 				 digits:true
 			 },
 			 nums:{
@@ -61,19 +139,22 @@ $(function(){
 			 },
 			 nums:{
 				 required:"工作号必填",
-				 digits:"工作号必须为数字",
+				 digits:"输入正确的手机号",
 				 rangelength:"输入正确手机号"
 			 },
 			 ver:{
 			 	rangelength:"输入4位验证码",
 			 },
 			 pass:{
-			 	 rangelength:"用户名长度必须为8-18位",
+			 	 rangelength:"密码长度必须为8-18位",
 			 }
 		},
 			 //验证通过可以在这里做你想做的事情
 		submitHandler:function(form){
 			 	alert("验证通过");
-			 }
-	})
+			}
+	})	
+//	window.setInterval(function(){
+//		console.log($("input:nth-of-type(5)").val())	
+//	},500)
 })
