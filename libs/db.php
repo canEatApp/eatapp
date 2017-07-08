@@ -48,8 +48,7 @@ class db{
     }
     //查询条件
     function where($params){
-        $this->opts["where"]=" WHERE ".$params;
-        return $this;
+         return $this;
     }
     //排序规则
     function oder($params){

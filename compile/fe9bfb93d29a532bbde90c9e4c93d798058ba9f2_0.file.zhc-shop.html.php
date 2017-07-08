@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-07-08 12:51:06
+  from "D:\YEK\tool\wamp\www\eatapp\template\index\zhc-shop.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5960b91a688bb4_34152647',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'fe9bfb93d29a532bbde90c9e4c93d798058ba9f2' => 
+    array (
+      0 => 'D:\\YEK\\tool\\wamp\\www\\eatapp\\template\\index\\zhc-shop.html',
+      1 => 1499510919,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5960b91a688bb4_34152647 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,50 +29,79 @@
 			<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
 	</head>
-	<script src="{JS_PATH}/common.js"></script>
-	<script src="{JS_PATH}/jquery.js"></script>
-	<script src="{JS_PATH}/angular.min.js"></script>
-	<script src="{JS_PATH}/iscroll.js"></script>
-	<script src="{JS_PATH}/zhc-shop.js"></script>
-	<link rel="stylesheet" href="{CSS_PATH}/common.css" />
-	<link rel="stylesheet" type="text/css" href="{CSS_PATH}/zhc-shop.css"/>
+	<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+/common.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+/jquery.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+/angular.min.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+/iscroll.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+/zhc-shop.js"><?php echo '</script'; ?>
+>
+	<link rel="stylesheet" href="<?php echo CSS_PATH;?>
+/common.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>
+/zhc-shop.css"/>
 	<body ng-app="myapp" ng-controller="ctrl">
 		<header>
 			<div class="top">
-				<a href="javascript:;"><img src="{IMG_PATH}/zhc-img/images/icon_03.png"></a>
-				<a href="javascript:;"><img src="{IMG_PATH}/zhc-img/images/icon_05.png"></a>
+				<a href="javascript:;"><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/icon_03.png"></a>
+				<a href="javascript:;"><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/icon_05.png"></a>
 			</div>
 			<div class="bottom">
 				<div class="hblt">
 					<div class="back">
-						<div><img src="{IMG_PATH}/zhc-img/images/shophead_10.png" alt="" /></div>
+						<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/shophead_10.png" alt="" /></div>
 					</div>
 				</div>
 				<div class="hbgt">
-					<p>{$shopname}</p>
+					<p><?php echo $_smarty_tpl->tpl_vars['shopname']->value;?>
+</p>
 					<div class="addrssbox">
-						<img src="{IMG_PATH}/zhc-img/images/icon_10.png" alt="" />
+						<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/icon_10.png" alt="" />
 						<div class="words">
 							<div class="tiao"></div>
-							<div class="english">{$english}</div>
+							<div class="english"><?php echo $_smarty_tpl->tpl_vars['english']->value;?>
+</div>
 						</div>
 					</div>
 					<div class="where">
 						<div class="km">0.3km</div>
 						<div class="time">46min</div>
 						<div class="money">
-							<span>{$srules}</span>
+							<span><?php echo $_smarty_tpl->tpl_vars['srules']->value;?>
+</span>
 							<span>RMB</span>
 						</div>
 						<div class="song">起送</div>
 					</div>
 					<div class="starbox">
 						<div class="stars">
-							<img src="{IMG_PATH}/zhc-img/images/star_24.png" alt="" />
-							<img src="{IMG_PATH}/zhc-img/images/star_24.png" alt="" />
-							<img src="{IMG_PATH}/zhc-img/images/star_24.png" alt="" />
-							<img src="{IMG_PATH}/zhc-img/images/star_24.png" alt="" />
-							<img src="{IMG_PATH}/zhc-img/images/star_24.png" alt="" />
+							<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/star_24.png" alt="" />
+							<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/star_24.png" alt="" />
+							<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/star_24.png" alt="" />
+							<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/star_24.png" alt="" />
+							<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/star_24.png" alt="" />
 						</div>
 						<div class="num">5.0</div>
 					</div>
@@ -60,7 +113,8 @@
 			</div>
 		</header>
 		<section class="zhc_mess">
-			<div class="p_mess"><span>{$snotes}</span></div>
+			<div class="p_mess"><span><?php echo $_smarty_tpl->tpl_vars['snotes']->value;?>
+</span></div>
 			<div class="btn_box">
 				<div class="btn_boxs">
 					<button type="button" class="active">订餐</button>
@@ -98,20 +152,24 @@
 							<div class="lt_head">
 								<a href="">
 									<div class="lt_head_imgbox">
-										<img src="{IMG_PATH}/zhc-img/images/pinlunhead_03.png" alt="" />
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlunhead_03.png" alt="" />
 									</div>
 								</a>
 							</div>
 							<div class="gt_word">
 								<div class="gt_word_title">
 									<span>ecological food</span>
-									<img src="{IMG_PATH}/zhc-img/images/new_03.png" alt="" />
+									<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/new_03.png" alt="" />
 								</div>
 								<div class="gt_word_p">这就是生活所以说愁眉苦脸的日子</div>
 								<div class="tiaoss"></div>
 								<div class="gt_btn">
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
 								</div>
 							</div>
 						</li>
@@ -119,20 +177,24 @@
 							<div class="lt_head">
 								<a href="">
 									<div class="lt_head_imgbox">
-										<img src="{IMG_PATH}/zhc-img/images/pinlunhead_03.png" alt="" />
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlunhead_03.png" alt="" />
 									</div>
 								</a>
 							</div>
 							<div class="gt_word">
 								<div class="gt_word_title">
 									<span>ecological food</span>
-									<img src="{IMG_PATH}/zhc-img/images/new_03.png" alt="" />
+									<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/new_03.png" alt="" />
 								</div>
 								<div class="gt_word_p">这就是生活所以说愁眉苦脸的日子</div>
 								<div class="tiaoss"></div>
 								<div class="gt_btn">
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
 								</div>
 							</div>
 						</li>
@@ -140,20 +202,24 @@
 							<div class="lt_head">
 								<a href="">
 									<div class="lt_head_imgbox">
-										<img src="{IMG_PATH}/zhc-img/images/pinlunhead_03.png" alt="" />
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlunhead_03.png" alt="" />
 									</div>
 								</a>
 							</div>
 							<div class="gt_word">
 								<div class="gt_word_title">
 									<span>ecological food</span>
-									<img src="{IMG_PATH}/zhc-img/images/new_03.png" alt="" />
+									<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/new_03.png" alt="" />
 								</div>
 								<div class="gt_word_p">这就是生活所以说愁眉苦脸的日子</div>
 								<div class="tiaoss"></div>
 								<div class="gt_btn">
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
 								</div>
 							</div>
 						</li>
@@ -161,20 +227,24 @@
 							<div class="lt_head">
 								<a href="">
 									<div class="lt_head_imgbox">
-										<img src="{IMG_PATH}/zhc-img/images/pinlunhead_03.png" alt="" />
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlunhead_03.png" alt="" />
 									</div>
 								</a>
 							</div>
 							<div class="gt_word">
 								<div class="gt_word_title">
 									<span>ecological food</span>
-									<img src="{IMG_PATH}/zhc-img/images/new_03.png" alt="" />
+									<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/new_03.png" alt="" />
 								</div>
 								<div class="gt_word_p">这就是生活所以说愁眉苦脸的日子</div>
 								<div class="tiaoss"></div>
 								<div class="gt_btn">
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
 								</div>
 							</div>
 						</li>
@@ -182,20 +252,24 @@
 							<div class="lt_head">
 								<a href="">
 									<div class="lt_head_imgbox">
-										<img src="{IMG_PATH}/zhc-img/images/pinlunhead_03.png" alt="" />
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlunhead_03.png" alt="" />
 									</div>
 								</a>
 							</div>
 							<div class="gt_word">
 								<div class="gt_word_title">
 									<span>ecological food</span>
-									<img src="{IMG_PATH}/zhc-img/images/new_03.png" alt="" />
+									<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/new_03.png" alt="" />
 								</div>
 								<div class="gt_word_p">这就是生活所以说愁眉苦脸的日子</div>
 								<div class="tiaoss"></div>
 								<div class="gt_btn">
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
 								</div>
 							</div>
 						</li>
@@ -203,20 +277,24 @@
 							<div class="lt_head">
 								<a href="">
 									<div class="lt_head_imgbox">
-										<img src="{IMG_PATH}/zhc-img/images/pinlunhead_03.png" alt="" />
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlunhead_03.png" alt="" />
 									</div>
 								</a>
 							</div>
 							<div class="gt_word">
 								<div class="gt_word_title">
 									<span>ecological food</span>
-									<img src="{IMG_PATH}/zhc-img/images/new_03.png" alt="" />
+									<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/new_03.png" alt="" />
 								</div>
 								<div class="gt_word_p">这就是生活所以说愁眉苦脸的日子</div>
 								<div class="tiaoss"></div>
 								<div class="gt_btn">
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
-									<div><img src="{IMG_PATH}/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_10.png" alt="" /><span>333</span></div>
+									<div><img src="<?php echo IMG_PATH;?>
+/zhc-img/images/pinlun_07.png" alt="" /><span>333</span></div>
 								</div>
 							</div>
 						</li>
@@ -225,25 +303,28 @@
 			</article>
 		</main>
 		<footer>
-			<img src="{IMG_PATH}/zhc-img/images/shopcar_42.png" class="car"/>
+			<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/shopcar_42.png" class="car"/>
 			<div class="info">
 				<div class="summon">
 					<span id="sum"></span>
 					<span>RMB</span>
 				</div>
 				<div class="mess">另需
-					<span>{literal}{{num}}{/literal}圆</span>
+					<span>{{num}}圆</span>
 					配送费用
 				</div>
 			</div>
 			<div class="btn">
 				<a href="index.php?m=index&f=buy&a=info" style="display: block;width: 100%;height: 100%;">
-					<img src="{IMG_PATH}/zhc-img/images/btn_46.png" alt="" />
+					<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/btn_46.png" alt="" />
 				</a>
 				
 			</div>
 		</footer>
-		<script>
+		<?php echo '<script'; ?>
+>
             angular.module('myapp', [])
                 .controller('ctrl', function($scope,$http) {
 
@@ -357,7 +438,8 @@
 
 
 								<div class="img_box">
-									<img src="{IMG_PATH}${
+									<img src="<?php echo IMG_PATH;?>
+${
                                     data.coimg
                                     }"/>
 								</div>
@@ -366,11 +448,16 @@
                                     data.coname
                                     }</div>
 									<div class="stars_box">
-										<img src="{IMG_PATH}/zhc-img/images/stats_18.png"/>
-										<img src="{IMG_PATH}/zhc-img/images/stats_18.png"/>
-										<img src="{IMG_PATH}/zhc-img/images/stats_18.png"/>
-										<img src="{IMG_PATH}/zhc-img/images/stats_18.png"/>
-										<img src="{IMG_PATH}/zhc-img/images/stats_18.png"/>
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/stats_18.png"/>
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/stats_18.png"/>
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/stats_18.png"/>
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/stats_18.png"/>
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/stats_18.png"/>
 									</div>
 									<div class="tiaos"></div>
 									<div class="money_box">
@@ -380,14 +467,17 @@
 										<span>RMB</span>
 									</div>
 									<div class="num">
-										<img src="{IMG_PATH}/zhc-img/images/dot_25.png" alt="" />
+										<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/dot_25.png" alt="" />
 										<span>366单</span>
 									</div>
 								</div>
 									<div class="add">
-									<img src="{IMG_PATH}/zhc-img/images/jian_03.png"  class="jian"/>
+									<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/jian_03.png"  class="jian"/>
 									<input type="text" ng-model="nub"/>
-									<img src="{IMG_PATH}/zhc-img/images/add_21.png" class="jia"/>
+									<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/add_21.png" class="jia"/>
 
 								</div>
 
@@ -434,6 +524,9 @@
                     window.history.back();
                 })
             }
-		</script>
+		<?php echo '</script'; ?>
+>
 	</body>
 </html>
+<?php }
+}

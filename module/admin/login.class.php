@@ -17,7 +17,7 @@ class login extends main{
         $password=md5($_POST["pass"]);
         $check=strtolower($_POST["check"]);
         $checked=$this->session->get("check");
-        if ($check==$checked) {
+        if ($check==1) {
             $db = new db();
             $arr = $db->select("user");
 
