@@ -10,36 +10,36 @@
 	<meta name="x5-fullscreen" content="true" />
 	<meta name="full-screen" content="yes">
 	<meta name="format-detection" content="telephone=no, email=no" />
-	<link rel="stylesheet" type="text/css" href="../../static/css/common.css"/>
-	<link rel="stylesheet" type="text/css" href="../../static/css/xx-login.css"/>
-	<script src="../../static/js/rem.js"></script>
-	<script src="../../static/js/jquery.js"></script>
-	<script src="../../static/js/xx-login.js"></script>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}/common.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}/xx-login.css"/>
+	<script src="{JS_PATH}/rem.js"></script>
+	<script src="{JS_PATH}/jquery.js"></script>
+	<script src="{JS_PATH}/xx-login.js"></script>
 	<body>
 		<header>
 			<div class="begin">
 				<a href=""></a>
 				<a href="xx-signin.html"></a>
 			</div>
-			<img src="../../static/img/xx-img/xx-login04.png"/>
+			<img src="{IMG_PATH}/xx-img/xx-login04.png"/>
 			<p>Jim.Green</p>
 			<h3>this better  be beautiful</h3>
 			<h4>美 x 食 x 汇</h4>
 			<div class="logn">
-				<img src="../../static/img/xx-img/xx-login05.png"/>
-				<img src="../../static/img/xx-img/xx-login06.png" alt="" />
-				<img src="../../static/img/xx-img/xx-login10.png"/>
+				<img src="{IMG_PATH}/xx-img/xx-login05.png"/>
+				<img src="{IMG_PATH}/xx-img/xx-login06.png" alt="" />
+				<img src="{IMG_PATH}/xx-img/xx-login10.png"/>
 			</div>
 			<form class="number" id="infos">
 				<p>Username</p>
-				<input type="text" placeholder="您可以输入邮箱，手机号码作为登录名" />
-				<input type="text" placeholder="请输入密码" />
+				<input type="text" class="user" placeholder="您可以输入邮箱，手机号码作为登录名" />
+				<input type="password" class="pass" placeholder="请输入密码" />
 			</form>
 		</header>
 		<section class="find">
 			<div></div>
 			<p>find passwold</p>
-			<img src="../../static/img/xx-img/xx-login11.png"/>
+			<img src="{IMG_PATH}/xx-img/xx-login11.png"/>
 		</section>
 		<section class="login loginone">
 			<p>立即登陆</p>
@@ -50,8 +50,25 @@
 			<p>login immediately</p>
 		</section>
 		<section class="outside">
-			<img src="../../static/img/xx-img/xx-login07.png"/>
-			<img src="../../static/img/xx-img/xx-login09.png"/>
+			<img src="{IMG_PATH}/xx-img/xx-login07.png"/>
+			<img src="{IMG_PATH}/xx-img/xx-login09.png"/>
 		</section>
 	</body>
 </html>
+<script>
+	$(".login").on("touchend",function () {
+		let aa=$(".user").val()
+		let bb=$(".pass").val()
+		$.ajax({
+			url:"index.php?m=index&f=login&a=logch",
+			data:{
+			    aa:aa,bb:bb
+			},
+			success:function (e) {
+				if (e=="ok"){
+				    location.href=""
+				}
+            }
+		})
+    })
+</script>
