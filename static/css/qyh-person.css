@@ -1,0 +1,458 @@
+#qyh-wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 1.22rem;
+    bottom: 48px;
+    left: 0;
+    width: 100%;
+    /*height:10.4rem;*/
+    background: #F7F7F7;
+    overflow: hidden;
+}
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+
+header{
+    width:100%;
+    height:4.68rem;
+    background-image: url("../img/qyh-img/qg-bj.png");
+    background-size: cover;
+}
+header > a.share{
+    display: block;
+    width:1.03rem;
+    margin-left:6.3rem;
+    padding-top:0.2rem;
+}
+header > a > img{
+    width:1.03rem;
+    text-align: right;
+}
+header > div.header{
+    wisth:100%;
+    line-height: 1.82rem;
+    display: flex;
+    justify-content: space-around;
+}
+header > div.header > a{
+    display: block;
+    width:0.6rem;
+}
+header > div.header > a > img{
+    width:100%;
+}
+header > div.header > div.photo{
+    width:1.82rem;
+    height:1.82rem;
+    background: rgba(234,227,227,0.2);
+    border-radius: 50%;
+    position: relative;
+}
+header > div.header > div.photo > .a1{
+    width:1.58rem;
+    height:1.58rem;
+    background: rgba(234,227,227,0.4);
+    border-radius: 50%;
+    position:absolute;
+    top:0.11rem;
+    left:0.11rem;
+}
+header > div.header > div.photo > .a2{
+    width:1.3rem;
+    height:1.3rem;
+    background: rgba(234,227,227,0.6);
+    border-radius: 50%;
+    position:absolute;
+    top:0.25rem;
+    left:0.25rem;
+    z-index: 4;
+}
+header > div.header > div.photo > .a3{
+    width:1rem;
+    height:1rem;
+    border-radius: 50%;
+    position:absolute;
+    top:0.37rem;
+    left:0.37rem;
+    z-index: 5;
+    border:2px solid #fff;
+}
+header > div.header > div.photo > .a3 > img{
+    width:0.4rem;
+    position:absolute;
+    top:0.67rem;
+    left:0.67rem;
+}
+header > p.name{
+    width:100%;
+    text-align: center;
+    color:#fff;
+    font-size: 0.3rem;
+}
+header > p.like{
+    width:100%;
+    text-align: center;
+    color:#fff;
+    font-size: 0.26rem;
+}
+header > div.star{
+    width:100%;
+    height:0.21rem;
+    text-align: center;
+}
+header > div.star > img{
+    height:100%;
+}
+header > div.sign{
+    float: right;
+    width:1.2rem;
+    position: relative;
+    height:0.5rem;
+    margin-right:0.2rem;
+}
+header > div.sign > img{
+    float: right;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+header > div.sign > span{
+    color:#fff;
+    position: absolute;top:0.1rem;left:0.1rem;
+}
+div.content{
+    width:7.05rem;
+    height:11.46rem;
+    position: absolute;
+    top:4.28rem;
+    left:0.2rem;
+    box-shadow: 0 0 5px #333;
+}
+div.content > .header{
+    width:100%;
+    height:1.2rem;
+    background: #FC801E;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0.14rem;
+    box-sizing: border-box;
+}
+div.content > .header > a{
+    display: block;
+    text-align: center;
+    margin-top:0.15rem;
+}
+div.content > .header > a > img{
+    width:0.56rem;
+    height:0.56rem;
+}
+div.content > .header > a > p{
+    color:#fff;
+
+}
+div.content > .header > div{
+    width:1px;
+    height:0.3rem;
+    background: #fff;
+    margin:0.42rem;
+}
+div.content ul{
+    width:90%;
+    margin:0.1rem auto;
+    padding:0.2rem 0.2rem;
+    box-sizing: border-box;
+}
+div.content ul > li{
+    width:100%;
+    border-radius: 10px;
+    background: #fff;
+    margin-bottom: 0.2rem;
+    position: relative;
+}
+div.content ul > li:not(.foot){
+    height:1rem;
+}
+div.content ul > li > img{
+    width:0.3rem;
+    margin:0.35rem 0 0 0.35rem;
+    float: left;
+}
+div.content ul > li > span:first-of-type{
+    color: #242837;
+    font-size: 0.3rem;
+    float: left;
+    display: block;
+    font-weight: bold;
+    margin:0.15rem 0.2rem 0.1rem;
+}
+div.content ul > li > span:last-of-type{
+    color: #B7B7B7;
+    font-size: 0.3rem;
+    float: left;
+    position: absolute;
+    left:0.88rem;
+    top:0.5rem;
+}
+div.content ul > li > p{
+    float: right;
+    margin:0.3rem 0.2rem 0;
+    color:#FB6C00;
+    font-size: 0.28rem;
+}
+div.content ul > li.foot > ul{
+    display: flex;
+    justify-content: space-between;
+    margin:0;
+    width:100%;
+}
+
+
+div.content ul > li.foot > ul{
+    display: flex;
+    justify-content: space-between;
+    padding:0 0.24rem;
+    box-sizing: border-box;
+}
+div.content ul > li.foot > ul > li{
+    width:1.94rem;
+    height:2.67rem;
+    position: relative;
+}
+div.content ul > li.foot > ul > li > div.q-back{
+    width:100%;
+    height:100%;
+    background: #F7A765;
+    border-radius: 10px;
+    position: absolute;
+    top:-0.1rem;right:-0.1rem;
+    z-index: -1;
+}
+div.content ul > li.foot > ul > li > .dian{
+    width:0.13rem;height:0.17rem;
+    background: #FA8628;
+    position: absolute;
+    top:2.1rem;
+    z-index: 2;
+}
+div.content ul > li.foot > ul > li  > .dian1{
+    border-radius: 0.13rem 0 0 0.13rem;
+    right:-0.06rem;
+}
+div.content ul > li.foot > ul > li  > .dian2{
+    border-radius:0 0.13rem 0.13rem 0 ;
+    left:0;
+}
+div.content ul > li.foot > ul > li > a{
+    display: block;
+    width:100%;
+    height:2.65rem;
+    overflow: hidden;
+    cursor: pointer;
+    vertical-align: baseline;
+    position: relative;
+}
+div.content ul > li.foot > ul > li > a > img{
+    width:100%;
+    /*height:100%;*/
+    border:1px solid #fff;
+    border-radius:10px;
+    box-shadow: 0 0 3px #333;
+    vertical-align: baseline;
+    position: absolute;
+    bottom: 0;
+    left:1px;
+}
+div.content ul > li.foot > ul > li  >.q-shi{
+    width:100%;
+    height:2.3rem;
+    position: absolute;
+    bottom: 1px;
+    left:1px;
+    border-radius: 0 0 10px 10px ;
+    background: #fff;
+}
+div.content ul > li.foot > ul > li  >.q-shi > .q-rgb{
+    position: absolute;
+    top:-0.42rem;
+    left:0;
+    width:100%;
+    height:0.42rem;
+    background: rgba(0,0,0,.3);
+}
+div.content ul > li.foot > ul > li  >.q-shi > .q-rgb > img{
+    width:0.63rem;
+    position: absolute;
+    top:-0.3rem;
+    left:0.1rem;
+}
+div.content ul > li.foot > ul > li  >.q-shi > .q-rgb > p{
+    float: right;
+    color: #fff;
+    height:100%;
+    line-height: 0.42rem;
+    margin-right:0.14rem;
+}
+div.content ul > li.foot > ul > li >.q-shi > .q-page{
+    width:100%;
+    margin-top:0.1rem;
+}
+div.content ul > li.foot > ul > li  .q-page > p.title,div.content ul > li.foot > ul > li  .q-page > p.etitle{
+    float: left;
+    font-size: 0.28rem;
+    font-weight:600;
+    color:#333333;
+    padding-left: 0.1rem;
+}
+div.content ul > li.foot > ul > li  .q-page > img.q-huo{
+    /*float: left;*/
+    height:0.24rem;
+    margin-left: 0.1rem;
+}
+div.content ul > li.foot > ul > li  .q-page > p.etitle{
+    font-size: 0.2rem;
+    font-family: Helvetica;
+    font-weight: 200;
+}
+div.content ul > li.foot > ul > li  .q-page > div.star{
+    height: 0.16rem;
+    float: right;
+    line-height: 0;
+    position: absolute;
+    top:0.2rem;right:0.1rem;
+}
+div.content ul > li.foot > ul > li  .q-page > div.star > img{
+    height:100%;
+}
+div.content ul > li.foot > ul > li  .q-page > img.q-zan{
+    position: absolute;
+    top:0.5rem;right: 0.1rem;
+}
+div.content ul > li.foot > ul > li  .q-page > .q-bianqian{
+    height:0.6rem;
+    position: relative;
+    line-height: 0;
+    margin:0.4rem 0 0;
+}
+div.content ul > li.foot > ul > li  .q-page > .q-bianqian >span{
+    border-radius: 15px;
+    border:2px solid transparent;
+    background-clip:padding-box,border-box;
+    background-origin:padding-box,border-box;
+    background-image:linear-gradient(45deg,#fff,#fff),linear-gradient(45deg,#37BD21,#F9D127);
+    display: inline-block;
+    width:auto;height:auto;
+    padding:0.2rem;
+    color:#333;
+    font-size: 0.20rem;
+}
+
+div.content ul > li.foot div.q-name{
+    width:100%;
+    height:0.7rem;
+}
+div.content ul > li.foot div.left{
+    width:78%;
+    float: left;
+}
+div.content ul > li.foot div.left > .q-img{
+    width:0.34rem;
+    height: 0.34rem;
+    margin: 0.14rem 0.1rem;
+    border-radius: 100%;
+    background-position: center;
+    background-size:contain;
+    float: left;
+}
+div.content ul > li.foot div.left > span:first-of-type{
+    color:#FA8628;
+    font-size: 0.28rem;
+    display: block;
+}
+div.content ul > li.foot div.left > span:last-of-type{
+    color:#333;
+    font-size: 0.24rem;
+    letter-spacing:-1px;
+}
+div.content ul > li.foot div.right{
+    width:22%;
+    float: right;
+    position: relative;
+}
+div.content ul > li.foot div.right > img{
+    width:0.34rem;
+    border-radius: 50%;
+    border:1px solid #fff;
+    position: absolute;
+    top:0rem;
+}
+div.content ul > li.foot div.right > img:first-child{
+    left:-0.6rem;
+}
+div.content ul > li.foot div.right > img:nth-child(2){
+    left:-0.4rem;
+}
+div.content ul > li.foot div.right > img:nth-child(3){
+    left:-0.2rem;
+}
+div.content ul > li.foot div.right > img:nth-child(4){
+    left:0rem;
+}
+div.content ul > li.foot div.right > img:nth-child(5){
+    left:0.2rem;
+}
+div.content ul > li.foot div.q-page > img:last-child{
+    height:0.3rem;
+    position: absolute;
+    bottom: -0.16rem;
+    left:1.4rem;
+}
+
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    z-index: 20;
+    height:1rem;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    background: #FC811E;
+}
+footer > div{
+    width:1px;
+    height:0.3rem;
+    background: #ACACAC;
+    margin-top:0.3rem;
+}
+footer > a > img{
+    height:0.5rem;
+    margin-top:3px;
+}
+footer > a > p{
+    color:#fff;
+}

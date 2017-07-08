@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-04 02:46:07
+/* Smarty version 3.1.30, created on 2017-07-06 03:19:34
   from "/Applications/MAMP/htdocs/eatapp/template/admin/main.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_595ae54f002b62_22992045',
+  'unifunc' => 'content_595d9026a78672_02662905',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4e379ea1571df3149b7a1abdd169ad7a8a49e89a' => 
     array (
       0 => '/Applications/MAMP/htdocs/eatapp/template/admin/main.html',
-      1 => 1499064491,
+      1 => 1499303974,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_595ae54f002b62_22992045 (Smarty_Internal_Template $_smarty_tpl) {
+function content_595d9026a78672_02662905 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +45,9 @@ function content_595ae54f002b62_22992045 (Smarty_Internal_Template $_smarty_tpl)
     <ul id="box">
         <?php if ($_smarty_tpl->tpl_vars['rid']->value == 1) {?>
         <li>
+            <a href="index.php?m=admin&f=addRole&a=applist" target="window" style="color: #ccc;">App分类管理</a>
+        </li>
+        <li>
             <span>角色管理</span>
             <ul >
                 <li>
@@ -66,6 +69,7 @@ function content_595ae54f002b62_22992045 (Smarty_Internal_Template $_smarty_tpl)
                 </li>
             </ul>
         </li>
+
         <?php } else { ?>
         <li>
             <span>店铺管理</span>

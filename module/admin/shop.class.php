@@ -46,4 +46,18 @@ class shop extends main{
             $this->jump("修改失败/未做修改","m=admin&f=shop&a=adminShop");
         }
     }
+    //店铺展示
+    function showShop(){
+        $db=new db();
+        $result=$db->select("shop");
+        $this->smarty->assign("arr",$result);
+        $this->smarty->display("showShop.html");
+    }
+    //商品展示
+    function showCom(){
+        $id=$_GET["id"];
+//        $db=new db();
+//        $result=$db->where("sid={$id}")->select("commodity");
+        $this->smarty->display("showcom.html");
+    }
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="x5-orientation" content="portrait | landscape" />
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-fullscreen" content="true" />
+	<meta name="full-screen" content="yes">
+	<meta name="format-detection" content="telephone=no, email=no" />	
+	<link rel="stylesheet" type="text/css" href="../../static/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../../static/css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../static/css/xx-flash.css"/>
+	<script src="../../static/js/rem.js"></script>
+	<script src="../../static/js/jquery.js"></script>
+	<script src="../../static/js/swiper.js"></script>
+	<body>
+		<div class="swiper-container">
+     		<div class="swiper-wrapper">
+	            <div class="swiper-slide"><img src="../../static/img/xx-img/xx-flash.png" alt="" /></div>
+	            <div class="swiper-slide"><img src="../../static/img/xx-img/xx-flash2.png" alt="" /></div>
+	            <div class="swiper-slide">
+	            	<img src="../../static/img/xx-img/xx-flash3.png" alt="" />
+	            	<!--<a href="zn_login.html"><img src="../../static/img/xx-img/xx-flash3.png" alt="" /></a>-->
+	            </div>     
+   		    </div>
+	        <!-- Add Pagination -->
+		    <div class="swiper-pagination" class='swiper'></div>
+		        <!-- Add Arrows -->
+	
+			</div>
+    	</div>
+	</body>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        paginationClickable: true
+	    });
+		let a=0	
+		let start=0
+		let end=middle=0
+		$(".swiper-wrapper").get(0).addEventListener('touchstart',function(event){
+            var touch = event.targetTouches[0];
+            start = touch.pageX;
+        },false);
+        $(".swiper-wrapper").get(0).addEventListener('touchmove',function(event){
+            var touch = event.targetTouches[0];
+            middle = touch.pageX;
+        },false);
+        $(".swiper-wrapper").get(0).addEventListener('touchend',function(event){
+            end = start-middle;
+            console.log(end)
+            if(end>187.5&&a<2){
+	        	a=a+1
+	        	console.log(a)
+	        }else if(end!=0&&a==2){
+	        	location.href="xx-login.html"
+	        }
+        },false);
+        
+	</script>
+</html>

@@ -1,0 +1,198 @@
+body{
+	width: 100%;
+	height: 100%;
+	background: #fc811e;
+	overflow: hidden;
+}
+header{
+	width: 7.5rem;
+	height: 6.76rem;
+	background-image: url(../img/xx-img/xx-login01.png);
+	background-size: 100%;
+}
+header > a{
+	width: .77rem;
+	height: .74rem;
+	display: block;
+	background-image: url(../img/xx-img/xx-login02.png);
+	background-size: 100%;
+}
+header > img{
+	width: 7.5rem;
+}
+header > div{
+	width: 100%;
+	height: .3rem;
+	text-align: center;
+	margin: -.1rem 0 .1rem 0;
+}
+header > div > div{
+	width: .06rem;
+	height: .06rem;
+	border-radius: 50%;
+	background: #fc811e;
+	display: inline;
+}
+header > div > span{
+	color: #fefefe;
+	font-size: .24rem;	
+}
+header > h2{
+	font-size: .4rem;
+	color: #fc811e;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: .15rem;
+}
+header > h4{
+	font-size: .14rem;
+	color: #FFFFFF;
+	text-align: center;
+	text-transform: uppercase;
+}
+form{
+	width: 7.5rem;
+	height: 9.81rem;
+	background-image: url(../img/xx-img/xx-signin03.png);
+	background-size: 100%;
+	margin-top: -3.2rem;
+	padding-top: 2rem;
+	box-sizing: border-box;
+	position: relative;
+}
+input{
+	width: 5rem;
+	display: block;
+	margin: .2rem;
+	border: none;
+	margin-top: .71rem;
+	margin-left: 1.2rem;
+	background: #fdfdfd;
+	color: #afadad;
+}
+input:-moz-placeholder,   
+textarea:-moz-placeholder {   
+    color: #c3c2c2;   
+}   
+  
+input:-ms-input-placeholder,   
+textarea:-ms-input-placeholder {   
+    color: #c3c2c2;   
+}   
+  
+input::-webkit-input-placeholder,   
+textarea::-webkit-input-placeholder {   
+    color: #c3c2c2;   
+}  
+*:focus { outline: none; }
+
+.submit{
+	width: 4.38rem;
+	height: 1.18rem;
+	background-image: url(../img/xx-img/xx-signin08.png);
+	background-size: 100%;
+	margin: .8rem auto;
+	overflow: hidden;
+}
+.submit > p{
+	margin-top: .14rem;
+	text-align: center;
+	font-size: .4rem;
+	color: #b7b7b7;
+}
+.submit > h4{
+	font-size: .18rem;
+	text-transform: uppercase;
+	color: #B7B7B7;
+	text-align: center;
+}
+.err,label{
+	width: 4.88rem;
+	height: .83rem;
+	line-height: .83rem;
+	padding-left: 2rem;
+	box-sizing: border-box;
+	position: absolute;
+	top: 7.2rem;
+	left: 0;
+	background-image: url(../img/xx-img/xx-signin10.png);
+	background-size: 100%;
+	font-size: .22rem;
+	color: #fd213a;
+	font-size: 500;
+	display: none;
+}
+.user{
+	width: 1.14rem;
+	height: .84rem;
+	position: absolute;
+	top: 2.07rem;
+	right: .62rem;
+	background-image: url(../img/xx-img/xx-signin09.png);
+	background-size: .83rem;
+	background-repeat: no-repeat;
+	background-position: .02rem .35rem;
+	overflow: hidden;
+}
+.user >img{
+	width: 1.14rem;
+	margin-right: -.3rem;
+	margin-top: .2rem;
+}
+.phone{
+	width: 1.6rem;
+	height: .84rem;
+	position: absolute;
+	top: 3.07rem;
+	right: .62rem;
+	background-image: url(../img/xx-img/xx-signin09.png);
+	background-size: 100%;
+	background-size: .83rem;
+	background-repeat: no-repeat;
+	background-position: .48rem .35rem;
+}
+.phone > img,.verfi > img,.pass >img,.again > img{
+	width: 1.6rem;
+	/*margin-right: -.3rem;*/
+}
+.phone > img{
+	/*margin-right: -.4rem;*/
+	margin-top: .2rem;
+}
+.verfi{
+	width: 1.6rem;
+	height: .84rem;
+	position: absolute;
+	top: 4.37rem;
+	right: .62rem;
+	background-image: url(../img/xx-img/xx-signin09.png);
+	background-size: 100%;
+	background-size: .83rem;
+	background-repeat: no-repeat;
+	background-position: .48rem .2rem;
+/*	margin-right: .3rem;*/
+}
+.pass{
+	width: 1.6rem;
+	height: .84rem;
+	position: absolute;
+	top: 5.42rem;
+	right: .62rem;
+	background-image: url(../img/xx-img/xx-signin09.png);
+	background-size: 100%;
+	background-size: .83rem;
+	background-repeat: no-repeat;
+	background-position: .48rem .2rem;
+}
+.again{
+	width: 1.6rem;
+	height: .84rem;
+	position: absolute;
+	top: 6.43rem;
+	right: .62rem;
+	background-image: url(../img/xx-img/xx-signin09.png);
+	background-size: 100%;
+	background-size: .83rem;
+	background-repeat: no-repeat;
+	background-position: .48rem .2rem;
+}

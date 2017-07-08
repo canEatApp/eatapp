@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{$smarty.const.CSS_PATH}/bootstrap.min.css">
+</head>
+<body>
+<table>
+    <tr style="text-align: center">
+        <th>店铺名</th>
+        <th>店铺缩略图</th>
+        <th>店铺地址</th>
+        <th>店铺标语</th>
+        <th>是否通过审核</th>
+        <th>查看商品</th>
+    </tr>
+    {foreach $arr as $v}
+    <tr style="text-align: center">
+        <td>{$v["sname"]}</td>
+        <td>
+            <img src="{$v['simg']}" style="width: 40px;" alt="">
+        </td>
+        <td>{$v['saddress']}</td>
+        <td>{$v['snotes']}</td>
+        <td>{if $v['state']==0}未通过{else}已通过{/if}</td>
+        <td><a href="index.php?m=admin&f=shop&a=showCom&cid={$v['sid']}">点击查看</a></td>
+    </tr>
+    {/foreach}
+</table>
+</body>
+</html>
