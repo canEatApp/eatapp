@@ -21,78 +21,80 @@
 		
 			<section>
 				<ul class="list">
+					{foreach $result as $v}
 				<li>
 					<div class="img_box">
 						<img src="{IMG_PATH}/zhc-img/images/food_14.png"/>
 					</div>
 					<div class="word_box">
-						<div class="title">Noodleswithgravy</div>
+						<div class="title">{$v['coname']}</div>
 						<div class="buybox">
 							<div class="buyboxs1">
-								<input type="text" name="num" value="01"/>
+								<input type="text" name="num" value="{$num}"/>
 							</div>
 							<div class="buyboxs">
 								<div class="tiaos"></div>
 								<div class="buymoney">
-									<img src="{IMG_PATH}/zhc-img/images/buy_03.png" alt="" />
+									<img src="{IMG_PATH}{$v['coimg']}" alt="" />
 									<span>558</span>
-									<span>33.00RMB</span>
+									<span>{$v['coprice']}RMB</span>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="buy_money">
-						33.00
+						{$v['coprice']}
 					</div>
 				</li>
-				<li>
-					<div class="img_box">
-						<img src="{IMG_PATH}/zhc-img/images/food_14.png"/>
-					</div>
-					<div class="word_box">
-						<div class="title">Noodleswithgravy</div>
-						<div class="buybox">
-							<div class="buyboxs1">
-								<input type="text" name="num" value="01"/>
-							</div>
-							<div class="buyboxs">
-								<div class="tiaos"></div>
-								<div class="buymoney">
-									<img src="{IMG_PATH}/zhc-img/images/buy_03.png" alt="" />
-									<span>558</span>
-									<span>33.00RMB</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="buy_money">
-						33.00
-					</div>
-				</li>
-				<li>
-					<div class="img_box">
-						<img src="{IMG_PATH}/zhc-img/images/food_14.png"/>
-					</div>
-					<div class="word_box">
-						<div class="title">Noodleswithgravy</div>
-						<div class="buybox">
-							<div class="buyboxs1">
-								<input type="text" name="num" value="01"/>
-							</div>
-							<div class="buyboxs">
-								<div class="tiaos"></div>
-								<div class="buymoney">
-									<img src="{IMG_PATH}/zhc-img/images/buy_03.png" alt="" />
-									<span>558</span>
-									<span>33.00RMB</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="buy_money">
-						33.00
-					</div>
-				</li>
+				<!--<li>-->
+					<!--<div class="img_box">-->
+						<!--<img src="{IMG_PATH}/zhc-img/images/food_14.png"/>-->
+					<!--</div>-->
+					<!--<div class="word_box">-->
+						<!--<div class="title">Noodleswithgravy</div>-->
+						<!--<div class="buybox">-->
+							<!--<div class="buyboxs1">-->
+								<!--<input type="text" name="num" value="01"/>-->
+							<!--</div>-->
+							<!--<div class="buyboxs">-->
+								<!--<div class="tiaos"></div>-->
+								<!--<div class="buymoney">-->
+									<!--<img src="{IMG_PATH}/zhc-img/images/buy_03.png" alt="" />-->
+									<!--<span>558</span>-->
+									<!--<span>33.00RMB</span>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div class="buy_money">-->
+						<!--33.00-->
+					<!--</div>-->
+				<!--</li>-->
+				<!--<li>-->
+					<!--<div class="img_box">-->
+						<!--<img src="{IMG_PATH}/zhc-img/images/food_14.png"/>-->
+					<!--</div>-->
+					<!--<div class="word_box">-->
+						<!--<div class="title">Noodleswithgravy</div>-->
+						<!--<div class="buybox">-->
+							<!--<div class="buyboxs1">-->
+								<!--<input type="text" name="num" value="01"/>-->
+							<!--</div>-->
+							<!--<div class="buyboxs">-->
+								<!--<div class="tiaos"></div>-->
+								<!--<div class="buymoney">-->
+									<!--<img src="{IMG_PATH}/zhc-img/images/buy_03.png" alt="" />-->
+									<!--<span>558</span>-->
+									<!--<span>33.00RMB</span>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div class="buy_money">-->
+						<!--33.00-->
+					<!--</div>-->
+				<!--</li>-->
+					{/foreach}
 			</ul>
 			<section class="sum">
 				<div class="buy_money">
@@ -140,6 +142,11 @@
 </html>
 <script>
 	window.onload=function(){
+
+
+
+	    var num=parseInt($(".buyboxs1 input").val())*parseInt($('.buy_money').text())-parseInt($(".jian p span").last().text());
+	    $('.number span').first().html(num)
 		myScroll = new IScroll('.container', {
 		        mouseWheel: true,
 		        scrollX:true,

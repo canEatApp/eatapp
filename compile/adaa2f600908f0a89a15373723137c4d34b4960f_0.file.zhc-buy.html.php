@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-07 09:09:49
+/* Smarty version 3.1.30, created on 2017-07-09 17:29:02
   from "D:\YEK\tool\wamp\www\eatapp\template\index\zhc-buy.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_595f33bd5008d3_38981986',
+  'unifunc' => 'content_59624bbe67cf50_52249221',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'adaa2f600908f0a89a15373723137c4d34b4960f' => 
     array (
       0 => 'D:\\YEK\\tool\\wamp\\www\\eatapp\\template\\index\\zhc-buy.html',
-      1 => 1499411388,
+      1 => 1499614141,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_595f33bd5008d3_38981986 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59624bbe67cf50_52249221 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -59,84 +59,100 @@ function content_595f33bd5008d3_38981986 (Smarty_Internal_Template $_smarty_tpl)
 		
 			<section>
 				<ul class="list">
+					<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['result']->value, 'v');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+?>
 				<li>
 					<div class="img_box">
 						<img src="<?php echo IMG_PATH;?>
 /zhc-img/images/food_14.png"/>
 					</div>
 					<div class="word_box">
-						<div class="title">Noodleswithgravy</div>
+						<div class="title"><?php echo $_smarty_tpl->tpl_vars['v']->value['coname'];?>
+</div>
 						<div class="buybox">
 							<div class="buyboxs1">
-								<input type="text" name="num" value="01"/>
+								<input type="text" name="num" value="<?php echo $_smarty_tpl->tpl_vars['num']->value;?>
+"/>
 							</div>
 							<div class="buyboxs">
 								<div class="tiaos"></div>
 								<div class="buymoney">
-									<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/buy_03.png" alt="" />
+									<img src="<?php echo IMG_PATH;
+echo $_smarty_tpl->tpl_vars['v']->value['coimg'];?>
+" alt="" />
 									<span>558</span>
-									<span>33.00RMB</span>
+									<span><?php echo $_smarty_tpl->tpl_vars['v']->value['coprice'];?>
+RMB</span>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="buy_money">
-						33.00
+						<?php echo $_smarty_tpl->tpl_vars['v']->value['coprice'];?>
+
 					</div>
 				</li>
-				<li>
-					<div class="img_box">
-						<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/food_14.png"/>
-					</div>
-					<div class="word_box">
-						<div class="title">Noodleswithgravy</div>
-						<div class="buybox">
-							<div class="buyboxs1">
-								<input type="text" name="num" value="01"/>
-							</div>
-							<div class="buyboxs">
-								<div class="tiaos"></div>
-								<div class="buymoney">
-									<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/buy_03.png" alt="" />
-									<span>558</span>
-									<span>33.00RMB</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="buy_money">
-						33.00
-					</div>
-				</li>
-				<li>
-					<div class="img_box">
-						<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/food_14.png"/>
-					</div>
-					<div class="word_box">
-						<div class="title">Noodleswithgravy</div>
-						<div class="buybox">
-							<div class="buyboxs1">
-								<input type="text" name="num" value="01"/>
-							</div>
-							<div class="buyboxs">
-								<div class="tiaos"></div>
-								<div class="buymoney">
-									<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/buy_03.png" alt="" />
-									<span>558</span>
-									<span>33.00RMB</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="buy_money">
-						33.00
-					</div>
-				</li>
+				<!--<li>-->
+					<!--<div class="img_box">-->
+						<!--<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/food_14.png"/>-->
+					<!--</div>-->
+					<!--<div class="word_box">-->
+						<!--<div class="title">Noodleswithgravy</div>-->
+						<!--<div class="buybox">-->
+							<!--<div class="buyboxs1">-->
+								<!--<input type="text" name="num" value="01"/>-->
+							<!--</div>-->
+							<!--<div class="buyboxs">-->
+								<!--<div class="tiaos"></div>-->
+								<!--<div class="buymoney">-->
+									<!--<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/buy_03.png" alt="" />-->
+									<!--<span>558</span>-->
+									<!--<span>33.00RMB</span>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div class="buy_money">-->
+						<!--33.00-->
+					<!--</div>-->
+				<!--</li>-->
+				<!--<li>-->
+					<!--<div class="img_box">-->
+						<!--<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/food_14.png"/>-->
+					<!--</div>-->
+					<!--<div class="word_box">-->
+						<!--<div class="title">Noodleswithgravy</div>-->
+						<!--<div class="buybox">-->
+							<!--<div class="buyboxs1">-->
+								<!--<input type="text" name="num" value="01"/>-->
+							<!--</div>-->
+							<!--<div class="buyboxs">-->
+								<!--<div class="tiaos"></div>-->
+								<!--<div class="buymoney">-->
+									<!--<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/buy_03.png" alt="" />-->
+									<!--<span>558</span>-->
+									<!--<span>33.00RMB</span>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div class="buy_money">-->
+						<!--33.00-->
+					<!--</div>-->
+				<!--</li>-->
+					<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
 			</ul>
 			<section class="sum">
 				<div class="buy_money">
@@ -187,6 +203,11 @@ function content_595f33bd5008d3_38981986 (Smarty_Internal_Template $_smarty_tpl)
 <?php echo '<script'; ?>
 >
 	window.onload=function(){
+
+
+
+	    var num=parseInt($(".buyboxs1 input").val())*parseInt($('.buy_money').text())-parseInt($(".jian p span").last().text());
+	    $('.number span').first().html(num)
 		myScroll = new IScroll('.container', {
 		        mouseWheel: true,
 		        scrollX:true,

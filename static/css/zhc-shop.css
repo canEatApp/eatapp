@@ -334,7 +334,6 @@ main .gt_list{
 	margin-left: 0.2rem;
 	padding-top: 0.2rem;
 	box-sizing: border-box;
-	display:none;
 }
 main .ulblock{
 	display: block;

@@ -41,11 +41,11 @@ class shop extends indexMain{
 //        接收一个店铺的ID
         $sid=1;
 //        接收店铺下分类的ID
-        $sclass=$_REQUEST['id'];
+        $slid=$_REQUEST['id'];
         //        商店商品分类
         $obj=new db2("commodity");
 //        条件  查出来ID为1的商店的商品分类
-        $shopclass=$obj->where("sid=$sid and slid=$sclass")->select();
+        $shopclass=$obj->where(" sid=$sid and slid=$slid ")->select();
         echo json_encode($shopclass);
 //        echo $sclass;
     }
