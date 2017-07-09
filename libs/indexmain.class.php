@@ -4,5 +4,6 @@ class indexMain{
         $this->smarty=new Smarty();
         $this->smarty->setCompileDir("compile");
         $this->smarty->setTemplateDir("template/index");
+        $this->session=new session();
     }
 }
