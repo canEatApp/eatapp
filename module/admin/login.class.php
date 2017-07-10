@@ -29,7 +29,7 @@ class login extends main{
                         $this->session->set("load", "loaded");
                         $uid=$v['uid'];
                         $this->session->set("uid",$uid);
-                        $this->session->set("rid",$v["rid"]);
+                        $this->session->set("rid",$v["uroles"]);
                         $this->jump("登录成功", "m=admin&f=login&a=main");
                     } else {
                         $this->jump("密码错误", "m=admin&f=login");
@@ -63,7 +63,7 @@ class login extends main{
             $user=$this->session->get("user");
             $this->smarty->assign("user",$this->session->get("user"));
             $db=new db();
-            $result=$db->where("uname='{$user}'")->select('user',"rid");
+            $result=$db->where("uname='{$user}'")->select('user',"uroles");
             $this->smarty->assign("rid",$this->session->get("rid"));
             $this->smarty->display("main.html");
         }else{

@@ -23,18 +23,23 @@ class db{
         $this->database=$config['database']['database'];
         $this->port=$config['database']['port'];
         $this->db=new mysqli($this->host,$this->user,$this->pass,$this->database,$this->port);
+        $this->db->query("set names utf8");
         if (!$this->db){
             echo mysqli_connect_error();
             exit();
         }
-        $this->db->query("set names utf8");
+
         $this->opts["field"]="*";
     }
     function select($table,$params="*"){
         $this->opts["field"]=$params;
         $this->table=$table;
         $this->sql="select ".$this->opts["field"]." from ".$this->table." ".$this->opts["where"]." ".$this->opts["order"]." ".$this->opts["limit"];
+//        var_dump($this->sql);
+//        var_dump($this->sql);
         $result=$this->db->query($this->sql);
+//        var_dump($result);
+
         $array=array();
         while ($row=$result->fetch_assoc()){
             $array[]=$row;
@@ -93,6 +98,7 @@ class db{
             }
         }
         $sql="update ".$this->table." set ".$this->opts["field"]." ".$this->opts["where"];
+//        var_dump($sql);
         $this->db->query($sql);
         return $this->db->affected_rows;
     }

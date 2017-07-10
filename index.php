@@ -5,7 +5,7 @@
  * Date: 2017/6/22
  * Time: 下午3:41
  */
-header("content-type:text/html,charset=utf-8");
+
 //定义进入指令
 define("COMMING","OK");
 $server=$_SERVER;
@@ -26,7 +26,7 @@ define("TEM_PATH",APP_PATH."/template／");
 define("CSS_PATH",HOST_PATH."/static/css");
 define("JS_PATH",HOST_PATH."/static/js");
 define("IMG_PATH",HOST_PATH."/static/img");
-
+header("content-type:text/html,charset=utf-8");
 include LIBS_PATH."function.class.php";
 include_once LIBS_PATH."checkimg.php";
 include LIBS_PATH."route.php";  //路由
@@ -36,5 +36,6 @@ include_once LIBS_PATH."smarty/Smarty.class.php";//模版引擎
 include_once LIBS_PATH."session.class.php";//session操作
 include_once LIBS_PATH."main.class.php";//admin主类
 include_once LIBS_PATH."indexmain.class.php";//index主类
+include_once LIBS_PATH."upload.class.php";//前台换头像
 $obj=new route();
 $obj->getInfo();

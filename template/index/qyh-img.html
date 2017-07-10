@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>更换头像</title>
+    <script src="{JS_PATH}/common.js"></script>
+    <script src="{JS_PATH}/jquery.js"></script>
+    <script src="{JS_PATH}/upload.js"></script>
+    <link rel="stylesheet" href="{CSS_PATH}/common.css">
+    <link rel="stylesheet" href="{CSS_PATH}/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="{CSS_PATH}/qyh-person.css">-->
+</head>
+<body>
+<header>
+    <a onclick="history.go(-1)"><img src="{IMG_PATH}/qyh-img/q-back.png" alt=""></a>
+    <h1 class="mui-title">上传头像</h1>
+</header>
+    <div style="margin-top:44px;">
+        <div class="uploadbox">
+            <input type="hidden" id="img" name="imgurl" value="">
+        </div>
+        <button type="submit" class="btn btn-default">确认修改</button>
+    </div>
+<div class="display">
+
+</div>
+
+</body>
+</html>
+<script>
+    $(function () {
+        var obj = new upload();
+        obj.size = 1024 * 1024 * 10;
+        obj.selectBtnStyle.background = "red";
+        obj.createView({
+            parent: document.querySelector(".uploadbox")
+        });
+        obj.up("index.php?m=index&f=qperson&a=imgurl",function(data){
+            console.log(data);
+            console.log($("#img"))
+            $("#img").val(data);
+        });
+        $("button").on('click',function(){
+            $.ajax({
+                url:"index.php?m=index&f=qperson&a=imgCon",
+                data:"img="+$("#img").val(),
+                success:function(e){
+                    console.log(e)
+                    if(e=="no"){
+                        $(".display").html('修改失败').css("display","block");
+                        setTimeout(function () {
+                            $(".display").css("display","none");
+                        },1500)
+
+                    }else if(e=="ok") {
+                        $(".display").html('修改成功').css("display", "block");
+                        setTimeout(function () {
+                            $(".display").css("display", "none");
+                            history.go(-1);
+                        }, 1500)
+                    }
+                }
+            })
+        })
+
+    })
+
+</script>
+<style>
+    .display{
+        width:200px;
+        height:50px;
+        position: absolute;
+        top:240px;
+        left:50%;
+        margin-left:-100px;
+        background: #00a2d4;
+        border-radius: 10px;
+        z-index: 100;
+        text-align: center;
+        line-height: 50px;
+        color:#fff;
+        display: none;
+    }
+    header{
+        width:100%;
+        height:1.87rem;
+        background: #FC801E;
+        background-size: cover;
+    }
+    header > a:first-child {
+        display: inline-block;
+        margin: 0rem 0.3rem 0;
+        padding-top:0.3rem;
+    }
+    header > a:first-child img {
+        height: 0.46rem;
+        width:0.46rem;
+        border: 1px solid #fff;
+        border-radius:50% ;
+        opacity: 0.8;
+    }
+    h1{
+        color:#fff;
+        font-size:0.3rem;
+        padding-left:0.2rem;
+    }
+</style>

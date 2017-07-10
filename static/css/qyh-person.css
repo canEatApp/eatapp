@@ -1,3 +1,8 @@
+body,html{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
 #qyh-wrapper {
     position: absolute;
     z-index: 1;
@@ -39,11 +44,24 @@ header{
     background-image: url("../img/qyh-img/qg-bj.png");
     background-size: cover;
 }
+header > a:first-child {
+    display: inline-block;
+    margin: 0rem 0.3rem 0;
+    padding-top:0.3rem;
+}
+header > a:first-child img {
+    height: 0.46rem;
+    width:0.46rem;
+    border: 1px solid #fff;
+    border-radius:50% ;
+    opacity: 0.8;
+}
 header > a.share{
-    display: block;
     width:1.03rem;
-    margin-left:6.3rem;
-    padding-top:0.2rem;
+    /*margin-left:6.3rem;*/
+    padding-top:0.3rem;
+    padding-right:0.3rem;
+    float: right;
 }
 header > a > img{
     width:1.03rem;
@@ -124,12 +142,36 @@ header > div.star{
 header > div.star > img{
     height:100%;
 }
-header > div.sign{
-    float: right;
-    width:1.2rem;
+header > div.progress{
+    width:3.2rem;
+    height:0.08rem;
+    background: #8B7795;
+    margin:0.1rem auto;
     position: relative;
+}
+header > div.progress > div{
+    width:70%;
+    height:100%;
+    background: #fff;
+}
+header > div.honor{
+    width:3.2rem;
+    height:auto;
+    margin:0.1rem auto;
+}
+header > div.honor > img{
+    width:0.3rem;
+}
+header > div.honor > span{
+    color:#fff;
+    float: right;
+}
+header > div.sign{
+    position: absolute;
+    top:3.5rem;
+    right:0.2rem;
+    width:1.2rem;
     height:0.5rem;
-    margin-right:0.2rem;
 }
 header > div.sign > img{
     float: right;
@@ -140,6 +182,7 @@ header > div.sign > img{
 }
 header > div.sign > span{
     color:#fff;
+    font-size: 0.24rem;
     position: absolute;top:0.1rem;left:0.1rem;
 }
 div.content{
@@ -179,11 +222,13 @@ div.content > .header > div{
     background: #fff;
     margin:0.42rem;
 }
-div.content ul{
+div.content #scroller > ul{
     width:90%;
-    margin:0.1rem auto;
-    padding:0.2rem 0.2rem;
+    height:15rem;
+    margin:0rem auto;
+    padding:0.2rem 0rem;
     box-sizing: border-box;
+    overflow: hidden;
 }
 div.content ul > li{
     width:100%;
@@ -198,7 +243,14 @@ div.content ul > li:not(.foot){
 div.content ul > li > img{
     width:0.3rem;
     margin:0.35rem 0 0 0.35rem;
+
+}
+div.content ul > li > img:first-child{
     float: left;
+}
+div.content ul > li > img:last-child{
+    float: right;
+    margin:0.35rem 0.35rem 0 0;
 }
 div.content ul > li > span:first-of-type{
     color: #242837;
@@ -210,7 +262,7 @@ div.content ul > li > span:first-of-type{
 }
 div.content ul > li > span:last-of-type{
     color: #B7B7B7;
-    font-size: 0.3rem;
+    font-size: 0.26rem;
     float: left;
     position: absolute;
     left:0.88rem;
@@ -222,50 +274,60 @@ div.content ul > li > p{
     color:#FB6C00;
     font-size: 0.28rem;
 }
-div.content ul > li.foot > ul{
+div.content ul > li.foot  ul{
     display: flex;
     justify-content: space-between;
     margin:0;
     width:100%;
 }
 
-
-div.content ul > li.foot > ul{
+div.content ul > li.foot > div.fenge{
+    width:90%;
+    height:1px;
+    background: #EEEEEE;
+    border-left:2px solid #FC903B;
+    border-right:2px solid #FC903B;
+    box-sizing: border-box;
+    margin:0.4rem 0.2rem 0.2rem;
+    float: left;
+}
+div.content ul > li.foot  ul{
     display: flex;
     justify-content: space-between;
     padding:0 0.24rem;
+    height:4.6rem;
     box-sizing: border-box;
 }
-div.content ul > li.foot > ul > li{
-    width:1.94rem;
-    height:2.67rem;
+div.content ul > li.foot  ul > li{
+    width:2.64rem;
+    height:3.95rem;
     position: relative;
+    box-shadow: 0 0 3px #ccc;
 }
-div.content ul > li.foot > ul > li > div.q-back{
+div.content ul > li.foot  ul > li > div.q-back{
     width:100%;
     height:100%;
     background: #F7A765;
-    border-radius: 10px;
+    border-radius: 7px;
     position: absolute;
     top:-0.1rem;right:-0.1rem;
-    z-index: -1;
 }
-div.content ul > li.foot > ul > li > .dian{
-    width:0.13rem;height:0.17rem;
+div.content ul > li.foot ul > li > .dian{
+    width:0.07rem;height:0.13rem;
     background: #FA8628;
     position: absolute;
-    top:2.1rem;
+    top:1.5rem;
     z-index: 2;
 }
-div.content ul > li.foot > ul > li  > .dian1{
+div.content ul > li.foot  ul > li  > .dian1{
     border-radius: 0.13rem 0 0 0.13rem;
     right:-0.06rem;
 }
-div.content ul > li.foot > ul > li  > .dian2{
+div.content ul > li.foot  ul > li  > .dian2{
     border-radius:0 0.13rem 0.13rem 0 ;
     left:0;
 }
-div.content ul > li.foot > ul > li > a{
+div.content ul > li.foot  ul > li > a{
     display: block;
     width:100%;
     height:2.65rem;
@@ -273,8 +335,10 @@ div.content ul > li.foot > ul > li > a{
     cursor: pointer;
     vertical-align: baseline;
     position: relative;
+    border:1px solid #fff;
+    border-radius:10px;
 }
-div.content ul > li.foot > ul > li > a > img{
+div.content ul > li.foot ul > li > a > img{
     width:100%;
     /*height:100%;*/
     border:1px solid #fff;
@@ -285,7 +349,7 @@ div.content ul > li.foot > ul > li > a > img{
     bottom: 0;
     left:1px;
 }
-div.content ul > li.foot > ul > li  >.q-shi{
+div.content ul > li.foot ul > li  >.q-shi{
     width:100%;
     height:2.3rem;
     position: absolute;
@@ -294,7 +358,7 @@ div.content ul > li.foot > ul > li  >.q-shi{
     border-radius: 0 0 10px 10px ;
     background: #fff;
 }
-div.content ul > li.foot > ul > li  >.q-shi > .q-rgb{
+div.content ul > li.foot ul > li  >.q-shi > .q-rgb{
     position: absolute;
     top:-0.42rem;
     left:0;
@@ -302,85 +366,61 @@ div.content ul > li.foot > ul > li  >.q-shi > .q-rgb{
     height:0.42rem;
     background: rgba(0,0,0,.3);
 }
-div.content ul > li.foot > ul > li  >.q-shi > .q-rgb > img{
+div.content ul > li.foot ul > li  >.q-shi > .q-rgb > img{
     width:0.63rem;
     position: absolute;
     top:-0.3rem;
     left:0.1rem;
 }
-div.content ul > li.foot > ul > li  >.q-shi > .q-rgb > p{
+div.content ul > li.foot ul > li  >.q-shi > .q-rgb > p{
     float: right;
     color: #fff;
     height:100%;
     line-height: 0.42rem;
     margin-right:0.14rem;
 }
-div.content ul > li.foot > ul > li >.q-shi > .q-page{
+div.content ul > li.foot ul > li >.q-shi > .q-page{
     width:100%;
     margin-top:0.1rem;
 }
-div.content ul > li.foot > ul > li  .q-page > p.title,div.content ul > li.foot > ul > li  .q-page > p.etitle{
+div.content ul > li.foot  ul > li  .q-page > p.title,div.content ul > li.foot ul > li  .q-page > p.etitle{
     float: left;
     font-size: 0.28rem;
     font-weight:600;
     color:#333333;
     padding-left: 0.1rem;
 }
-div.content ul > li.foot > ul > li  .q-page > img.q-huo{
+div.content ul > li.foot ul > li  .q-page > img.q-huo{
     /*float: left;*/
     height:0.24rem;
     margin-left: 0.1rem;
 }
-div.content ul > li.foot > ul > li  .q-page > p.etitle{
+div.content ul > li.foot ul > li  .q-page > p.etitle{
     font-size: 0.2rem;
     font-family: Helvetica;
     font-weight: 200;
 }
-div.content ul > li.foot > ul > li  .q-page > div.star{
+div.content ul > li.foot ul > li  .q-page > div.star{
     height: 0.16rem;
-    float: right;
     line-height: 0;
     position: absolute;
-    top:0.2rem;right:0.1rem;
+    top:0.93rem;left:0.1rem;
 }
-div.content ul > li.foot > ul > li  .q-page > div.star > img{
+div.content ul > li.foot ul > li  .q-page > div.star > img{
     height:100%;
 }
-div.content ul > li.foot > ul > li  .q-page > img.q-zan{
-    position: absolute;
-    top:0.5rem;right: 0.1rem;
-}
-div.content ul > li.foot > ul > li  .q-page > .q-bianqian{
-    height:0.6rem;
-    position: relative;
-    line-height: 0;
-    margin:0.4rem 0 0;
-}
-div.content ul > li.foot > ul > li  .q-page > .q-bianqian >span{
-    border-radius: 15px;
-    border:2px solid transparent;
-    background-clip:padding-box,border-box;
-    background-origin:padding-box,border-box;
-    background-image:linear-gradient(45deg,#fff,#fff),linear-gradient(45deg,#37BD21,#F9D127);
-    display: inline-block;
-    width:auto;height:auto;
-    padding:0.2rem;
-    color:#333;
-    font-size: 0.20rem;
-}
-
 div.content ul > li.foot div.q-name{
     width:100%;
     height:0.7rem;
 }
 div.content ul > li.foot div.left{
-    width:78%;
+    width:100%;
     float: left;
 }
 div.content ul > li.foot div.left > .q-img{
     width:0.34rem;
     height: 0.34rem;
-    margin: 0.14rem 0.1rem;
+    margin: 0.33rem 0.1rem 0.14rem;
     border-radius: 100%;
     background-position: center;
     background-size:contain;
@@ -390,15 +430,22 @@ div.content ul > li.foot div.left > span:first-of-type{
     color:#FA8628;
     font-size: 0.28rem;
     display: block;
+    margin-top:0.2rem;
 }
 div.content ul > li.foot div.left > span:last-of-type{
     color:#333;
     font-size: 0.24rem;
     letter-spacing:-1px;
+    display: block;
+    width:130%;
+    text-align: left;
 }
 div.content ul > li.foot div.right{
     width:22%;
+    height:0.35rem;
     float: right;
+    margin-top:0.1rem;
+    margin-right:0.1rem;
     position: relative;
 }
 div.content ul > li.foot div.right > img{
@@ -427,7 +474,7 @@ div.content ul > li.foot div.q-page > img:last-child{
     height:0.3rem;
     position: absolute;
     bottom: -0.16rem;
-    left:1.4rem;
+    left:1.1rem;
 }
 
 
