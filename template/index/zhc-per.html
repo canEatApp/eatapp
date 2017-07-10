@@ -23,16 +23,18 @@
 				</div>
 				<div class="zhifutitle"></div>
 				<div class="zflist">
-					<div class="zfhead">
-						<img src="../../static/img/zhc-img/images/zfhead_14.png" alt="" />
-					</div>
-					<div class="zflist_word">
-						<div>选择银行卡完成支付</div>
-						<div>使用银行卡完成支付 <span>上次使用过招商银行卡</span></div>
-					</div>
-					<div class="zfnum">
-						5
-					</div>
+					<a href="zhc-card.html" style="display: block; width: 100%;height: 100%;">
+						<div class="zfhead">
+							<img src="../../static/img/zhc-img/images/zfhead_14.png" alt="" />
+						</div>
+						<div class="zflist_word">
+							<div>选择银行卡完成支付</div>
+							<div>使用银行卡完成支付 <span>上次使用过招商银行卡</span></div>
+						</div>
+						<div class="zfnum">
+							5
+						</div>
+					</a>
 				</div>
 				<div class="zflist">
 					<div class="zfhead">
@@ -58,3 +60,8 @@
 		</main>
 	</body>
 </html>
+<script>
+	$("header img").on("touchend",function(){
+   		window.history.back();
+   })
+</script>

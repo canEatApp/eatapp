@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-07-09 17:29:02
+  from "D:\YEK\tool\wamp\www\eatapp\template\index\zhc-buy.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_59624bbe67cf50_52249221',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'adaa2f600908f0a89a15373723137c4d34b4960f' => 
+    array (
+      0 => 'D:\\YEK\\tool\\wamp\\www\\eatapp\\template\\index\\zhc-buy.html',
+      1 => 1499614141,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_59624bbe67cf50_52249221 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,50 +29,76 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>buy</title>
 	</head>
-	<script src="{JS_PATH}/common.js"></script>
-	<script src="{JS_PATH}/jquery.js"></script>
-	<script src="{JS_PATH}/iscroll.js"></script>
-	<link rel="stylesheet" href="{CSS_PATH}/common.css" />
-	<link rel="stylesheet" href="{CSS_PATH}/zhc-buy.css" />
+	<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+/common.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+/jquery.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+/iscroll.js"><?php echo '</script'; ?>
+>
+	<link rel="stylesheet" href="<?php echo CSS_PATH;?>
+/common.css" />
+	<link rel="stylesheet" href="<?php echo CSS_PATH;?>
+/zhc-buy.css" />
 	<body>
 		<header>
-			<img src="{IMG_PATH}/zhc-img/images/icon_03.png" alt="" />
-			<img src="{IMG_PATH}/zhc-img/images/buyhead_03.png" alt="" />
-			<img src="{IMG_PATH}/zhc-img/images/buyhead_05.png" alt="" />
+			<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/icon_03.png" alt="" />
+			<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/buyhead_03.png" alt="" />
+			<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/buyhead_05.png" alt="" />
 		</header>
 		<main class="container">
 			
 		
 			<section>
 				<ul class="list">
-					{foreach $result as $v}
+					<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['result']->value, 'v');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+?>
 				<li>
 					<div class="img_box">
-						<img src="{IMG_PATH}/zhc-img/images/food_14.png"/>
+						<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/food_14.png"/>
 					</div>
 					<div class="word_box">
-						<div class="title">{$v['coname']}</div>
+						<div class="title"><?php echo $_smarty_tpl->tpl_vars['v']->value['coname'];?>
+</div>
 						<div class="buybox">
 							<div class="buyboxs1">
-								<input type="text" name="num" value="{$num}"/>
+								<input type="text" name="num" value="<?php echo $_smarty_tpl->tpl_vars['num']->value;?>
+"/>
 							</div>
 							<div class="buyboxs">
 								<div class="tiaos"></div>
 								<div class="buymoney">
-									<img src="{IMG_PATH}{$v['coimg']}" alt="" />
+									<img src="<?php echo IMG_PATH;
+echo $_smarty_tpl->tpl_vars['v']->value['coimg'];?>
+" alt="" />
 									<span>558</span>
-									<span>{$v['coprice']}RMB</span>
+									<span><?php echo $_smarty_tpl->tpl_vars['v']->value['coprice'];?>
+RMB</span>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="buy_money">
-						{$v['coprice']}
+						<?php echo $_smarty_tpl->tpl_vars['v']->value['coprice'];?>
+
 					</div>
 				</li>
 				<!--<li>-->
 					<!--<div class="img_box">-->
-						<!--<img src="{IMG_PATH}/zhc-img/images/food_14.png"/>-->
+						<!--<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/food_14.png"/>-->
 					<!--</div>-->
 					<!--<div class="word_box">-->
 						<!--<div class="title">Noodleswithgravy</div>-->
@@ -59,7 +109,8 @@
 							<!--<div class="buyboxs">-->
 								<!--<div class="tiaos"></div>-->
 								<!--<div class="buymoney">-->
-									<!--<img src="{IMG_PATH}/zhc-img/images/buy_03.png" alt="" />-->
+									<!--<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/buy_03.png" alt="" />-->
 									<!--<span>558</span>-->
 									<!--<span>33.00RMB</span>-->
 								<!--</div>-->
@@ -72,7 +123,8 @@
 				<!--</li>-->
 				<!--<li>-->
 					<!--<div class="img_box">-->
-						<!--<img src="{IMG_PATH}/zhc-img/images/food_14.png"/>-->
+						<!--<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/food_14.png"/>-->
 					<!--</div>-->
 					<!--<div class="word_box">-->
 						<!--<div class="title">Noodleswithgravy</div>-->
@@ -83,7 +135,8 @@
 							<!--<div class="buyboxs">-->
 								<!--<div class="tiaos"></div>-->
 								<!--<div class="buymoney">-->
-									<!--<img src="{IMG_PATH}/zhc-img/images/buy_03.png" alt="" />-->
+									<!--<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/buy_03.png" alt="" />-->
 									<!--<span>558</span>-->
 									<!--<span>33.00RMB</span>-->
 								<!--</div>-->
@@ -94,7 +147,12 @@
 						<!--33.00-->
 					<!--</div>-->
 				<!--</li>-->
-					{/foreach}
+					<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
 			</ul>
 			<section class="sum">
 				<div class="buy_money">
@@ -124,14 +182,16 @@
 					</li>
 					<li class="address">
 						<p>上海市黄浦江</p>
-						<img src="{IMG_PATH}/zhc-img/images/more_06.png" alt="" />
+						<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/more_06.png" alt="" />
 					</li>
 					<li class="zhifu">
 						<div>货到付款</div>
 					</li>
 					<li class="zfbtn">
 						<a href="zhc-per.html">
-							<img src="{IMG_PATH}/zhc-img/images/buybtn_14.png" alt="" />
+							<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/buybtn_14.png" alt="" />
 						</a>
 					</li>
 				</ul>
@@ -140,7 +200,8 @@
 		</main>
 	</body>
 </html>
-<script>
+<?php echo '<script'; ?>
+>
 	window.onload=function(){
 
 
@@ -157,4 +218,6 @@
 		   		window.history.back();
 		   })
 	}
-</script>
+<?php echo '</script'; ?>
+><?php }
+}
