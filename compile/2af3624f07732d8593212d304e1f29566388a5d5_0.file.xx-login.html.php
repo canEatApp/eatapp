@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-07 18:57:38
+/* Smarty version 3.1.30, created on 2017-07-09 18:12:25
   from "C:\wamp\www\eatapp\template\index\xx-login.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_595fbd82366285_48653992',
+  'unifunc' => 'content_596255e91a5875_32136710',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2af3624f07732d8593212d304e1f29566388a5d5' => 
     array (
       0 => 'C:\\wamp\\www\\eatapp\\template\\index\\xx-login.html',
-      1 => 1499446517,
+      1 => 1499616744,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_595fbd82366285_48653992 (Smarty_Internal_Template $_smarty_tpl) {
+function content_596255e91a5875_32136710 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,7 +54,7 @@ function content_595fbd82366285_48653992 (Smarty_Internal_Template $_smarty_tpl)
 		<header>
 			<div class="begin">
 				<a href=""></a>
-				<a href="xx-signin.html"></a>
+				<a href="index.php?m=index&f=signin&a=sign"></a>
 			</div>
 			<img src="<?php echo IMG_PATH;?>
 /xx-img/xx-login04.png"/>

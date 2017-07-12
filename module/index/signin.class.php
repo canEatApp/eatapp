@@ -24,7 +24,7 @@ class signin extends indexMain{
         $ucpass->templateSMS($appId,$to,$templateId,$param);
         session_start();
         $_SESSION["yan"]=$param;
-        echo $_SESSION[ ];
+//        echo $_SESSION[ ];
     }
     function signch(){
         $user=$_REQUEST["user"];

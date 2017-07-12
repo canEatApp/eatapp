@@ -9,25 +9,35 @@ if(!COMMING){
     exit();
 }
 class index extends indexMain {
-    function mode(){
-//        $obj=new db();
-//        $array=$obj->where("pass=123123")->select("friend","names");
-//        var_dump($array);
-//        $obj->del();
-//        $smarty=new Smarty();   自己写的smarty未完成
-//        $smarty->display();
-//        $smarty=new Smarty_1();
-//        $smarty->setCompileDir("compile");
-//        $smarty->setTemplateDir("template");
-//        $smarty->assign("str","str");
-//        $smarty->display("qyh-index.html");
-//        smarty引擎
-        $this->smarty->display("qyh-index.html");
-
-
+    function __construct(){
+        parent::__construct();
+        $this->db=new db();
     }
-    function bb(){
-        echo "bb";
+
+    function mode(){
+        $result=$this->db->select('list');
+        $this->smarty->assign("result",$result);
+        $shop=$this->db->select('shop');
+        $this->smarty->assign("shop",$shop);
+        $lunbo=$this->db->where('srec=3')->limit("0,3")->select('shop');
+        $this->smarty->assign("lunbo",$lunbo);
+        $like=$this->db->where('srec=4')->limit("0,2")->select('commodity');
+        $this->smarty->assign("like",$like);
+        $new=$this->db->where('srec=5')->limit("0,5")->select('commodity');
+        $this->smarty->assign("new",$new);
+        $this->smarty->display("qyh-index.html");
+    }
+    function lists(){
+        $sid=$_GET['sid'];
+        $result=$this->db->where("lid=$sid")->select('list');
+        $this->smarty->assign("result",$result);
+        $hot=$this->db->where('srec=6')->limit("0,5")->select('commodity');
+        $this->smarty->assign("hot",$hot);
+        $shop=$this->db->where("lid=$sid")->select('shop');
+        $this->smarty->assign("shop",$shop);
+        $new=$this->db->where('srec=5')->limit("0,5")->select('commodity');
+        $this->smarty->assign("new",$new);
+        $this->smarty->display("qyh-list.html");
     }
     function load(){
 
