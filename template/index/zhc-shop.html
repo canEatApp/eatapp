@@ -370,9 +370,8 @@
                             obj.price=price;
                             obj.num=value;
 							shoparr.push(obj)
-//                            console.log(shoparr)
 							for (var i=0;i<shoparr.length;i++){
-							    sums=(shoparr[i].num+1)*shoparr[i].price
+							    sums=(shoparr[i].num)*shoparr[i].price
 							}
                             $(".info .summon #sum").html(sums)
                         }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-09 17:16:41
+/* Smarty version 3.1.30, created on 2017-07-10 03:09:55
   from "D:\YEK\tool\wamp\www\eatapp\template\index\zhc-shop.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_596248d95151f6_60368662',
+  'unifunc' => 'content_5962d3e3919bd6_16276545',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fe9bfb93d29a532bbde90c9e4c93d798058ba9f2' => 
     array (
       0 => 'D:\\YEK\\tool\\wamp\\www\\eatapp\\template\\index\\zhc-shop.html',
-      1 => 1499613371,
+      1 => 1499648992,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_596248d95151f6_60368662 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5962d3e3919bd6_16276545 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -460,9 +460,8 @@ function content_596248d95151f6_60368662 (Smarty_Internal_Template $_smarty_tpl)
                             obj.price=price;
                             obj.num=value;
 							shoparr.push(obj)
-//                            console.log(shoparr)
 							for (var i=0;i<shoparr.length;i++){
-							    sums=(shoparr[i].num+1)*shoparr[i].price
+							    sums=(shoparr[i].num)*shoparr[i].price
 							}
                             $(".info .summon #sum").html(sums)
                         }

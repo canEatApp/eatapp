@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-09 17:29:02
+/* Smarty version 3.1.30, created on 2017-07-12 08:35:06
   from "D:\YEK\tool\wamp\www\eatapp\template\index\zhc-buy.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59624bbe67cf50_52249221',
+  'unifunc' => 'content_5965c31a36ded4_96690001',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'adaa2f600908f0a89a15373723137c4d34b4960f' => 
     array (
       0 => 'D:\\YEK\\tool\\wamp\\www\\eatapp\\template\\index\\zhc-buy.html',
-      1 => 1499614141,
+      1 => 1499841304,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59624bbe67cf50_52249221 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5965c31a36ded4_96690001 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -172,7 +172,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 			<article class="dingdanmess">
 				<ul>
 					<li class="dingdanhao">
-						35689809256
+						<?php echo $_smarty_tpl->tpl_vars['danhao']->value;?>
+
 					</li>
 					<li class="active">
 						<div>即刻配送</div>
@@ -181,7 +182,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 						<div>15:30</div>
 					</li>
 					<li class="address">
-						<p>上海市黄浦江</p>
+						<p><?php echo $_smarty_tpl->tpl_vars['address']->value;?>
+</p>
 						<img src="<?php echo IMG_PATH;?>
 /zhc-img/images/more_06.png" alt="" />
 					</li>

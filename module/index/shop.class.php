@@ -13,6 +13,7 @@ class shop extends indexMain{
 
         $db=new db2("shop");
 //        接收一个店铺的ID
+//        $sid=$_REQUEST['sid'];
         $sid=1;
         $shop=$db->where("sid=$sid")->select();
 //        var_dump($shop[0]);
