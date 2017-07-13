@@ -17,19 +17,18 @@ class login extends main{
         $password=md5($_POST["pass"]);
         $check=strtolower($_POST["check"]);
         $checked=$this->session->get("check");
-        if ($check==1) {
+        if ($check==$checked) {
             $db = new db();
-            $arr = $db->select("user");
-
+            $arr = $db->select("admin");
             foreach ($arr as $k=>$v) {
-                if ($user == $v["uname"]) {
-                    if ($password = $v["upass"]) {
+                if ($user == $v["aname"]) {
+                    if ($password = $v["apass"]) {
                         $this->session->clear();
                         $this->session->set("user", "{$user}");
                         $this->session->set("load", "loaded");
-                        $uid=$v['uid'];
+                        $uid=$v['aid'];
                         $this->session->set("uid",$uid);
-                        $this->session->set("rid",$v["uroles"]);
+                        $this->session->set("rid",$v["arole"]);
                         $this->jump("登录成功", "m=admin&f=login&a=main");
                     } else {
                         $this->jump("密码错误", "m=admin&f=login");
@@ -63,7 +62,7 @@ class login extends main{
             $user=$this->session->get("user");
             $this->smarty->assign("user",$this->session->get("user"));
             $db=new db();
-            $result=$db->where("uname='{$user}'")->select('user',"uroles");
+            $result=$db->where("aname='{$user}'")->select('admin');
             $this->smarty->assign("rid",$this->session->get("rid"));
             $this->smarty->display("main.html");
         }else{
@@ -77,26 +76,5 @@ class login extends main{
     }
     function sign(){
         $this->smarty->display("sign.html");
-    }
-    function signed(){
-        $uname=$_POST["suser"];
-        $upass=md5($_POST["supass"]);
-        $check=$_POST["checked"];
-        if ($check==$this->session->get("check")) {
-            $db = new db();
-            if ($db->where("uname='{$uname}'")->select("user")) {
-                $this->jump("账号已存在", "m=admin&f=login&a=sign");
-                exit;
-            }
-            if ($db->insert("uname='{$uname}',upass='{$upass}',credit=60,rid=3","user") > 0) {
-                $this->jump("注册成功，请登陆", "m=admin&f=login");
-            } else {
-                $this->jump("注册失败，请重试", "m=admin&f=login&a=sign");
-            };
-        }else{
-            $this->jump("验证码错误，请重新输入","m=admin&f=login&a=sign");
-        }
-
-
     }
 }

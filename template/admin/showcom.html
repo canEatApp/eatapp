@@ -5,7 +5,81 @@
     <title>Title</title>
     <link rel="stylesheet" href="{$smarty.const.CSS_PATH}/bootstrap.min.css">
 </head>
-<body>
+<style>
+    button > a{
+        color:#fff;
+        display: inline-block;
+        width:100%;
+        height:100%;
+        font-size:16px;
 
+    }
+    button > a:hover{
+        color:#fff;
+        text-decoration: none;
+    }
+    th{
+        text-align: center
+    }
+    img{
+        width:40px;
+    }
+</style>
+<body>
+<h2>商铺详情</h2>
+
+<table class="table table-bordered" style="text-align: center">
+    <tr>
+        <th>商铺名</th>
+        <th>商铺英文名</th>
+        <th>商铺地址</th>
+        <th>商铺中文简介</th>
+
+    </tr>
+    <tr>
+        <td>{$result[0]['sname']}</td>
+        <td>{$result[0]['sename']}</td>
+        <td>{$result[0]['saddress']}</td>
+        <td>{$result[0]['snotes']}</td>
+
+    </tr>
+    <tr>
+        <th>商铺英文简介</th>
+        <th>商铺规则</th>
+        <th>商铺所属分类ID</th>
+        <th>商铺用户ID</th>
+    </tr>
+    <tr>
+        <td>{$result[0]['senotes']}</td>
+        <td>{$result[0]['srules']}</td>
+        <td>{$result[0]['lid']}</td>
+        <td>{$result[0]['uid']}</td>
+    </tr>
+</table>
+<h2>商铺商品</h2>
+<table class="table table-bordered" style="text-align: center">
+    <tr>
+        <th>商品名</th>
+        <th>英文商品名</th>
+        <th>商品价格</th>
+        <th>商品图片</th>
+        <th>商品简介</th>
+        <th>商品所属分类</th>
+        <th>商品当前状态</th>
+        <th>商品下一状态</th>
+    </tr>
+    {foreach $result1 as $v}
+    <tr>
+        <td>{$v['coname']}</td>
+        <td>{$v['coename']}</td>
+        <td>{$v['coprice']}</td>
+        <td><img src="{$v['coimg']}" alt=""></td>
+        <td>{$v['conote']}</td>
+        <td>{$v['slid']}</td>
+        <td>{$v['srec']}</td>
+        <td>{$v['status']}{if $v['srec'] != $v['status']}<button type="button" class="btn btn-success"><a href="index.php?m=admin&f=shop&a=copass&sid={$result[0]['sid']}&coid={$v['coid']}">审核通过</a></button>{/if}</td>
+    </tr>
+    {/foreach}
+</table>
 </body>
 </html>

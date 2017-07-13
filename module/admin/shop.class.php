@@ -1,63 +1,71 @@
 <?php
 class shop extends main{
-    private $rid;
-    private $sid;
-    function addShop(){
-        $this->smarty->display("addShop.html");
-    }
-    function add (){
-        $sname=$_POST["sname"];
-        $spass=md5($_POST["spass"]);
-        $snotes=$_POST["snotes"];
-        $saddress=$_POST["saddress"];
-        $simg=$_POST["simg"];
-        $db=new db();
-        $time=date();
-        $result=$db->insert("sname='{$sname}',spass='{$spass}',snotes='{$snotes}',saddress='{$saddress}',srecommed=0,simg='{$simg}',saudit=0,state=0,stime='{$time}'","shop");
-        if($result>0){
-            $this->sid=mysqli_insert_id();
-            $this->jump("创建成功","m=admin&f=shop&a=adminShop");
-        }
-    }
-    function adminShop(){
-//        echo $this->session->get("uid");
-        $db=new db();
-        $upid=$this->session->get("uid");
-        $result=$db->where("upid={$upid}")->select("shop");
-        $this->smarty->assign("info",$result[0]);
-//        $this->smarty->assign("rid","{$this->rid}");
-        $this->smarty->display("adminShop.html");
-    }
-    function update(){
-        $snotes=$_POST["snotes"];
-        $saddress=$_POST["saddress"];
-        $simg=$_POST["simg"];
-        $upid=$this->session->get("uid");
-        $db=new db();
-        $time=date();
-        if ($simg==1) {
-            $result=$db->where("upid='{$upid}'")->update("snotes='{$snotes}',saddress='{$saddress}',stime='{$time}'","shop");
-        }else{
-            $result=$db->where("upid='{$upid}'")->update("snotes='{$snotes}',saddress='{$saddress}',stime='{$time}',simg='{$simg}'","shop");
-        }
-        if ($result>0){
-            $this->jump("修改成功","m=admin&f=shop&a=adminShop");
-        }else{
-            $this->jump("修改失败/未做修改","m=admin&f=shop&a=adminShop");
-        }
-    }
     //店铺展示
     function showShop(){
+        $db1=new db2("shop");
+        if(isset($_GET["status"])){
+            $where="and shop.srec=".$_GET["status"];
+            $where1="where shop.srec!=".$_GET["status"];
+        }else{
+            $where="";
+            $where1="";
+        }
+        $num=$db1->select("select count(sid) as sid from shop  ".$where1);
+        $page=new page();
+        $page->pageNum=5;
+        var_dump($num[0]['sid']);
+        $page->total=$num[0]['sid'];
+        $str=$page->show();
+        $limit=$page->limit;
+        $this->smarty->assign("pages",$str);
         $db=new db();
         $result=$db->select("shop");
         $this->smarty->assign("arr",$result);
         $this->smarty->display("showShop.html");
     }
+    //审核商铺通过
+    function shopsrec(){
+        $id=$_GET["sid"];
+        $this->db=new db2('shop');
+        $result=$this->db->where("sid='$id'")->select();
+        if($this->db->where("sid=$id")->update("srec={$result[0]['status']}")>0){
+            $this->jump("审核通过","m=admin&f=shop&a=showShop");
+        }else{
+            $this->jump("审核未成功","m=admin&f=shop&a=showShop");
+        }
+    }
     //商品展示
     function showCom(){
-        $id=$_GET["id"];
-//        $db=new db();
-//        $result=$db->where("sid={$id}")->select("commodity");
+        $id=$_GET["sid"];
+        $db=new db2('shop');
+        $db1=new db2('commodity');
+        $result=$db->where("sid={$id}")->select();
+        $this->smarty->assign("result",$result);
+        $result1=$db1->where("sid={$id}")->select();
+        $this->smarty->assign("result1",$result1);
         $this->smarty->display("showcom.html");
+    }
+    //商品通过
+    function copass(){
+        $id=$_GET["coid"];
+        $sid=$_GET["sid"];
+        $this->db=new db2('commodity');
+        $result=$this->db->where("coid='$id'")->select();
+        if($this->db->where("coid=$id")->update("srec={$result[0]['status']}")>0){
+            $this->jump("审核通过","m=admin&f=shop&a=showCom&sid=$sid");
+        }else{
+            $this->jump("审核未成功","m=admin&f=shop&a=showCom&sid=$sid");
+        }
+    }
+    //商铺拉黑
+    function shopstate(){
+        $id=$_GET["sid"];
+        $this->db=new db2('shop');
+        $result=$this->db->where("sid='$id'")->select();
+        if($this->db->where("sid=$id")->update("state=0,srec=0")>0){
+            $this->jump("拉黑成功","m=admin&f=shop&a=showShop");
+        }else{
+            $this->jump("拉黑未成功","m=admin&f=shop&a=showShop");
+        }
     }
 }

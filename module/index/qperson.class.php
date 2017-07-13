@@ -56,4 +56,11 @@ class qperson extends indexMain {
             echo "no";
         }
     }
+    function logout(){
+        $this->smarty->display("xx-person.html");
+    }
+    function logoutCon(){
+        $this->session->clear();
+        echo "ok";
+    }
 }

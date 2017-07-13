@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-10 03:27:44
+/* Smarty version 3.1.30, created on 2017-07-10 04:28:06
   from "D:\html\wamp\www\eatapp\template\index\qyh-person.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5962d8102e66f3_72203131',
+  'unifunc' => 'content_5962e6364ba1c5_06271310',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f1eaa9dddea23fe292a82673e158c75211c9ffed' => 
     array (
       0 => 'D:\\html\\wamp\\www\\eatapp\\template\\index\\qyh-person.html',
-      1 => 1499650063,
+      1 => 1499653684,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5962d8102e66f3_72203131 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5962e6364ba1c5_06271310 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html lang="en">
@@ -94,13 +94,13 @@ function content_5962d8102e66f3_72203131 (Smarty_Internal_Template $_smarty_tpl)
             <div class="a3">
                 <a href="index.php?m=index&f=qperson&a=img">
                     <img src="<?php echo $_smarty_tpl->tpl_vars['result']->value[0]['uimg'];?>
-" alt="" style="width:100%;height:100%;border-radius: 50%;">
+" alt="">
                 </a>
                 <img src="<?php echo IMG_PATH;?>
 /qyh-img/qg-huiyuan.png" alt="">
             </div>
         </div>
-        <a href=""><img src="<?php echo IMG_PATH;?>
+        <a href="index.php?m=index&f=qperson&a=logout"><img src="<?php echo IMG_PATH;?>
 /qyh-img/qg-shezhi.png" alt=""></a>
     </div>
     <p class="name"><?php echo $_smarty_tpl->tpl_vars['result']->value[0]['uiname'];?>
@@ -429,7 +429,7 @@ function content_5962d8102e66f3_72203131 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 </div>
 <footer>
-    <a href="">
+    <a href="index.php">
         <img src="<?php echo IMG_PATH;?>
 /qyh-img/q-guan.png" alt="">
         <p>推荐</p>

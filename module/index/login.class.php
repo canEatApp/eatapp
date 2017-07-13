@@ -7,6 +7,7 @@
  */
 class login extends indexMain{
     function log(){
+
         $this->smarty->display("xx-login.html");
 
     }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{$smarty.const.CSS_PATH}/bootstrap.min.css">
+</head>
+<style>
+    th,td{
+        text-align: center;
+    }
+    img{
+        width:40px;
+    }
+</style>
+<body>
+<table class="table table-bordered" >
+    <tr style="text-align: center">
+        <th>用户ID</th>
+        <th>用户名</th>
+        <th>用户昵称</th>
+        <th>用户头像</th>
+        <th>用户地址</th>
+        <th>用户电话</th>
+        <th>用户签名</th>
+        <th>角色（1用户2卖家）</th>
+        <th>操作</th>
+    </tr>
+    {foreach $arr as $v}
+    {foreach $arr1 as $val}
+    {if $v['uid']==$val['uid'] }
+    <tr style="text-align: center">
+        <td>{$v["uid"]}</td>
+        <td>{$v["uname"]}</td>
+        <td>{$val['uiname']}</td>
+        <td><img src="{$val['uimg']}"  alt=""></td>
+        <td>{$val['uaddress']}</td>
+        <td>{$val['utel']}</td>
+        <td>{$val['unotes']}</td>
+        <td>{$v['uroles']}</td>
+        <td>{if $val['ustate']==1}<a href="index.php?m=admin&f=user&a=state&uid={$v['uid']}"><button type="button" class="btn btn-success">拉黑</button></a>{else}
+        <a href="index.php?m=admin&f=user&a=state1&uid={$v['uid']}"><button type="button" class="btn btn-success">正常</button></a>{/if}
+            <a href="index.php?m=admin&f=user&a=del&uid={$v['uid']}"><button type="button" class="btn btn-warning ">删除</button></a></td>
+    </tr>
+    {/if}
+    {/foreach}
+    {/foreach}
+</table>
+</body>
+</html>

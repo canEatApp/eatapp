@@ -73,6 +73,21 @@ section{
 	background-size: 100%;
 	overflow: hidden;
 }
+.display{
+	width:200px;
+	height:50px;
+	position: absolute;
+	top:240px;
+	left:50%;
+	margin-left:-100px;
+	background: #00a2d4;
+	border-radius: 10px;
+	z-index: 100;
+	text-align: center;
+	line-height: 50px;
+	color:#fff;
+	display: none;
+}
 .footer > p{
 	text-align: center;
 	font-size: .24rem;

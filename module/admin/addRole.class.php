@@ -9,9 +9,9 @@ class addRole extends main {
     //添加管理员页面
     function mode(){
         $this->db=new db();
-        $arr=$this->db->select("roles");
-        $this->smarty->assign('arr',$arr);
-        $this->smarty->display("roles.html");
+        $arr=$this->db->select("role");
+        $this->smarty->assign('result',$arr);
+        $this->smarty->display("roleshow.html");
     }
     //添加角色页面
     function add(){
@@ -21,35 +21,42 @@ class addRole extends main {
     function addroles(){
         $rname=$_POST["rname"];
         $this->db=new db();
-        if($this->db->insert("rname='{$rname}'","roles")>0){
+        if($this->db->insert("rname='{$rname}'","role")>0){
             $this->jump("添加成功","m=admin&f=addRole&a=add");
         };
     }
-    //添加管理员
-    function addAdmin(){
-        $rid=$_POST["rid"];
-        $adname=$_POST["adname"];
-        $adpass=$_POST["adpass"];
+    //添加角色
+    function roles(){
+        $rid=$_GET['rid'];
+        $this->db=new db();
+        $arr=$this->db->where("rid='$rid'")->select("role");
+        $this->smarty->assign('result',$arr);
+//        var_dump($arr);
+        $this->smarty->display("roles.html");
+    }
+    function rolechange(){
+        $rid=$_POST['rid'];
+        $adname=$_POST["rname"];
         $db=new db();
-        if ($db->insert("adname='{$adname}'","adpass='{$adpass}'","rid='{$rid}'")>0){
-            $this->jump("创建成功","m=admin&f=addRole");
+        if ($db->where("rid='$rid'")->update("rname='{$adname}'",'role')>0){
+            $this->jump("更改成功","m=admin&f=addRole");
         }else{
-            $this->jump("创建失败","m=admin&f=addRole");
+            $this->jump("更改失败","m=admin&f=addRole");
         }
     }
-    //表单验证查询角色功能
-    function checkRoles(){
-        $rname=$_POST["rname"];
-        
-    }
-    //表单验证查询管理员功能
-    function checkAdmin(){
-
+    function roledel(){
+        $rid=$_GET['rid'];
+        $this->db=new db2('role');
+        if ($this->db->where("rid=$rid")->del()>0){
+            $this->jump("删除成功","m=admin&f=addRole");
+        }else{
+            $this->jump("删除失败","m=admin&f=addRole");
+        }
     }
     //app分类管理
     function applist(){
         $db=new db();
-        $result=$db->select("applists");
+        $result=$db->select("list");
         if ($result){
             $this->smarty->assign("arr",$result);
         }
@@ -66,7 +73,28 @@ class addRole extends main {
         }else{
             $this->jump("添加失败","m=admin&f=addRole&a=applist");
         }
-
+    }
+    function listCon(){
+        $lid=$_GET['lid'];
+        $db=new db();
+        $result=$db->where("lid=$lid")->select('list');
+//        var_dump($lid);
+//        var_dump($result);
+        $this->smarty->assign("res",$result);
+        $this->smarty->display("listchange.html");
+    }
+    function listchange(){
+        $lname=$_POST['lname'];
+        $lename=$_POST['lename'];
+        $limg=$_POST['img'];
+        $lid=$_POST['lid'];
+        $db=new db();
+        $result=$db->where("lid=$lid")->update("lname='$lname',lename='$lename',limg='$limg'",'list');
+        if($result>0){
+            $this->jump("修改成功","m=admin&f=addRole&a=listCon&lid='$lid'");
+        }else{
+            $this->jump("修改失败","m=admin&f=addRole&a=listCon&lid='$lid'");
+        }
     }
 }
 

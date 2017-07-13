@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-10 02:51:15
+/* Smarty version 3.1.30, created on 2017-07-10 04:35:43
   from "D:\html\wamp\www\eatapp\template\index\qyh-img.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5962cf8349f5b9_27459050',
+  'unifunc' => 'content_5962e7ff1de4d7_59748894',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8c4866594525e62eeb51d55b62f252b3ba80e45e' => 
     array (
       0 => 'D:\\html\\wamp\\www\\eatapp\\template\\index\\qyh-img.html',
-      1 => 1499647873,
+      1 => 1499654137,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5962cf8349f5b9_27459050 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5962e7ff1de4d7_59748894 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html lang="en">
@@ -72,7 +72,6 @@ function content_5962cf8349f5b9_27459050 (Smarty_Internal_Template $_smarty_tpl)
     $(function () {
         var obj = new upload();
         obj.size = 1024 * 1024 * 10;
-        obj.selectBtnStyle.background = "red";
         obj.createView({
             parent: document.querySelector(".uploadbox")
         });
@@ -146,6 +145,9 @@ function content_5962cf8349f5b9_27459050 (Smarty_Internal_Template $_smarty_tpl)
         color:#fff;
         font-size:0.3rem;
         padding-left:0.2rem;
+    }
+    div{
+        text-align: center;
     }
 </style><?php }
 }

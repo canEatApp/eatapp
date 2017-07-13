@@ -605,6 +605,8 @@ footer{
     display: flex;
     justify-content: space-around;
     background: #FC811E;
+    padding:0 0.3rem;
+    box-sizing: border-box;
 }
 footer > div{
     width:1px;

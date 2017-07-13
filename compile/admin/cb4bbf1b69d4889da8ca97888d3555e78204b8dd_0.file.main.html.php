@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-06 08:11:13
+/* Smarty version 3.1.30, created on 2017-07-12 18:15:25
   from "D:\html\wamp\www\eatapp\template\admin\main.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_595dd4818937b5_76463377',
+  'unifunc' => 'content_59664b1d1b3cd9_43787863',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cb4bbf1b69d4889da8ca97888d3555e78204b8dd' => 
     array (
       0 => 'D:\\html\\wamp\\www\\eatapp\\template\\admin\\main.html',
-      1 => 1499321465,
+      1 => 1499876123,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_595dd4818937b5_76463377 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59664b1d1b3cd9_43787863 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +43,7 @@ function content_595dd4818937b5_76463377 (Smarty_Internal_Template $_smarty_tpl)
 </section>
 <section id="main">
     <ul id="box">
-        <?php if ($_smarty_tpl->tpl_vars['rid']->value == 1) {?>
+        <?php if ($_smarty_tpl->tpl_vars['rid']->value == 0) {?>
         <li>
             <a href="index.php?m=admin&f=addRole&a=applist" target="window" style="color: #ccc;">App分类管理</a>
         </li>
@@ -64,9 +64,6 @@ function content_595dd4818937b5_76463377 (Smarty_Internal_Template $_smarty_tpl)
                 <li>
                     <a href="index.php?m=admin&f=shop&a=showShop" target="window">店铺情况</a>
                 </li>
-                <li>
-                    <a href="index.php?m=admin&f=shop&a=adminShop" target="window">管理店铺</a>
-                </li>
             </ul>
         </li>
 
@@ -77,27 +74,17 @@ function content_595dd4818937b5_76463377 (Smarty_Internal_Template $_smarty_tpl)
                 <li>
                     <a href="index.php?m=admin&f=shop&a=addShop" target="window">添加店铺</a>
                 </li>
-                <li>
-                    <a href="index.php?m=admin&f=shop&a=adminShop" target="window">管理店铺</a>
-                </li>
             </ul>
         </li>
         <?php }?>
         <li>
-            <span>商品管理</span>
-            <ul>
-                <li><a href="index.php?m=admin&f=commodity" target="window">添加商品</a></li>
-                <li><a href="index.php?m=admin&f=commodity&a=admin" target="window">管理商品</a></li>
-            </ul>
-        </li>
-        <li>
             <span>用户管理</span>
             <ul>
                 <li>
-                    <a href="" target="window">留言管理</a>
+                    <a href="index.php?m=admin&f=manger" target="window">管理员管理</a>
                 </li>
                 <li>
-                    <a href="" target="window">用户管理</a>
+                    <a href="index.php?m=admin&f=user" target="window">用户管理</a>
                 </li>
 
             </ul>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_PATH}/bootstrap.min.css">
+    <link rel="stylesheet" href="{CSS_PATH}/common.css">
+</head>
+<style>
+    button > a{
+        color:#fff;
+        display: inline-block;
+        width:100%;
+        height:100%;
+        font-size:16px;
+
+    }
+    button > a:hover{
+        color:#fff;
+        text-decoration: none;
+    }
+    th{
+        text-align: center
+    }
+</style>
+<body>
+
+<table class="table table-bordered" style="text-align: center">
+    <tr>
+        <th style="text-align: center">角色ID</th>
+        <th>角色名</th>
+        <th>操作</th>
+    </tr>
+    {foreach $result as $v}
+    <tr>
+        <td>{$v['rid']}</td>
+        <td>{$v['rname']}</td>
+        <td><button type="button" class="btn btn-success"><a href="index.php?m=admin&f=addRole&a=roles&rid={$v['rid']}">编辑</a></button>
+            <button type="button" class="btn btn-danger"><a href="index.php?m=admin&f=addRole&a=roledel&rid={$v['rid']}">删除</a></button></td>
+    </tr>
+    {/foreach}
+</table>
+</body>
+</html>

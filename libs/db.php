@@ -36,7 +36,6 @@ class db{
         $this->table=$table;
         $this->sql="select ".$this->opts["field"]." from ".$this->table." ".$this->opts["where"]." ".$this->opts["order"]." ".$this->opts["limit"];
 //        var_dump($this->sql);
-//        var_dump($this->sql);
         $result=$this->db->query($this->sql);
 //        var_dump($result);
 
@@ -53,6 +52,7 @@ class db{
     }
     //查询条件
     function where($params){
+        $this->opts["where"]="WHERE ".$params;
          return $this;
     }
     //排序规则
@@ -71,8 +71,8 @@ class db{
             $this->opts["where"]=$params;
             $this->table=$table;
             $sql = "delete from " . $this->table . " " . $this->opts["where"];
-            $result = $this->db->query($sql);
-            return $this->db->affected_rows();
+            $this->db->query($sql);
+            return $this->db->affected_rows;
         }else{
             echo "请填写参数";
         }
@@ -224,7 +224,6 @@ class db2{
 
         $sql="insert into ".$this->table." (".$this->opts["field"].") values (".$this->opts["val"].")";
         $this->db->query($sql);
-
         return $this->db->affected_rows;
     }
 

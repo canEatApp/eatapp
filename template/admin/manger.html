@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{$smarty.const.CSS_PATH}/bootstrap.min.css">
+</head>
+<style>
+    th,td{
+        text-align: center;
+    }
+</style>
+<body>
+<table class="table table-bordered" >
+    <tr style="text-align: center">
+        <th>管理员名称</th>
+        <th>角色ID</th>
+        <th>操作</th>
+    </tr>
+    {foreach $arr as $v}
+    <tr style="text-align: center">
+        <td>{$v["aname"]}</td>
+        <td>{$v['arole']}</td>
+        <td><a href="index.php?m=admin&f=manger&a=change&aid={$v['aid']}"><button type="button" class="btn btn-success">更改</button></a>
+            <a href="index.php?m=admin&f=manger&a=del&aid={$v['aid']}"><button type="button" class="btn btn-warning ">删除</button></a></td>
+    </tr>
+    {/foreach}
+    <tr><td colspan="3"><a href="index.php?m=admin&f=manger&a=add"><button type="button" class="btn btn-success ">添加管理员</button></a>
+        </td></tr>
+</table>
+</body>
+</html>

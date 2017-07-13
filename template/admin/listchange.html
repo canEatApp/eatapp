@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{$smarty.const.CSS_PATH}/bootstrap.min.css">
+    <script src="{$smarty.const.JS_PATH}/uploadimg.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<form method="post" action="index.php?m=admin&f=addRole&a=listchange">
+    <div class="form-group">
+        <label for="exampleInputEmail1">分类名</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="lname" value="{$res[0]['lname']}" placeholder="分类名">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">英文分类名</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="lename" value="{$res[0]['lename']}" placeholder="英文分类名">
+    </div>
+    <div class="form-group">
+        <img src="{$res[0]['limg']}"  alt="">
+        <label>上传图片</label>
+        <input type="hidden" class="inputImg" name="img" value="">
+        <input type="hidden" name="lid" value="{$res[0]['lid']}">
+    </div>
+    <button type="submit" class="btn btn-default">确认修改</button>
+</form>
+</body>
+</html>
+<script>
+    window.onload=function () {
+        let obj=new upload_1();
+        obj.url="upload.php";
+        obj.success=function (url) {
+            document.querySelector(".inputImg").value=url;
+        };
+        obj.createView();
+    }
+</script>

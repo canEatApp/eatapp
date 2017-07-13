@@ -13,7 +13,6 @@ class index extends indexMain {
         parent::__construct();
         $this->db=new db();
     }
-
     function mode(){
         $result=$this->db->select('list');
         $this->smarty->assign("result",$result);
@@ -31,16 +30,12 @@ class index extends indexMain {
         $sid=$_GET['sid'];
         $result=$this->db->where("lid=$sid")->select('list');
         $this->smarty->assign("result",$result);
-        $hot=$this->db->where('srec=6')->limit("0,5")->select('commodity');
-        $this->smarty->assign("hot",$hot);
         $shop=$this->db->where("lid=$sid")->select('shop');
         $this->smarty->assign("shop",$shop);
+        $hot=$this->db->where('srec=6')->limit("0,5")->select('commodity');
+        $this->smarty->assign("hot",$hot);
         $new=$this->db->where('srec=5')->limit("0,5")->select('commodity');
         $this->smarty->assign("new",$new);
         $this->smarty->display("qyh-list.html");
     }
-    function load(){
-
-    }
-
 }

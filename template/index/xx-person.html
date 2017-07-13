@@ -13,9 +13,10 @@
 	<link rel="stylesheet" type="text/css" href="{CSS_PATH}/common.css"/>
 	<link rel="stylesheet" type="text/css" href="{CSS_PATH}/xx-person.css"/>
 	<script src="{JS_PATH}/rem.js"></script>
+	<script src="{JS_PATH}/jquery.js"></script>
 	<body>
 		<header>
-			<a href=""></a>
+			<a onclick="history.go(-1)"></a>
 			<h2>Enjoy the food</h2>
 			<h4>享受美食</h4>
 		</header>
@@ -40,9 +41,27 @@
 			</div>
 			<a href=""></a>
 		</section>
-		<a href="" class="footer">
+		<a href="javascript:;" class="footer">
 			<p>退出登录</p>
 			<h5>Exitloginaccount</h5>
 		</a>
+	<div class="display"></div>
 	</body>
 </html>
+<script>
+    $(".footer").on('touchstart',function(){
+        $.ajax({
+            url:"index.php?m=index&f=qperson&a=logoutCon",
+            success:function(e){
+                console.log(e)
+                if(e=="ok"){
+                    $(".display").html('退出成功').css("display", "block");
+                    setTimeout(function () {
+                        $(".display").css("display", "none");
+                        location.href="index.php";
+                    }, 1500)
+                }
+            }
+        })
+    })
+</script>

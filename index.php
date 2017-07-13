@@ -37,5 +37,6 @@ include_once LIBS_PATH."session.class.php";//session操作
 include_once LIBS_PATH."main.class.php";//admin主类
 include_once LIBS_PATH."indexmain.class.php";//index主类
 include_once LIBS_PATH."upload.class.php";//前台换头像
+include_once LIBS_PATH."page.class.php";//前台换头像
 $obj=new route();
 $obj->getInfo();

@@ -5,15 +5,20 @@
     <title>Title</title>
     <link rel="stylesheet" href="{$smarty.const.CSS_PATH}/bootstrap.min.css">
 </head>
+<style>
+    th{
+        text-align: center;
+    }
+</style>
 <body>
-<table>
+<table class="table table-bordered" >
     <tr style="text-align: center">
         <th>店铺名</th>
         <th>店铺缩略图</th>
         <th>店铺地址</th>
-        <th>店铺标语</th>
-        <th>是否通过审核</th>
-        <th>查看商品</th>
+        <th>当前状态</th>
+        <th>下一状态</th>
+        <th>操作</th>
     </tr>
     {foreach $arr as $v}
     <tr style="text-align: center">
@@ -22,11 +27,20 @@
             <img src="{$v['simg']}" style="width: 40px;" alt="">
         </td>
         <td>{$v['saddress']}</td>
-        <td>{$v['snotes']}</td>
-        <td>{if $v['state']==0}未通过{else}已通过{/if}</td>
-        <td><a href="index.php?m=admin&f=shop&a=showCom&cid={$v['sid']}">点击查看</a></td>
+        <td>{$v['srec']}</td>
+        <td>{$v['status']}</td>
+        <td><a href="index.php?m=admin&f=shop&a=showCom&sid={$v['sid']}"><button type="button" class="btn btn-success">点击查看</button></a>
+        {if $v['srec'] != $v['status']}<a href="index.php?m=admin&f=shop&a=shopsrec&sid={$v['sid']}"><button type="button" class="btn btn-success">审核通过</button></a>{/if}
+        {if $v['state'] != 0}<a href="index.php?m=admin&f=shop&a=shopstate&sid={$v['sid']}"><button type="button" class="btn btn-warning ">拉黑禁开</button></a>{/if}</td>
     </tr>
     {/foreach}
 </table>
+<a href="index.php?m=admin&f=shop&a=showShop&status=0">
+    未审核
+</a>
+<a href="index.php?m=admin&f=shop&a=showShop&status=0">
+    审核通过
+</a>
+{$pages}
 </body>
 </html>

@@ -2,12 +2,12 @@ class upload {
     constructor() {
         this.type = "image/jpeg,image/png,image/gif";
         this.size = 1024;
-        this.containerStyle = {width: 300, border: "1px solid #ccc"};
-        this.selectBtnStyle = {width: 150, height: 40, background: "orange", text: "选择图片"};
-        this.uploadBtnStyle = {width: 150, height: 40, background: "green", text: "上传图片"};
+        this.containerStyle = {width: "100%", border: "0px solid #ccc"};
+        this.selectBtnStyle = {width: "100%", height: 40, background: "orange", text: "选择图片"};
+        this.uploadBtnStyle = {width: "100%", height: 40, background: "green", text: "上传图片"};
 
-        this.Pstyle = {width: 300, border: "1px solid #ccc", " border-radius:": 5}
-        this.listStyle = {width: 100, height: 100, border: "1px solid #ccc", margin: 5}
+        this.Pstyle = {width: "100%", border: "0px solid #ccc", " border-radius:": 10}
+        this.listStyle = {width: 100, height: 100, border: "0px solid #ccc", margin: 5}
         //  放的是具有数据的列表视图
         this.lists = [];
 
@@ -171,7 +171,7 @@ class upload {
             return;
         }
         var div = document.createElement("div");
-        div.style.cssText = "width:" + this.selectBtnStyle.width + "px;height:" + this.selectBtnStyle.height + "px;background: " + this.selectBtnStyle.background + ";text-align: center;line-height:" + this.selectBtnStyle.height + "px;position:relative";
+        div.style.cssText = "width:" + this.selectBtnStyle.width+";height:" + this.selectBtnStyle.height + "px;background: " + this.selectBtnStyle.background + ";text-align: center;line-height:" + this.selectBtnStyle.height + "px;position:relative";
 
         var span = document.createElement("span");
         span.innerHTML = this.selectBtnStyle.text;
@@ -196,7 +196,7 @@ class upload {
         }
 
         var div = document.createElement("div");
-        div.style.cssText = "width:" + this.uploadBtnStyle.width + "px;height:" + this.uploadBtnStyle.height + "px;background: " + this.uploadBtnStyle.background + ";text-align: center;line-height:" + this.uploadBtnStyle.height + "px";
+        div.style.cssText = "width:" + this.uploadBtnStyle.width+";height:" + this.uploadBtnStyle.height + "px;background: " + this.uploadBtnStyle.background + ";text-align: center;line-height:" + this.uploadBtnStyle.height + "px";
 
         var span = document.createElement("span");
         span.innerHTML = this.uploadBtnStyle.text;
@@ -213,7 +213,7 @@ class upload {
             return;
         }
         var div = document.createElement("div");
-        div.style.cssText = "width:" + this.Pstyle.width + "px;height:auto;overflow:hidden;border:" + this.Pstyle.border + ";border-radius:" + this.Pstyle["border-radius"] + "px";
+        div.style.cssText = "width:" + this.Pstyle.width + ";height:auto;overflow:hidden;border:" + this.Pstyle.border + ";border-radius:" + this.Pstyle["border-radius"] + "px";
         this.P = div;
         this.container.insertBefore(div, this.uploadBtn);
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-09 05:10:29
+/* Smarty version 3.1.30, created on 2017-07-10 04:28:52
   from "D:\html\wamp\www\eatapp\template\index\qyh-index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59619ea539e3b1_08429845',
+  'unifunc' => 'content_5962e664ccbf81_23275714',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '098d6b8ca8d4cd1a516ac2496ee8cac93d53cfe2' => 
     array (
       0 => 'D:\\html\\wamp\\www\\eatapp\\template\\index\\qyh-index.html',
-      1 => 1499569827,
+      1 => 1499653730,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59619ea539e3b1_08429845 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5962e664ccbf81_23275714 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html lang="en">
@@ -398,7 +398,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
     </div>
 </div>
 <footer>
-    <a href="">
+    <a href="index.php">
         <img src="<?php echo IMG_PATH;?>
 /qyh-img/q-guan.png" alt="">
         <p>推荐</p>
