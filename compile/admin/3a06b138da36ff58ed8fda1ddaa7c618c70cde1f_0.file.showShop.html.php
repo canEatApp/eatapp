@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-13 06:49:25
+/* Smarty version 3.1.30, created on 2017-07-14 03:32:17
   from "D:\html\wamp\www\eatapp\template\admin\showShop.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5966fbd540d5d9_23065350',
+  'unifunc' => 'content_59681f211478f9_82233145',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3a06b138da36ff58ed8fda1ddaa7c618c70cde1f' => 
     array (
       0 => 'D:\\html\\wamp\\www\\eatapp\\template\\admin\\showShop.html',
-      1 => 1499921363,
+      1 => 1499995935,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5966fbd540d5d9_23065350 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59681f211478f9_82233145 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,10 +77,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
 </table>
-<a href="index.php?m=admin&f=shop&a=showShop&status=0">
+<a href="index.php?m=admin&f=shop&a=showShop&status=srec!=status">
     未审核
 </a>
-<a href="index.php?m=admin&f=shop&a=showShop&status=0">
+<a href="index.php?m=admin&f=shop&a=showShop&status=srec=status">
     审核通过
 </a>
 <?php echo $_smarty_tpl->tpl_vars['pages']->value;?>

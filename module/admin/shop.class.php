@@ -2,25 +2,21 @@
 class shop extends main{
     //店铺展示
     function showShop(){
-        $db1=new db2("shop");
+        $db1=new db2('shop');
         if(isset($_GET["status"])){
-            $where="and shop.srec=".$_GET["status"];
-            $where1="where shop.srec!=".$_GET["status"];
+            $num=$db1->where($_GET['status'])->select("select count(sid) as sid from shop ");
         }else{
-            $where="";
-            $where1="";
+            $num=$db1->select("select count(sid) as sid from shop ");
         }
-        $num=$db1->select("select count(sid) as sid from shop  ".$where1);
+//        $num=$db1->where($_GET['status'])->select("select count(sid) as sid from shop ");
         $page=new page();
         $page->pageNum=5;
-        var_dump($num[0]['sid']);
-        $page->total=$num[0]['sid'];
+        $page->total=count($num);
         $str=$page->show();
         $limit=$page->limit;
         $this->smarty->assign("pages",$str);
-        $db=new db();
-        $result=$db->select("shop");
-        $this->smarty->assign("arr",$result);
+        $array=$db1->order("sid desc ".$limit)->select();
+        $this->smarty->assign("arr",$array);
         $this->smarty->display("showShop.html");
     }
     //审核商铺通过

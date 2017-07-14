@@ -26,6 +26,8 @@ define("TEM_PATH",APP_PATH."/template／");
 define("CSS_PATH",HOST_PATH."/static/css");
 define("JS_PATH",HOST_PATH."/static/js");
 define("IMG_PATH",HOST_PATH."/static/img");
+
+define("SELF_PATH",$http."://".$server["HTTP_HOST"].$server["SCRIPT_NAME"]);
 header("content-type:text/html,charset=utf-8");
 include LIBS_PATH."function.class.php";
 include_once LIBS_PATH."checkimg.php";

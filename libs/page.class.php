@@ -52,7 +52,6 @@ class page{
 
        $currentNum=$current*$this->pageNum;
        $this->limit="limit ".$currentNum. " , ".$this->pageNum;
-
        return $str;
 
     }
