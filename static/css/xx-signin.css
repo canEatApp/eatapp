@@ -196,3 +196,6 @@ textarea::-webkit-input-placeholder {
 	background-repeat: no-repeat;
 	background-position: .48rem .2rem;
 }
+.add.submit{
+	background-image: url(../img/xx-img/xx-signin11.png);
+}

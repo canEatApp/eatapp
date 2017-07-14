@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-09 18:12:25
+/* Smarty version 3.1.30, created on 2017-07-14 04:07:49
   from "C:\wamp\www\eatapp\template\index\xx-login.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_596255e91a5875_32136710',
+  'unifunc' => 'content_59682775c9d6b4_66939024',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2af3624f07732d8593212d304e1f29566388a5d5' => 
     array (
       0 => 'C:\\wamp\\www\\eatapp\\template\\index\\xx-login.html',
-      1 => 1499616744,
+      1 => 1499997928,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_596255e91a5875_32136710 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59682775c9d6b4_66939024 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -64,6 +64,8 @@ function content_596255e91a5875_32136710 (Smarty_Internal_Template $_smarty_tpl)
 			<div class="logn">
 				<img src="<?php echo IMG_PATH;?>
 /xx-img/xx-login05.png"/>
+				<img src="<?php echo IMG_PATH;?>
+/xx-img/xx-login20.png"/>
 				<img src="<?php echo IMG_PATH;?>
 /xx-img/xx-login06.png" alt="" />
 				<img src="<?php echo IMG_PATH;?>
