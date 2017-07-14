@@ -1,4 +1,5 @@
 $(function(){
+//	alert(1);
 	$("input:first-of-type").blur(function(){
 //		console.log($("label").css("displiay"))	
 		window.setTimeout(function(){	
@@ -12,7 +13,7 @@ $(function(){
 		}
 		,100)		
 		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
-	 		$(".submit").css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+	 		$(".submit").addClass("add")
 	 		$(".submit p").css("color","#FFFFFF")
 	 		$(".submit > h4").css("color","#FFFFFF")
 	 }
@@ -28,7 +29,7 @@ $(function(){
 		}
 		,100)	
 		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
-	 		$(".submit").css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+	 		$(".submit").addClass("add")
 	 		$(".submit p").css("color","#FFFFFF")
 	 		$(".submit > h4").css("color","#FFFFFF")
 	 }
@@ -45,7 +46,7 @@ $(function(){
 		}
 		,100)	
 		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
-	 		$(".submit").css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+	 		$(".submit").addClass("add")
 	 		$(".submit p").css("color","#FFFFFF")
 	 		$(".submit > h4").css("color","#FFFFFF")
 	 }
@@ -53,7 +54,7 @@ $(function(){
 	$("input:nth-of-type(4)").focus(function(){
 		$(".err").css("display","none")
 		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
-	 		$(".submit").css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+	 		$(".submit").addClass("add")
 	 		$(".submit p").css("color","#FFFFFF")
 	 		$(".submit > h4").css("color","#FFFFFF")
 	 }
@@ -71,7 +72,7 @@ $(function(){
 		,100)	
 		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
 	 		let sub=$(".submit");
-			sub.css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+			$(".submit").addClass("add")
 	 		$(".submit p").css("color","#FFFFFF")
 	 		$(".submit > h4").css("color","#FFFFFF")
 
@@ -100,7 +101,7 @@ $(function(){
 			$(".err").css("display","block")
 		}
 		if($("input:nth-of-type(1)").val()!==''&&$("input:nth-of-type(2)").val()!==''&&$("input:nth-of-type(3)").val()!==''&&$("input:nth-of-type(4)").val()!==''&&$("input:nth-of-type(5)").val()!==''){
-	 		$(".submit").css("background-image","url(../../static/img/xx-img/xx-signin11.png)")
+	 		$(".submit").addClass("add")
 	 		$(".submit p").css("color","#FFFFFF")
 	 		$(".submit > h4").css("color","#FFFFFF")
 	 }

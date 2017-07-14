@@ -65,7 +65,13 @@ h4{
 	height: 100%;
 	
 }
-.logn > img:nth-child(3){
+.logn > img:nth-child(2){
+	display: none;
+}
+.login.add{
+	background-image: url(../img/xx-img/xx-login12.png);
+}
+.logn > img:nth-child(4){
 	display: none;
 }
 .number{

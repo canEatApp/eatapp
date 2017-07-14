@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-09 18:17:39
+/* Smarty version 3.1.30, created on 2017-07-14 03:54:32
   from "C:\wamp\www\eatapp\template\index\xx-signin.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5962572342fde6_91081587',
+  'unifunc' => 'content_596824581ab8d0_98078359',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f14d7244f29ae5ee45f9cc3814d389a23b88a3a3' => 
     array (
       0 => 'C:\\wamp\\www\\eatapp\\template\\index\\xx-signin.html',
-      1 => 1499617057,
+      1 => 1499997269,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5962572342fde6_91081587 (Smarty_Internal_Template $_smarty_tpl) {
+function content_596824581ab8d0_98078359 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,7 +80,7 @@ function content_5962572342fde6_91081587 (Smarty_Internal_Template $_smarty_tpl)
 			<input type="text" name="username" id="phonebtn" placeholder="设置您的用户名"/>
 			<input type="text" name="nums" placeholder="填写您的手机号  后期无法修改"/>		
 			<input type="text" name="ver" placeholder="填写验证码"/>				
-			<input type="password" name="pass" placeholder="设置六位密码 包含英文和数字"/>
+			<input type="password" name="pass" placeholder="设置八位密码 包含英文和数字"/>
 			<input type="password" name="pass" placeholder="再次输入密码"/>			
 			<div class="user">
 				<img src="<?php echo IMG_PATH;?>

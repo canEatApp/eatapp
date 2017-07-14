@@ -1,11 +1,24 @@
 $(function(){
-	$(".logn img:nth-child(2)").click(function(){
-		$(".logn img:nth-child(2)").css("display","none")
-		$(".logn img:nth-child(3)").css("display","inline")
+	$(".logn img:nth-child(3)").on("touchend",function(){
+		$(".logn img:nth-child(1)").css("display","none")
+		$(".logn img:nth-child(2)").css("display","inline")
+		$(".logn img:nth-child(3)").css("display","none")
+		$(".logn img:nth-child(4)").css("display","inline")
 		$(".number input:nth-of-type(1)").css("display","none")
 		$(".number input:nth-of-type(2)").css("display","inline")
-		$(".login").css({"background-image":"url(../../static/img/xx-img/xx-login12.png)"})
+		$(".login").addClass("add")
 		$(".login p").css({"color":"#fff"})
 		$(".number p").text("Password")
+	})
+	$(".logn img:nth-child(2)").on("touchend",function(){
+		$(".logn img:nth-child(2)").css("display","none")
+		$(".logn img:nth-child(1)").css("display","inline")
+		$(".logn img:nth-child(4)").css("display","none")
+		$(".logn img:nth-child(3)").css("display","inline")
+		$(".number input:nth-of-type(2)").css("display","none")
+		$(".number input:nth-of-type(1)").css("display","inline")
+		$(".login").removeClass("add")
+		$(".login p").css({"color":"#e0e0e0"})
+		$(".number p").text("Username")
 	})
 })
