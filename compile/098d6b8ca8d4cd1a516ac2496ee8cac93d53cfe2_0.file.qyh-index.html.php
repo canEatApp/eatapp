@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-10 04:28:52
+/* Smarty version 3.1.30, created on 2017-07-14 10:06:56
   from "D:\html\wamp\www\eatapp\template\index\qyh-index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5962e664ccbf81_23275714',
+  'unifunc' => 'content_59687ba03b9d50_09125983',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '098d6b8ca8d4cd1a516ac2496ee8cac93d53cfe2' => 
     array (
       0 => 'D:\\html\\wamp\\www\\eatapp\\template\\index\\qyh-index.html',
-      1 => 1499653730,
+      1 => 1500019612,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5962e664ccbf81_23275714 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59687ba03b9d50_09125983 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html lang="en">
@@ -61,6 +61,7 @@ function content_5962e664ccbf81_23275714 (Smarty_Internal_Template $_smarty_tpl)
             bounceTime: 1200 ,
             mouseWheel:true,
             scrollbars:false,
+            click : true,
         });
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',

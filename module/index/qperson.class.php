@@ -47,9 +47,9 @@ class qperson extends indexMain {
     }
     function imgCon(){
         $img=$_REQUEST['img'];
-        $aa=$this->db->where("uid=$this->uid")->update("uimg='$img'",userinfo);
+        $aa=$this->db->where("uid=$this->uid")->update("uimg='$img'","userinfo");
         if($aa>0){
-            $this->session->clear('uid');
+//            $this->session->clear('uid');
             $this->session->set('uimg',$img);
             echo "ok";
         }else{

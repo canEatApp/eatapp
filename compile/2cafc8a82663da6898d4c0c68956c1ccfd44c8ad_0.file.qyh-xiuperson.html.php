@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-10 02:48:48
+/* Smarty version 3.1.30, created on 2017-07-14 09:10:59
   from "D:\html\wamp\www\eatapp\template\index\qyh-xiuperson.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5962cef0b5f264_86920039',
+  'unifunc' => 'content_59686e83e247f8_57776423',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2cafc8a82663da6898d4c0c68956c1ccfd44c8ad' => 
     array (
       0 => 'D:\\html\\wamp\\www\\eatapp\\template\\index\\qyh-xiuperson.html',
-      1 => 1499647639,
+      1 => 1500016258,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5962cef0b5f264_86920039 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59686e83e247f8_57776423 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html lang="en">
@@ -155,8 +155,8 @@ function content_5962cef0b5f264_86920039 (Smarty_Internal_Template $_smarty_tpl)
         padding-top:0.3rem;
     }
     header > a:first-child img {
-        height: 0.46rem;
-        width:0.46rem;
+        height: 0.8rem;
+        width:0.8rem;
         border: 1px solid #fff;
         border-radius:50% ;
         opacity: 0.8;
@@ -168,11 +168,11 @@ function content_5962cef0b5f264_86920039 (Smarty_Internal_Template $_smarty_tpl)
         box-sizing: border-box;
     }
     form > div:last-child{
-        text-align: center;
-        position: absolute;
-        bottom: 0.5rem;
-        left:0;
-        width:100%;
+        text-align: right;
+        position: fixed;
+        top: 0.5rem;
+        right:0;
+        width:40%;
     }
 </style><?php }
 }

@@ -31,7 +31,7 @@
         <td>{$v['status']}</td>
         <td><a href="index.php?m=admin&f=shop&a=showCom&sid={$v['sid']}"><button type="button" class="btn btn-success">点击查看</button></a>
         {if $v['srec'] != $v['status']}<a href="index.php?m=admin&f=shop&a=shopsrec&sid={$v['sid']}"><button type="button" class="btn btn-success">审核通过</button></a>{/if}
-        {if $v['state'] != 0}<a href="index.php?m=admin&f=shop&a=shopstate&sid={$v['sid']}"><button type="button" class="btn btn-warning ">拉黑禁开</button></a>{/if}</td>
+        {if $v['srec'] != 0}<a href="index.php?m=admin&f=shop&a=shopstate&sid={$v['sid']}"><button type="button" class="btn btn-warning ">拉黑禁开</button></a>{/if}</td>
     </tr>
     {/foreach}
 </table>

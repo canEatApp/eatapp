@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-14 03:32:17
+/* Smarty version 3.1.30, created on 2017-07-14 03:52:24
   from "D:\html\wamp\www\eatapp\template\admin\showShop.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59681f211478f9_82233145',
+  'unifunc' => 'content_596823d82d21c0_92877249',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3a06b138da36ff58ed8fda1ddaa7c618c70cde1f' => 
     array (
       0 => 'D:\\html\\wamp\\www\\eatapp\\template\\admin\\showShop.html',
-      1 => 1499995935,
+      1 => 1499997140,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59681f211478f9_82233145 (Smarty_Internal_Template $_smarty_tpl) {
+function content_596823d82d21c0_92877249 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +67,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
 "><button type="button" class="btn btn-success">点击查看</button></a>
         <?php if ($_smarty_tpl->tpl_vars['v']->value['srec'] != $_smarty_tpl->tpl_vars['v']->value['status']) {?><a href="index.php?m=admin&f=shop&a=shopsrec&sid=<?php echo $_smarty_tpl->tpl_vars['v']->value['sid'];?>
 "><button type="button" class="btn btn-success">审核通过</button></a><?php }?>
-        <?php if ($_smarty_tpl->tpl_vars['v']->value['state'] != 0) {?><a href="index.php?m=admin&f=shop&a=shopstate&sid=<?php echo $_smarty_tpl->tpl_vars['v']->value['sid'];?>
+        <?php if ($_smarty_tpl->tpl_vars['v']->value['srec'] != 0) {?><a href="index.php?m=admin&f=shop&a=shopstate&sid=<?php echo $_smarty_tpl->tpl_vars['v']->value['sid'];?>
 "><button type="button" class="btn btn-warning ">拉黑禁开</button></a><?php }?></td>
     </tr>
     <?php
