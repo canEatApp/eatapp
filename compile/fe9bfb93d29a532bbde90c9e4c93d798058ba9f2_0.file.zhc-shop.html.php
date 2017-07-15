@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-07-10 03:09:55
+/* Smarty version 3.1.30, created on 2017-07-14 07:42:33
   from "D:\YEK\tool\wamp\www\eatapp\template\index\zhc-shop.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5962d3e3919bd6_16276545',
+  'unifunc' => 'content_596859c94a1467_97914332',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fe9bfb93d29a532bbde90c9e4c93d798058ba9f2' => 
     array (
       0 => 'D:\\YEK\\tool\\wamp\\www\\eatapp\\template\\index\\zhc-shop.html',
-      1 => 1499648992,
+      1 => 1500010950,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5962d3e3919bd6_16276545 (Smarty_Internal_Template $_smarty_tpl) {
+function content_596859c94a1467_97914332 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -355,11 +355,17 @@ function content_5962d3e3919bd6_16276545 (Smarty_Internal_Template $_smarty_tpl)
 				</div>
 			</div>
 			<div class="btn">
-				<a class="sub" href="javascript:;" style="display: block;width: 100%;height: 100%;">
+				<?php if ($_smarty_tpl->tpl_vars['user']->value) {?>
+				<a class="sub" href="javascript:;">
 					<img src="<?php echo IMG_PATH;?>
 /zhc-img/images/btn_46.png" alt="" />
 				</a>
-				
+				<?php } else { ?>
+				<a class="subs" href="javascript:;">
+					<img src="<?php echo IMG_PATH;?>
+/zhc-img/images/btn_46.png" alt="" />
+				</a>
+				<?php }?>
 			</div>
 		</footer>
 		<?php echo '<script'; ?>
@@ -468,6 +474,9 @@ function content_5962d3e3919bd6_16276545 (Smarty_Internal_Template $_smarty_tpl)
 
                     })
 
+					$(".btn .subs").on("touchend",function () {
+                        location.href="index.php?m=index&f=index&a=mode"
+                    })
 					$('.btn .sub').on("touchend",function () {
                         var id=shoparr[shoparr.length-1].id;
                         var num=shoparr[shoparr.length-1].num;
@@ -488,149 +497,6 @@ function content_5962d3e3919bd6_16276545 (Smarty_Internal_Template $_smarty_tpl)
 
                 });
             window.onload=function(){
-
-//                let firstid;
-//                $(document).queue('fx',function () {
-//                    $.ajax({
-//                        url:'index.php?m=index&f=shop&a=info',
-//                        dataType:'json',
-//                        type:"post",
-//                        success:function (data) {
-//                            console.log(data)
-//                            data.forEach(function(value,index){
-//                                if(index==0){
-//                                    $(`<li class="active" id="${
-//                                        value.slid
-//                                        }"></li>`).html(`${
-//                                        value.slname
-//                                        }`).appendTo($('.lt_list'));
-//                                    firstid=value.slid;
-//
-//                                }else {
-//                                    $(`<li id="${
-//                                        value.slid
-//                                        }"></li>`).html(`${
-//                                        value.slname
-//                                        }`).appendTo($('.lt_list'))
-//                                }
-//
-//                            })
-//
-//                            $(document).dequeue();
-//                        }
-//                    })
-//                })
-//
-//                $(document).queue('fx',function () {
-//                    gitid(firstid)
-//
-//                })
-//
-//// 点击左边列表
-//                $('.lt_list').delegate("li","touchend",function(){
-//                    let id=$(this).attr('id');
-//                    let ulid=$(".gt_list")
-//                    console.log(ulid);
-//
-//                    let where;
-//                    for(let i=0;i<ulid.length;i++){
-//                        if($(ulid[i]).id!=id){
-//                            where=1;
-////                           return;
-//                        }else{
-//                            where=0;
-//                        }
-//                    }
-//                    if(where==1){
-//                        gitid(id);
-//                        console.log(id)
-//                        $(this).addClass("active").siblings().removeClass('active');
-//                        ulid.eq($(this).index()).addClass("ulblock").siblings().removeClass("ulblock")
-//                    }
-//                })
-//
-//                // 点击左列表获取点击的ID 传到后台取相应的数据
-//                function gitid(id) {
-//                    let con=$('.gt_list');
-//                    $.ajax({
-//                        url:'index.php?m=index&f=shop&a=shopclass',
-//                        dataType:'json',
-//                        data:{
-//                            id:id
-//                        },
-//                        type:"post",
-//                        success:function (data) {
-//                            console.log(data)
-//                            let ul=$(`<ul class='gt_list ulblock' id='${
-//                                id
-//                                }'>`);
-//                            let len=data.length;
-//                            for(let i=0;i<len;i++){
-//                                $("<li>").html(`
-//
-//
-//								<div class="img_box">
-//									<img src="<?php echo IMG_PATH;?>
-${data.coimg}"/>
-//								</div>
-//								<div class="word_box">
-//									<div class="title">${data.coname}</div>
-//									<div class="stars_box">
-//										<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/stats_18.png"/>
-//										<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/stats_18.png"/>
-//										<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/stats_18.png"/>
-//										<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/stats_18.png"/>
-//										<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/stats_18.png"/>
-//									</div>
-//									<div class="tiaos"></div>
-//									<div class="money_box">
-//										<span>${
-//                                    data.coprice
-//                                    }</span>
-//										<span>RMB</span>
-//									</div>
-//									<div class="num">
-//										<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/dot_25.png" alt="" />
-//										<span>366单</span>
-//									</div>
-//								</div>
-//									<div class="add">
-//									<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/jian_03.png"  class="jian"/>
-//									<input type="text" ng-model="nub"/>
-//									<img src="<?php echo IMG_PATH;?>
-/zhc-img/images/add_21.png" class="jia"/>
-//
-//								</div>
-//
-//
-//                   `).appendTo(ul)
-//                                ul.appendTo($('.conblock'))
-//                            }
-//                            myScroll = new IScroll('.container', {
-//                                mouseWheel: true,
-//                                scrollX:true,
-//                                shrinkScrollbars: 'scale',
-//                                fadeScrollbars: true,
-//                                click:true
-//                            });
-//                        }
-//                    })
-
-//                }
-
-
-
-
-
-
-
 
 //                -----------------------------------------
 

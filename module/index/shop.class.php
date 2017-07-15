@@ -10,7 +10,8 @@ if(!COMMING){
 }
 class shop extends indexMain{
     function text(){
-
+        @$user=$this->session->get("user");
+        $this->smarty->assign("user",$user);
         $db=new db2("shop");
 //        接收一个店铺的ID
 //        $sid=$_REQUEST['sid'];
